@@ -1,0 +1,13 @@
+@mixin flex($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin text_font_style($fc, $ff, $fs, $fw) {
+  color: $fc;
+  font-family: $ff;
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: normal;
+}
