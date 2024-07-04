@@ -1,0 +1,67 @@
+header {
+  height: 150px;
+  background-color: $header-background;
+
+  .header_wrapper {
+    height: 100%;
+    @include flex(space-between, center);
+
+    .navigation {
+      nav {
+        ul {
+          @include flex(space-between, center);
+          column-gap: 65px;
+
+          @media (max-width: $tablet) {
+            column-gap: 48px;
+          }
+        }
+
+        li {
+          a {
+            /* font-family: */
+            font-weight: 800;
+            font-size: 32px;
+            line-height: 38.4px;
+            color: $nav-element-color;
+
+            @media (max-width: $desktop-large-screen) {
+              font-size: 20px;
+            }
+
+            @media (max-width: $tablet) {
+              font-size: 14px;
+              line-height: 16.3px;
+            }
+          }
+        }
+      }
+
+      @media (max-width: 600px) {
+        display: none;
+      }
+    }
+
+    .burger_menu {
+      width: 18px;
+      height: 15px;
+      cursor: pointer;
+
+      @include flex(space-between, center);
+      flex-direction: column;
+
+      display: none;
+
+      @media (max-width: 600px) {
+        display: flex;
+      }
+
+      div {
+        width: 100%;
+        height: 1.25px;
+        border-radius: 2px;
+        background-color: #ffffff;
+      }
+    }
+  }
+}
