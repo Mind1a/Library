@@ -160,29 +160,66 @@ button {
 }
 
 header {
-  height: 150px;
+  height: 200px;
   background-color: #162974;
+}
+@media (max-width: 1200px) {
+  header {
+    height: 120px;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    height: 80px;
+  }
+}
+@media (max-width: 480px) {
+  header {
+    height: 48px;
+  }
 }
 header .header_wrapper {
   height: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
-header .header_wrapper .navigation nav ul {
+header .header_wrapper .header_components {
+  width: 100%;
+  height: 47.21px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  -moz-column-gap: 65px;
-       column-gap: 65px;
+}
+header .header_wrapper .header_components .logo {
+  height: 100%;
+  width: 13.83%;
 }
 @media (max-width: 768px) {
-  header .header_wrapper .navigation nav ul {
+  header .header_wrapper .header_components .logo {
+    width: 14.48%;
+  }
+}
+header .header_wrapper .header_components .logo a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+header .header_wrapper .header_components .navigation nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -moz-column-gap: 92px;
+       column-gap: 92px;
+}
+@media (max-width: 768px) {
+  header .header_wrapper .header_components .navigation nav ul {
     -moz-column-gap: 48px;
          column-gap: 48px;
   }
 }
-header .header_wrapper .navigation nav li a {
+header .header_wrapper .header_components .navigation nav li a {
   /* font-family: */
   font-weight: 800;
   font-size: 32px;
@@ -190,24 +227,24 @@ header .header_wrapper .navigation nav li a {
   color: #f5f5f5;
 }
 @media (max-width: 1200px) {
-  header .header_wrapper .navigation nav li a {
+  header .header_wrapper .header_components .navigation nav li a {
     font-size: 20px;
   }
 }
 @media (max-width: 768px) {
-  header .header_wrapper .navigation nav li a {
+  header .header_wrapper .header_components .navigation nav li a {
     font-size: 14px;
     line-height: 16.3px;
   }
 }
 @media (max-width: 600px) {
-  header .header_wrapper .navigation {
+  header .header_wrapper .header_components .navigation {
     display: none;
   }
 }
 header .header_wrapper .burger_menu {
   width: 18px;
-  height: 15px;
+  height: 12px;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -220,9 +257,9 @@ header .header_wrapper .burger_menu {
     display: flex;
   }
 }
-header .header_wrapper .burger_menu div {
+header .header_wrapper .burger_menu .line {
   width: 100%;
-  height: 1.25px;
+  height: 1.5px;
   border-radius: 2px;
   background-color: #ffffff;
 }/*# sourceMappingURL=global.css.map */
