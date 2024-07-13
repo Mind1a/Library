@@ -70,29 +70,42 @@
   .filter-books-wrapper {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     margin-top: 35px;
   }
 
   .filter-section {
-    width: 100%;
-    max-width: 360px;
-    margin-right: 90px;
+    width: 360px;
+    margin-right: 10px;
   }
 
   .books-section {
-    width: 100%;
     max-width: 1230px;
+    flex: 1;
     background-color: white;
-    // padding: 24px 37px;
     padding: 24px 29px;
     border-radius: 10px;
     display: grid;
-    grid-template-columns: repeat(4, 275px);
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 24px;
     row-gap: 34px;
 
+    @media (max-width: 1760px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 1440px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 1110px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
     .card {
-      // width: 275px;
+      width: fit-content;
+      margin: 0 auto;
 
       .book-cover {
         height: 420px;
@@ -100,6 +113,7 @@
 
       .book-info {
         width: 100%;
+        max-width: 275px;
         padding: 16px;
         margin-top: -3px;
         border: 1px solid #c2c2c2;
@@ -160,23 +174,17 @@
         font-size: 24px;
         font-weight: 500;
         color: #022859;
-        margin-right: 10px;
+        padding: 5px 10px;
+        border-radius: 8px;
 
         &.active {
           background-color: #064aa2;
           color: white;
-          border-radius: 8px;
-          padding: 5px 10px;
         }
-      }
-
-      img {
-        margin-right: 5px;
       }
 
       & img:last-child {
         rotate: 180deg;
-        margin-right: 0;
       }
     }
   }
