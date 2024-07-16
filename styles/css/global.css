@@ -425,4 +425,86 @@ header .header_wrapper .burger_menu .line {
   height: 1.5px;
   border-radius: 2px;
   background-color: #ffffff;
+}
+
+.footer-main-info {
+  background-color: #162974;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.6px;
+}
+.footer-main-info .container {
+  padding: 88px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer-main-info .container .contacts-container {
+  display: flex;
+  flex-direction: column;
+}
+.footer-main-info .container .contacts-container .contacts-wrapper {
+  margin-top: 40px;
+}
+.footer-main-info .container .contacts-container .contacts-wrapper .contacts {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.footer-main-info .container .contacts-container .contacts-wrapper .contacts:not(:last-child) {
+  margin-bottom: 22px;
+}
+.footer-main-info .container .contacts-container .contacts-wrapper .contacts p,
+.footer-main-info .container .contacts-container .contacts-wrapper .contacts a {
+  margin-left: 16px;
+}
+.footer-main-info .container .contacts-container .contacts-wrapper .contacts a {
+  color: white;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.footer-main-info .container .usage-container {
+  display: flex;
+  flex-direction: column;
+}
+.footer-main-info .container .usage-container a {
+  color: white;
+  cursor: pointer;
+}
+.footer-main-info .container .usage-container a:not(:last-child) {
+  margin-bottom: 22px;
+}
+.footer-main-info .container .unilab-team-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-main-info .container .unilab-team-container .logo-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer-main-info .container .unilab-team-container p {
+  margin-top: 24px;
+  font-size: 14px;
+  line-height: 16.8px;
+}
+
+.footer-additional-info {
+  background-color: #064aa2;
+  color: white;
+}
+.footer-additional-info .container {
+  padding: 15px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-additional-info .container p {
+  font-size: 18px;
+  line-height: 21.6px;
+  font-weight: 700;
 }/*# sourceMappingURL=global.css.map */
