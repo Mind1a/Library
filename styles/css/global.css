@@ -322,6 +322,30 @@ button {
   rotate: 180deg;
 }
 
+.landing-photo-wrapper {
+  width: 100%;
+  height: 294px;
+  overflow: hidden;
+  position: relative;
+}
+.landing-photo-wrapper .landing-photo {
+  width: 100%;
+  height: 294px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.landing-photo-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #162974;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
 header {
   height: 200px;
   background-color: #162974;
