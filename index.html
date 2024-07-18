@@ -8,6 +8,10 @@
 
     <!-- css link -->
     <link rel="stylesheet" href="./styles/css/global.css" />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
   </head>
 
   <body>
@@ -114,6 +118,39 @@
               </div>
               <div class="dropdown-section-wrapper">
                 <div class="dropdown-head">
+                  <p>გამოცემის წელი</p>
+                </div>
+                <div class="publish-date">
+                  <div class="dropdown-line"></div>
+                  <div class="date-wrapper">
+                    <div class="date-input-container">
+                      <label for="date-input">
+                        <img
+                          src="./assets/calendar-icon.svg"
+                          alt="calendar-icon"
+                          class="icon"
+                        />
+                        <p id="date-text">-დან</p>
+                        <input type="date" id="date-input" name="date" />
+                      </label>
+                    </div>
+                    <img src="./assets/dropdown-icon.svg" alt="dropdown-icon" />
+                    <div class="date-input-container">
+                      <label for="date-input">
+                        <img
+                          src="./assets/calendar-icon.svg"
+                          alt="calendar-icon"
+                          class="icon"
+                        />
+                        <p id="date-text">-მდე</p>
+                        <input type="date" id="date-input" name="date" />
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown-section-wrapper">
+                <div class="dropdown-head">
                   <p>სერიები</p>
                   <img src="./assets/dropdown-icon.svg" alt="dropdown-icon" />
                 </div>
@@ -158,7 +195,6 @@
                   </div>
                 </div>
               </div>
-              <div class="dropdown-section-wrapper"></div>
             </section>
           </section>
           <section class="books-section">
@@ -439,6 +475,8 @@
     </footer>
 
     <!-- JavaScript link -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>
