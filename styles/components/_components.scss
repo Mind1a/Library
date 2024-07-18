@@ -146,9 +146,44 @@
                 }
 
                 input {
+                  appearance: none;
+                  -webkit-appearance: none;
                   width: 22px;
                   height: 22px;
                   cursor: pointer;
+                  border: 2px solid #515151;
+                  border-radius: 5px;
+                  position: relative;
+                  display: inline-block;
+                  vertical-align: middle;
+
+                  &::before {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  }
+
+                  &:checked::before {
+                    background-color: #022859;
+                  }
+
+                  &:checked {
+                    background-color: #022859;
+                    border: 2px solid #022859;
+                  }
+
+                  &:checked::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 6px;
+                    height: 12px;
+                    border: solid white;
+                    border-width: 0 2px 2px 0;
+                    transform: translate(-50%, -60%) rotate(45deg);
+                  }
                 }
               }
             }
