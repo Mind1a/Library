@@ -148,6 +148,78 @@ button {
   cursor: pointer;
 }
 
+/* firago-latin-100-normal */
+@font-face {
+  font-family: "FiraGO";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-100-normal.woff2) format("woff2"), url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-100-normal.woff) format("woff");
+}
+/* firago-latin-200-normal */
+@font-face {
+  font-family: "FiraGO";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-200-normal.woff2) format("woff2"), url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-200-normal.woff) format("woff");
+}
+/* firago-latin-300-normal */
+@font-face {
+  font-family: "FiraGO";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-300-normal.woff2) format("woff2"), url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-300-normal.woff) format("woff");
+}
+/* firago-latin-400-normal */
+@font-face {
+  font-family: "FiraGO";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-400-normal.woff2) format("woff2"), url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-400-normal.woff) format("woff");
+}
+/* firago-latin-500-normal */
+@font-face {
+  font-family: "FiraGO";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-500-normal.woff2) format("woff2"), url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-500-normal.woff) format("woff");
+}
+/* firago-latin-600-normal */
+@font-face {
+  font-family: "FiraGO";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-600-normal.woff2) format("woff2"), url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-600-normal.woff) format("woff");
+}
+/* firago-latin-700-normal */
+@font-face {
+  font-family: "FiraGO";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-700-normal.woff2) format("woff2"), url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-700-normal.woff) format("woff");
+}
+/* firago-latin-800-normal */
+@font-face {
+  font-family: "FiraGO";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 800;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-800-normal.woff2) format("woff2"), url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-800-normal.woff) format("woff");
+}
+/* firago-latin-900-normal */
+@font-face {
+  font-family: "FiraGO";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 900;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-900-normal.woff2) format("woff2"), url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-900-normal.woff) format("woff");
+}
 .container {
   max-width: 1680px;
   width: 100%;
@@ -701,4 +773,157 @@ header .header_wrapper .burger_menu .line {
   font-size: 18px;
   line-height: 21.6px;
   font-weight: 700;
+}
+
+.book-main {
+  background-color: #f5f5f5;
+}
+.book-main .book-container {
+  padding: 76px 6.2% 63px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 72px;
+  background-color: #f5f5f5;
+}
+.book-main .book-container .cover-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.book-main .book-container .cover-wrapper img {
+  width: 504px;
+  height: 685px;
+  margin-bottom: 44px;
+  border-radius: 20px;
+}
+.book-main .book-container .cover-wrapper button {
+  background-color: #203a9c;
+  color: #fff;
+  padding: 32px 116px;
+  border-radius: 20px;
+  font-size: 24px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  font-family: "FiraGO", sans-serif;
+}
+.book-main .book-container .info-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.book-main .book-container .info-wrapper .main-info {
+  display: flex;
+  flex-direction: column;
+}
+.book-main .book-container .info-wrapper .main-info h3 {
+  margin-bottom: 28px;
+  font-family: "FiraGO", sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  color: #000;
+}
+.book-main .book-container .info-wrapper .main-info p {
+  margin-bottom: 40px;
+  font-family: "FiraGO", sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  color: #555;
+}
+.book-main .book-container .info-wrapper .main-info .book-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.book-main .book-container .info-wrapper .main-info .book-info div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+.book-main .book-container .info-wrapper .main-info .book-info div img {
+  width: 20px;
+  height: 17.5px;
+}
+.book-main .book-container .info-wrapper .main-info .book-info div span {
+  font-family: "FiraGO", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  color: #000;
+}
+.book-main .book-container .info-wrapper .button-wrapper {
+  margin: 75px 0 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 46px;
+}
+.book-main .book-container .info-wrapper .button-wrapper button {
+  background-color: transparent;
+  color: #000;
+  padding: 0 0 7px;
+  border: none;
+  border-radius: 0;
+  font-family: "FiraGO";
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+.book-main .book-container .info-wrapper .button-wrapper button:active {
+  color: #112f91;
+}
+.book-main .book-container .info-wrapper .button-wrapper button:focus {
+  color: #112f91;
+  border-bottom: #112f91 solid 3px;
+}
+.book-main .book-container .info-wrapper .anotation-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.book-main .book-container .info-wrapper .anotation-section p {
+  margin-bottom: 32px;
+  font-family: "FiraGO", sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #000;
+}
+.book-main .book-container .info-wrapper .anotation-section div {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.book-main .book-container .info-wrapper .anotation-section div span {
+  font-family: "FiraGO", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  color: #000;
+}
+.book-main .book-container .info-wrapper .feature-section ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.book-main .book-container .info-wrapper .feature-section ul li {
+  padding-bottom: 16px;
+  border-bottom: 1px dashed #d0d0d0;
+  font-family: "FiraGO", sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  color: #000;
+}
+.book-main .book-container .info-wrapper .feature-section ul li:last-child {
+  border-bottom: 0;
+}
+.book-main .book-container .info-wrapper .anotation-section, .book-main .book-container .info-wrapper .feature-section, .book-main .book-container .info-wrapper .searching-section {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+  opacity: 0;
+}
+.book-main .book-container .info-wrapper .open {
+  max-height: 100%;
+  opacity: 1;
 }/*# sourceMappingURL=global.css.map */
