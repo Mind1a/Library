@@ -1,0 +1,1022 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: "Work Sans", sans-serif;
+  background-color: #f7f7f7;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* firago-latin-100-normal */
+@font-face {
+  font-family: "FiraGO";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-100-normal.woff2) format("woff2"), url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-100-normal.woff) format("woff");
+}
+/* firago-latin-200-normal */
+@font-face {
+  font-family: "FiraGO";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-200-normal.woff2) format("woff2"), url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-200-normal.woff) format("woff");
+}
+/* firago-latin-300-normal */
+@font-face {
+  font-family: "FiraGO";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-300-normal.woff2) format("woff2"), url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-300-normal.woff) format("woff");
+}
+/* firago-latin-400-normal */
+@font-face {
+  font-family: "FiraGO";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-400-normal.woff2) format("woff2"), url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-400-normal.woff) format("woff");
+}
+/* firago-latin-500-normal */
+@font-face {
+  font-family: "FiraGO";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-500-normal.woff2) format("woff2"), url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-500-normal.woff) format("woff");
+}
+/* firago-latin-600-normal */
+@font-face {
+  font-family: "FiraGO";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-600-normal.woff2) format("woff2"), url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-600-normal.woff) format("woff");
+}
+/* firago-latin-700-normal */
+@font-face {
+  font-family: "FiraGO";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-700-normal.woff2) format("woff2"), url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-700-normal.woff) format("woff");
+}
+/* firago-latin-800-normal */
+@font-face {
+  font-family: "FiraGO";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 800;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-800-normal.woff2) format("woff2"), url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-800-normal.woff) format("woff");
+}
+/* firago-latin-900-normal */
+@font-face {
+  font-family: "FiraGO";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 900;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-900-normal.woff2) format("woff2"), url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-900-normal.woff) format("woff");
+}
+.container {
+  max-width: 1680px;
+  width: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 1800px) {
+  .container {
+    width: 91.67%;
+  }
+}
+
+.main-content-wrapper {
+  max-width: 1680px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 64px;
+}
+@media (max-width: 1800px) {
+  .main-content-wrapper {
+    width: 91.67%;
+  }
+}
+.main-content-wrapper .search-sort-div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-content-wrapper .search-sort-div .search-div {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+.main-content-wrapper .search-sort-div .search-div input {
+  width: 361px;
+  height: 62px;
+  border-radius: 14px;
+  padding: 14px 15px 14px 60px;
+  border: 1.5px solid #000000;
+  font-size: 18px;
+}
+.main-content-wrapper .search-sort-div .search-div input:focus {
+  outline: none;
+}
+.main-content-wrapper .search-sort-div .search-div img {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.main-content-wrapper .search-sort-div .sort-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.main-content-wrapper .search-sort-div .sort-div p {
+  font-size: 18px;
+}
+.main-content-wrapper .search-sort-div .sort-div img {
+  cursor: pointer;
+}
+.main-content-wrapper .filter-books-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 35px;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section {
+  width: 360px;
+  margin-right: 10px;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .filter-clear-button {
+  width: 100%;
+  height: 58px;
+  border: 1px solid #022859;
+  border-radius: 10px;
+  background-color: white;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21.6px;
+  color: #022859;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section {
+  margin-top: 32px;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .dropdown-head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: 200px;
+  line-height: 28.8px;
+  cursor: pointer;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .dropdown-head img {
+  cursor: pointer;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .dropdown-head img.rotate {
+  transform: rotate(180deg);
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .dropdown-container {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .dropdown-container .dropdown {
+  display: flex;
+  flex-direction: column;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .dropdown-container .dropdown .dropdown-line {
+  width: 100%;
+  height: 1px;
+  border: 1px solid #d5d5d5;
+  border-radius: 5px;
+  color: #d5d5d5;
+  margin: 18px 0;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .dropdown-container .dropdown label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  position: relative;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .dropdown-container .dropdown label:not(:last-child) {
+  margin-bottom: 20px;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .dropdown-container .dropdown label input[type=checkbox] {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  border: 2px solid #515151;
+  border-radius: 3px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .dropdown-container .dropdown label input[type=checkbox]::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .dropdown-container .dropdown label input[type=checkbox]:checked::before {
+  background-color: #022859;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .dropdown-container .dropdown label input[type=checkbox]:checked {
+  background-color: #022859;
+  border: 2px solid #022859;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .dropdown-container .dropdown label input[type=checkbox]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 14px;
+  border: solid #ffffff;
+  border-width: 0 2.5px 2.5px 0;
+  transform: translate(-40%, -60%) rotate(45deg);
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .dropdown-container.active {
+  height: 184px;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .publish-date {
+  height: 115px;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .publish-date .dropdown-line {
+  width: 100%;
+  height: 1px;
+  border: 1px solid #d5d5d5;
+  border-radius: 5px;
+  color: #d5d5d5;
+  margin: 25px 0;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .publish-date .date-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .publish-date .date-wrapper img {
+  rotate: 270deg;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .publish-date .date-wrapper .date-input-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: 1px solid #000;
+  border-radius: 15px;
+  width: 145px;
+  height: 54px;
+  padding: 17px 16px;
+  cursor: pointer;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .publish-date .date-wrapper .date-input-container label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .publish-date .date-wrapper .date-input-container label .icon {
+  margin-right: 10px;
+  rotate: 0deg;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .publish-date .date-wrapper .date-input-container label p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.2px;
+  color: #7d7d7d;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .publish-date .date-wrapper .date-input-container label input[type=date] {
+  position: absolute;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .publish-date .date-wrapper .date-input-container label input[type=date]::-webkit-inner-spin-button, .main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .publish-date .date-wrapper .date-input-container label input[type=date]::-webkit-clear-button {
+  display: none;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .publish-date .date-wrapper .date-input-container label input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  cursor: pointer;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper:not(:last-child) {
+  margin-bottom: 30px;
+}
+.main-content-wrapper .filter-books-wrapper .books-section {
+  max-width: 1230px;
+  flex: 1;
+  background-color: white;
+  padding: 24px 29px;
+  border-radius: 10px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+  row-gap: 34px;
+}
+@media (max-width: 1760px) {
+  .main-content-wrapper .filter-books-wrapper .books-section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 1440px) {
+  .main-content-wrapper .filter-books-wrapper .books-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 1110px) {
+  .main-content-wrapper .filter-books-wrapper .books-section {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.main-content-wrapper .filter-books-wrapper .books-section .card {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+.main-content-wrapper .filter-books-wrapper .books-section .card .book-cover {
+  height: 420px;
+}
+.main-content-wrapper .filter-books-wrapper .books-section .card .book-info {
+  width: 100%;
+  max-width: 275px;
+  padding: 16px;
+  margin-top: -3px;
+  border: 1px solid #c2c2c2;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.main-content-wrapper .filter-books-wrapper .books-section .card .book-info h2 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+.main-content-wrapper .filter-books-wrapper .books-section .card .book-info p {
+  font-size: 16px;
+  line-height: 19.2px;
+  font-weight: 400;
+}
+.main-content-wrapper .filter-books-wrapper .books-section .card .book-info .book-additional-info {
+  margin-top: 23px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-content-wrapper .filter-books-wrapper .books-section .card .book-info .book-additional-info .book-views {
+  display: flex;
+  flex-direction: row;
+}
+.main-content-wrapper .filter-books-wrapper .books-section .card .book-info .book-additional-info .book-views p {
+  color: #13297f;
+  font-weight: 700;
+  margin-left: 4px;
+}
+.main-content-wrapper .pagination-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin: 124px 0 112px;
+}
+.main-content-wrapper .pagination-container .pagination-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.main-content-wrapper .pagination-container .pagination-wrapper * {
+  cursor: pointer;
+}
+.main-content-wrapper .pagination-container .pagination-wrapper p {
+  font-size: 24px;
+  font-weight: 500;
+  color: #022859;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+.main-content-wrapper .pagination-container .pagination-wrapper p.active {
+  background-color: #064aa2;
+  color: white;
+}
+.main-content-wrapper .pagination-container .pagination-wrapper img:last-child {
+  rotate: 180deg;
+}
+
+.landing-photo-wrapper {
+  width: 100%;
+  height: 294px;
+  overflow: hidden;
+  position: relative;
+}
+.landing-photo-wrapper .landing-photo {
+  width: 100%;
+  height: 294px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.landing-photo-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #162974;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+header {
+  height: 200px;
+  background-color: #162974;
+}
+@media (max-width: 1200px) {
+  header {
+    height: 120px;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    height: 80px;
+  }
+}
+@media (max-width: 480px) {
+  header {
+    height: 48px;
+  }
+}
+header .header_wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .header_wrapper .header_components {
+  width: 100%;
+  height: 47.21px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header_wrapper .header_components .logo {
+  height: 100%;
+  width: 11.83%;
+}
+@media (max-width: 768px) {
+  header .header_wrapper .header_components .logo {
+    width: 14.48%;
+  }
+}
+header .header_wrapper .header_components .logo a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+header .header_wrapper .header_components .navigation nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -moz-column-gap: 92px;
+       column-gap: 92px;
+}
+@media (max-width: 768px) {
+  header .header_wrapper .header_components .navigation nav ul {
+    -moz-column-gap: 48px;
+         column-gap: 48px;
+  }
+}
+header .header_wrapper .header_components .navigation nav li a {
+  /* font-family: */
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 38.4px;
+  color: #f5f5f5;
+}
+@media (max-width: 1200px) {
+  header .header_wrapper .header_components .navigation nav li a {
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  header .header_wrapper .header_components .navigation nav li a {
+    font-size: 14px;
+    line-height: 16.3px;
+  }
+}
+@media (max-width: 600px) {
+  header .header_wrapper .header_components .navigation {
+    display: none;
+  }
+}
+header .header_wrapper .burger_menu {
+  width: 18px;
+  height: 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+}
+@media (max-width: 600px) {
+  header .header_wrapper .burger_menu {
+    display: flex;
+  }
+}
+header .header_wrapper .burger_menu .line {
+  width: 100%;
+  height: 1.5px;
+  border-radius: 2px;
+  background-color: #ffffff;
+}
+
+.footer-main-info {
+  background-color: #162974;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.6px;
+}
+.footer-main-info .container {
+  padding: 88px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer-main-info .container .contacts-container {
+  display: flex;
+  flex-direction: column;
+}
+.footer-main-info .container .contacts-container .contacts-wrapper {
+  margin-top: 40px;
+}
+.footer-main-info .container .contacts-container .contacts-wrapper .contacts {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.footer-main-info .container .contacts-container .contacts-wrapper .contacts:not(:last-child) {
+  margin-bottom: 22px;
+}
+.footer-main-info .container .contacts-container .contacts-wrapper .contacts p,
+.footer-main-info .container .contacts-container .contacts-wrapper .contacts a {
+  margin-left: 16px;
+}
+.footer-main-info .container .contacts-container .contacts-wrapper .contacts a {
+  color: white;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.footer-main-info .container .usage-container {
+  display: flex;
+  flex-direction: column;
+}
+.footer-main-info .container .usage-container a {
+  color: white;
+  cursor: pointer;
+}
+.footer-main-info .container .usage-container a:not(:last-child) {
+  margin-bottom: 22px;
+}
+.footer-main-info .container .unilab-team-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-main-info .container .unilab-team-container .logo-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer-main-info .container .unilab-team-container p {
+  margin-top: 24px;
+  font-size: 14px;
+  line-height: 16.8px;
+}
+
+.footer-additional-info {
+  background-color: #064aa2;
+  color: white;
+}
+.footer-additional-info .container {
+  padding: 15px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-additional-info .container p {
+  font-size: 18px;
+  line-height: 21.6px;
+  font-weight: 700;
+}
+
+.book-main {
+  background-color: #f5f5f5;
+}
+.book-main .book-container {
+  padding: 76px 6.2% 63px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 72px;
+  background-color: #f5f5f5;
+}
+.book-main .book-container .cover-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.book-main .book-container .cover-wrapper img {
+  width: 504px;
+  height: 685px;
+  margin-bottom: 44px;
+  border-radius: 20px;
+}
+.book-main .book-container .cover-wrapper button {
+  background-color: #203a9c;
+  color: #fff;
+  padding: 32px 116px;
+  border-radius: 20px;
+  font-size: 24px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  font-family: "FiraGO", sans-serif;
+}
+.book-main .book-container .info-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.book-main .book-container .info-wrapper .main-info {
+  display: flex;
+  flex-direction: column;
+}
+.book-main .book-container .info-wrapper .main-info h3 {
+  margin-bottom: 28px;
+  font-family: "FiraGO", sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  color: #000;
+}
+.book-main .book-container .info-wrapper .main-info p {
+  margin-bottom: 40px;
+  font-family: "FiraGO", sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  color: #555;
+}
+.book-main .book-container .info-wrapper .main-info .book-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.book-main .book-container .info-wrapper .main-info .book-info div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+.book-main .book-container .info-wrapper .main-info .book-info div img {
+  width: 20px;
+  height: 17.5px;
+}
+.book-main .book-container .info-wrapper .main-info .book-info div span {
+  font-family: "FiraGO", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  color: #000;
+}
+.book-main .book-container .info-wrapper .button-wrapper {
+  margin: 75px 0 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 46px;
+}
+.book-main .book-container .info-wrapper .button-wrapper button {
+  background-color: transparent;
+  color: #000;
+  padding: 0 0 7px;
+  border: none;
+  border-radius: 0;
+  font-family: "FiraGO";
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+.book-main .book-container .info-wrapper .button-wrapper button:active {
+  color: #112f91;
+}
+.book-main .book-container .info-wrapper .button-wrapper button:focus {
+  color: #112f91;
+  border-bottom: #112f91 solid 3px;
+}
+.book-main .book-container .info-wrapper .anotation-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.book-main .book-container .info-wrapper .anotation-section p {
+  margin-bottom: 32px;
+  font-family: "FiraGO", sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #000;
+}
+.book-main .book-container .info-wrapper .anotation-section div {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.book-main .book-container .info-wrapper .anotation-section div span {
+  font-family: "FiraGO", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  color: #000;
+}
+.book-main .book-container .info-wrapper .feature-section ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.book-main .book-container .info-wrapper .feature-section ul li {
+  padding-bottom: 16px;
+  border-bottom: 1px dashed #d0d0d0;
+  font-family: "FiraGO", sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  color: #000;
+}
+.book-main .book-container .info-wrapper .feature-section ul li:last-child {
+  border-bottom: 0;
+}
+.book-main .book-container .info-wrapper .searching-section {
+  margin-top: 40px;
+}
+.book-main .book-container .info-wrapper .searching-section .each_content_line {
+  display: flex;
+  justify-content: space-between;
+}
+.book-main .book-container .info-wrapper .searching-section .each_content_line p {
+  margin-bottom: 34px;
+  font-family: "FiraGO", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+  line-height: 21.6px;
+}
+.book-main .book-container .info-wrapper .searching-section .each_content_line p:nth-child(2) {
+  letter-spacing: 0.25em;
+}
+.book-main .book-container .info-wrapper .anotation-section,
+.book-main .book-container .info-wrapper .feature-section,
+.book-main .book-container .info-wrapper .searching-section {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+  opacity: 0;
+}
+.book-main .book-container .info-wrapper .open {
+  max-height: 100%;
+  opacity: 1;
+}
+.book-main .similar-books {
+  margin-bottom: 179px;
+  padding: 36px 6.8%;
+  background-color: #fff;
+}
+.book-main .similar-books h3 {
+  margin-bottom: 48px;
+  font-family: "FiraGO", sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: #000;
+}
+.book-main .similar-books .cards-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.book-main .similar-books .cards-wrapper .card {
+  border-radius: 10px;
+  border: solid 1px #c2c2c2;
+  background-color: #fff;
+}
+.book-main .similar-books .cards-wrapper .card img {
+  width: 275px;
+  height: 420px;
+}
+.book-main .similar-books .cards-wrapper .card div {
+  padding: 16px;
+}
+.book-main .similar-books .cards-wrapper .card div h4 {
+  margin-bottom: 40px;
+  font-family: "FiraGO", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #000;
+}
+.book-main .similar-books .cards-wrapper .card div p {
+  margin-bottom: 22.5px;
+  font-family: "FiraGO", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  color: #000;
+}
+.book-main .similar-books .cards-wrapper .card div div {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.book-main .similar-books .cards-wrapper .card div div span {
+  font-family: "FiraGO", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  color: #000;
+}
+.book-main .similar-books .cards-wrapper .card div div div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5;
+}
+.book-main .similar-books .cards-wrapper .card div div div img {
+  width: 22px;
+  height: 15px;
+}
+.book-main .similar-books .cards-wrapper .card div div div span {
+  font-family: "FiraGO", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #13297f;
+}/*# sourceMappingURL=global.css.map */

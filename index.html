@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+
+    <!-- css link -->
+    <link rel="stylesheet" href="./styles/css/global.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header_wrapper container">
+        <div class="header_components">
+          <!-- Logo -->
+          <div class="logo">
+            <a href="index.html"
+              ><img src="./assets/index.html/logo.svg" alt="logo"
+            /></a>
+          </div>
+
+          <!-- Navigation -->
+          <div class="navigation">
+            <nav>
+              <ul>
+                <li><a href="#">წიგნები</a></li>
+                <li><a href="#">პროექტის შესახებ</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Burger Menu Icon -->
+          <div class="burger_menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <div class="landing-photo-wrapper">
+        <img
+          src="./assets/landing-photo.png"
+          alt="landing-photo"
+          class="landing-photo"
+        />
+      </div>
+      <div class="main-content-wrapper">
+        <div class="search-sort-div">
+          <div class="search-div">
+            <img src="./assets/loop-icon.svg" alt="loop-icon" />
+            <input type="text" />
+          </div>
+          <div class="sort-div">
+            <p>სორტირება</p>
+            <img src="./assets/dropdown-icon.svg" alt="dropdown-icon" />
+          </div>
+        </div>
+        <div class="filter-books-wrapper">
+          <section class="filter-section">
+            <button class="filter-clear-button">ფილტრაციის გასუფთავება</button>
+            <section class="dropdown-section">
+              <div class="dropdown-section-wrapper">
+                <div class="dropdown-head">
+                  <p>მედიის ტიპი</p>
+                  <img src="./assets/dropdown-icon.svg" alt="dropdown-icon" />
+                </div>
+                <div class="dropdown-container">
+                  <div class="dropdown">
+                    <div class="dropdown-line"></div>
+                    <label>
+                      წიგნები
+                      <input type="checkbox" name="option1" value="1" />
+                    </label>
+                    <label>
+                      ჟურნალები
+                      <input type="checkbox" name="option2" value="2" />
+                    </label>
+                    <label>
+                      წერილები
+                      <input type="checkbox" name="option3" value="3" />
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown-section-wrapper">
+                <div class="dropdown-head">
+                  <p>თემები</p>
+                  <img src="./assets/dropdown-icon.svg" alt="dropdown-icon" />
+                </div>
+                <div class="dropdown-container">
+                  <div class="dropdown">
+                    <div class="dropdown-line"></div>
+                    <label>
+                      რომანი
+                      <input type="checkbox" name="option1" value="1" />
+                    </label>
+                    <label>
+                      ავტობიოგრაფია
+                      <input type="checkbox" name="option2" value="2" />
+                    </label>
+                    <label>
+                      პოეზია
+                      <input type="checkbox" name="option3" value="3" />
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown-section-wrapper">
+                <div class="dropdown-head">
+                  <p>გამოცემის წელი</p>
+                </div>
+                <div class="publish-date">
+                  <div class="dropdown-line"></div>
+                  <div class="date-wrapper">
+                    <div class="date-input-container">
+                      <label for="date-input">
+                        <img
+                          src="./assets/calendar-icon.svg"
+                          alt="calendar-icon"
+                          class="icon"
+                        />
+                        <p id="date-text">-დან</p>
+                        <input type="date" id="date-input" name="date" />
+                      </label>
+                    </div>
+                    <img src="./assets/dropdown-icon.svg" alt="dropdown-icon" />
+                    <div class="date-input-container">
+                      <label for="date-input">
+                        <img
+                          src="./assets/calendar-icon.svg"
+                          alt="calendar-icon"
+                          class="icon"
+                        />
+                        <p id="date-text">-მდე</p>
+                        <input type="date" id="date-input" name="date" />
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown-section-wrapper">
+                <div class="dropdown-head">
+                  <p>სერიები</p>
+                  <img src="./assets/dropdown-icon.svg" alt="dropdown-icon" />
+                </div>
+                <div class="dropdown-container">
+                  <div class="dropdown">
+                    <div class="dropdown-line"></div>
+                    <label>
+                      რომანი
+                      <input type="checkbox" name="option1" value="1" />
+                    </label>
+                    <label>
+                      ავტობიოგრაფია
+                      <input type="checkbox" name="option2" value="2" />
+                    </label>
+                    <label>
+                      პოეზია
+                      <input type="checkbox" name="option3" value="3" />
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown-section-wrapper">
+                <div class="dropdown-head">
+                  <p>კოლექცია</p>
+                  <img src="./assets/dropdown-icon.svg" alt="dropdown-icon" />
+                </div>
+                <div class="dropdown-container">
+                  <div class="dropdown">
+                    <div class="dropdown-line"></div>
+                    <label>
+                      რომანი
+                      <input type="checkbox" name="option1" value="1" />
+                    </label>
+                    <label>
+                      ავტობიოგრაფია
+                      <input type="checkbox" name="option2" value="2" />
+                    </label>
+                    <label>
+                      პოეზია
+                      <input type="checkbox" name="option3" value="3" />
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </section>
+          <section class="books-section">
+            <a href="./view/book-details.html">
+              <div class="card">
+                <img
+                  src="./assets/book-card-img.png"
+                  alt="book-cover"
+                  class="book-cover"
+                />
+                <div class="book-info">
+                  <h2>სახელწოდება</h2>
+                  <p>გამომცემლობა</p>
+                  <div class="book-additional-info">
+                    <p>2024</p>
+                    <div class="book-views">
+                      <img src="./assets/views-icon.svg" alt="views-icon" />
+                      <p>29</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="./view/book-details.html">
+              <div class="card">
+                <img
+                  src="./assets/book-card-img.png"
+                  alt="book-cover"
+                  class="book-cover"
+                />
+                <div class="book-info">
+                  <h2>სახელწოდება</h2>
+                  <p>გამომცემლობა</p>
+                  <div class="book-additional-info">
+                    <p>2024</p>
+                    <div class="book-views">
+                      <img src="./assets/views-icon.svg" alt="views-icon" />
+                      <p>29</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="./view/book-details.html">
+              <div class="card">
+                <img
+                  src="./assets/book-card-img.png"
+                  alt="book-cover"
+                  class="book-cover"
+                />
+                <div class="book-info">
+                  <h2>სახელწოდება</h2>
+                  <p>გამომცემლობა</p>
+                  <div class="book-additional-info">
+                    <p>2024</p>
+                    <div class="book-views">
+                      <img src="./assets/views-icon.svg" alt="views-icon" />
+                      <p>29</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="./view/book-details.html">
+              <div class="card">
+                <img
+                  src="./assets/book-card-img.png"
+                  alt="book-cover"
+                  class="book-cover"
+                />
+                <div class="book-info">
+                  <h2>სახელწოდება</h2>
+                  <p>გამომცემლობა</p>
+                  <div class="book-additional-info">
+                    <p>2024</p>
+                    <div class="book-views">
+                      <img src="./assets/views-icon.svg" alt="views-icon" />
+                      <p>29</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="./view/book-details.html">
+              <div class="card">
+                <img
+                  src="./assets/book-card-img.png"
+                  alt="book-cover"
+                  class="book-cover"
+                />
+                <div class="book-info">
+                  <h2>სახელწოდება</h2>
+                  <p>გამომცემლობა</p>
+                  <div class="book-additional-info">
+                    <p>2024</p>
+                    <div class="book-views">
+                      <img src="./assets/views-icon.svg" alt="views-icon" />
+                      <p>29</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="./view/book-details.html">
+              <div class="card">
+                <img
+                  src="./assets/book-card-img.png"
+                  alt="book-cover"
+                  class="book-cover"
+                />
+                <div class="book-info">
+                  <h2>სახელწოდება</h2>
+                  <p>გამომცემლობა</p>
+                  <div class="book-additional-info">
+                    <p>2024</p>
+                    <div class="book-views">
+                      <img src="./assets/views-icon.svg" alt="views-icon" />
+                      <p>29</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="./view/book-details.html">
+              <div class="card">
+                <img
+                  src="./assets/book-card-img.png"
+                  alt="book-cover"
+                  class="book-cover"
+                />
+                <div class="book-info">
+                  <h2>სახელწოდება</h2>
+                  <p>გამომცემლობა</p>
+                  <div class="book-additional-info">
+                    <p>2024</p>
+                    <div class="book-views">
+                      <img src="./assets/views-icon.svg" alt="views-icon" />
+                      <p>29</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="./view/book-details.html">
+              <div class="card">
+                <img
+                  src="./assets/book-card-img.png"
+                  alt="book-cover"
+                  class="book-cover"
+                />
+                <div class="book-info">
+                  <h2>სახელწოდება</h2>
+                  <p>გამომცემლობა</p>
+                  <div class="book-additional-info">
+                    <p>2024</p>
+                    <div class="book-views">
+                      <img src="./assets/views-icon.svg" alt="views-icon" />
+                      <p>29</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="./view/book-details.html">
+              <div class="card">
+                <img
+                  src="./assets/book-card-img.png"
+                  alt="book-cover"
+                  class="book-cover"
+                />
+                <div class="book-info">
+                  <h2>სახელწოდება</h2>
+                  <p>გამომცემლობა</p>
+                  <div class="book-additional-info">
+                    <p>2024</p>
+                    <div class="book-views">
+                      <img src="./assets/views-icon.svg" alt="views-icon" />
+                      <p>29</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="./view/book-details.html">
+              <div class="card">
+                <img
+                  src="./assets/book-card-img.png"
+                  alt="book-cover"
+                  class="book-cover"
+                />
+                <div class="book-info">
+                  <h2>სახელწოდება</h2>
+                  <p>გამომცემლობა</p>
+                  <div class="book-additional-info">
+                    <p>2024</p>
+                    <div class="book-views">
+                      <img src="./assets/views-icon.svg" alt="views-icon" />
+                      <p>29</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="./view/book-details.html">
+              <div class="card">
+                <img
+                  src="./assets/book-card-img.png"
+                  alt="book-cover"
+                  class="book-cover"
+                />
+                <div class="book-info">
+                  <h2>სახელწოდება</h2>
+                  <p>გამომცემლობა</p>
+                  <div class="book-additional-info">
+                    <p>2024</p>
+                    <div class="book-views">
+                      <img src="./assets/views-icon.svg" alt="views-icon" />
+                      <p>29</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="./view/book-details.html">
+              <div class="card">
+                <img
+                  src="./assets/book-card-img.png"
+                  alt="book-cover"
+                  class="book-cover"
+                />
+                <div class="book-info">
+                  <h2>სახელწოდება</h2>
+                  <p>გამომცემლობა</p>
+                  <div class="book-additional-info">
+                    <p>2024</p>
+                    <div class="book-views">
+                      <img src="./assets/views-icon.svg" alt="views-icon" />
+                      <p>29</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </section>
+        </div>
+        <div class="pagination-container">
+          <div class="pagination-wrapper">
+            <img src="./assets/pagination-arrow.svg" alt="pagination-arrow" />
+            <p>1</p>
+            <p class="active">2</p>
+            <p>3</p>
+            <img src="./assets/pagination-arrow.svg" alt="pagination-arrow" />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <section class="footer-main-info">
+        <div class="container">
+          <div class="contacts-container">
+            <p>კონტაქტი</p>
+            <div class="contacts-wrapper">
+              <div class="contacts">
+                <img src="./assets/phone-icon.svg" alt="phone-icon" />
+                <p>(+995 32) 222 00 09</p>
+              </div>
+              <div class="contacts">
+                <img src="./assets/email-icon.svg" alt="email-icon" />
+                <p>info@iliauni.edu.ge</p>
+              </div>
+              <div class="contacts">
+                <img src="./assets/location-icon.svg" alt="location-icon" />
+                <p>ქაქუცა ჩოლოყაშვილის 3/5</p>
+              </div>
+              <div class="contacts">
+                <img src="./assets/link-icon.svg" alt="link-icon" />
+                <a href="#">https://library.iliauni.edu.ge/</a>
+              </div>
+            </div>
+          </div>
+          <div class="usage-container">
+            <a href="#">კონფიდენციალურობის პოლიტიკა</a>
+            <a href="#">გამოყენების წესები</a>
+          </div>
+          <div class="unilab-team-container">
+            <div class="logo-container">
+              <img src="./assets/iliauni-logo.svg" alt="iliauni-logo" />
+              <img src="./assets/unilab-logo.svg" alt="unilab-logo" />
+            </div>
+            <p>ვებსაიტზე იმუშავა უნილაბის გუნდმა</p>
+          </div>
+        </div>
+      </section>
+      <section class="footer-additional-info">
+        <div class="container">
+          <p>ილიას სახელმწიფო უნივერსიტეტი 2024. ყველა უფლება დაცულია.</p>
+          <img src="./assets/facebook-icon.svg" alt="facebook-icon" />
+        </div>
+      </section>
+    </footer>
+
+    <!-- JavaScript link -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>

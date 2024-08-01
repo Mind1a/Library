@@ -1,0 +1,101 @@
+header {
+  height: 200px;
+  background-color: $header-background;
+
+  @media (max-width: $desktop-large-screen) {
+    height: 120px;
+  }
+
+  @media (max-width: $tablet) {
+    height: 80px;
+  }
+
+  @media (max-width: $mobile) {
+    height: 48px;
+  }
+
+  .header_wrapper {
+    height: 100%;
+    @include flex(center, center);
+
+    .header_components {
+      width: 100%;
+      height: 47.21px;
+      @include flex(space-between, center);
+
+      .logo {
+        height: 100%;
+        width: 11.83%;
+
+        @media (max-width: $tablet) {
+          width: 14.48%;
+        }
+
+        a {
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+
+      .navigation {
+        nav {
+          ul {
+            @include flex(space-between, center);
+            column-gap: 92px;
+
+            @media (max-width: $tablet) {
+              column-gap: 48px;
+            }
+          }
+
+          li {
+            a {
+              /* font-family: */
+              font-weight: 800;
+              font-size: 28px;
+              line-height: 38.4px;
+              color: $nav-element-color;
+
+              @media (max-width: $desktop-large-screen) {
+                font-size: 20px;
+              }
+
+              @media (max-width: $tablet) {
+                font-size: 14px;
+                line-height: 16.3px;
+              }
+            }
+          }
+        }
+
+        @media (max-width: 600px) {
+          display: none;
+        }
+      }
+    }
+
+    .burger_menu {
+      width: 18px;
+      height: 12px;
+      cursor: pointer;
+
+      @include flex(space-between);
+      flex-direction: column;
+      display: none;
+
+      @media (max-width: 600px) {
+        display: flex;
+      }
+
+      .line {
+        width: 100%;
+        height: 1.5px;
+        border-radius: 2px;
+        background-color: #ffffff;
+      }
+    }
+  }
+}

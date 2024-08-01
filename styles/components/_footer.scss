@@ -1,0 +1,98 @@
+.footer-main-info {
+  background-color: $header-background;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.6px;
+
+  .container {
+    padding: 88px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    // align-items: center;
+
+    .contacts-container {
+      display: flex;
+      flex-direction: column;
+
+      .contacts-wrapper {
+        margin-top: 40px;
+
+        .contacts {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          &:not(:last-child) {
+            margin-bottom: 22px;
+          }
+
+          p,
+          a {
+            margin-left: 16px;
+          }
+
+          a {
+            color: white;
+            cursor: pointer;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .usage-container {
+      display: flex;
+      flex-direction: column;
+
+      a {
+        color: white;
+        cursor: pointer;
+
+        &:not(:last-child) {
+          margin-bottom: 22px;
+        }
+      }
+    }
+
+    .unilab-team-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .logo-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        // align-items: center;
+        justify-content: space-between;
+      }
+
+      p {
+        margin-top: 24px;
+        font-size: 14px;
+        line-height: 16.8px;
+      }
+    }
+  }
+}
+
+.footer-additional-info {
+  background-color: #064aa2;
+  color: white;
+
+  .container {
+    padding: 15px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      font-size: 18px;
+      line-height: 21.6px;
+      font-weight: 700;
+    }
+  }
+}
