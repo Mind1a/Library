@@ -917,7 +917,27 @@ header .header_wrapper .burger_menu .line {
 .book-main .book-container .info-wrapper .feature-section ul li:last-child {
   border-bottom: 0;
 }
-.book-main .book-container .info-wrapper .anotation-section, .book-main .book-container .info-wrapper .feature-section, .book-main .book-container .info-wrapper .searching-section {
+.book-main .book-container .info-wrapper .searching-section {
+  margin-top: 40px;
+}
+.book-main .book-container .info-wrapper .searching-section .each_content_line {
+  display: flex;
+  justify-content: space-between;
+}
+.book-main .book-container .info-wrapper .searching-section .each_content_line p {
+  margin-bottom: 34px;
+  font-family: "FiraGO", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+  line-height: 21.6px;
+}
+.book-main .book-container .info-wrapper .searching-section .each_content_line p:nth-child(2) {
+  letter-spacing: 0.25em;
+}
+.book-main .book-container .info-wrapper .anotation-section,
+.book-main .book-container .info-wrapper .feature-section,
+.book-main .book-container .info-wrapper .searching-section {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
