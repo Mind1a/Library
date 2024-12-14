@@ -150,7 +150,7 @@ button {
 
 /* firago-latin-100-normal */
 @font-face {
-  font-family: "FiraGO";
+  font-family: "FiraGO100";
   font-style: normal;
   font-display: swap;
   font-weight: 100;
@@ -158,7 +158,7 @@ button {
 }
 /* firago-latin-200-normal */
 @font-face {
-  font-family: "FiraGO";
+  font-family: "FiraGO200";
   font-style: normal;
   font-display: swap;
   font-weight: 200;
@@ -166,7 +166,7 @@ button {
 }
 /* firago-latin-300-normal */
 @font-face {
-  font-family: "FiraGO";
+  font-family: "FiraGO300";
   font-style: normal;
   font-display: swap;
   font-weight: 300;
@@ -174,7 +174,7 @@ button {
 }
 /* firago-latin-400-normal */
 @font-face {
-  font-family: "FiraGO";
+  font-family: "FiraGO400";
   font-style: normal;
   font-display: swap;
   font-weight: 400;
@@ -182,7 +182,7 @@ button {
 }
 /* firago-latin-500-normal */
 @font-face {
-  font-family: "FiraGO";
+  font-family: "FiraGO500";
   font-style: normal;
   font-display: swap;
   font-weight: 500;
@@ -190,7 +190,7 @@ button {
 }
 /* firago-latin-600-normal */
 @font-face {
-  font-family: "FiraGO";
+  font-family: "FiraGO600";
   font-style: normal;
   font-display: swap;
   font-weight: 600;
@@ -198,7 +198,7 @@ button {
 }
 /* firago-latin-700-normal */
 @font-face {
-  font-family: "FiraGO";
+  font-family: "FiraGO700";
   font-style: normal;
   font-display: swap;
   font-weight: 700;
@@ -206,7 +206,7 @@ button {
 }
 /* firago-latin-800-normal */
 @font-face {
-  font-family: "FiraGO";
+  font-family: "FiraGO800";
   font-style: normal;
   font-display: swap;
   font-weight: 800;
@@ -214,12 +214,16 @@ button {
 }
 /* firago-latin-900-normal */
 @font-face {
-  font-family: "FiraGO";
+  font-family: "FiraGO900";
   font-style: normal;
   font-display: swap;
   font-weight: 900;
   src: url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-900-normal.woff2) format("woff2"), url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-900-normal.woff) format("woff");
 }
+body {
+  background-color: #F5F5F5;
+}
+
 .container {
   max-width: 1680px;
   width: 100%;
@@ -242,52 +246,10 @@ button {
     width: 91.67%;
   }
 }
-.main-content-wrapper .search-sort-div {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-.main-content-wrapper .search-sort-div .search-div {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-}
-.main-content-wrapper .search-sort-div .search-div input {
-  width: 361px;
-  height: 62px;
-  border-radius: 14px;
-  padding: 14px 15px 14px 60px;
-  border: 1.5px solid #000000;
-  font-size: 18px;
-}
-.main-content-wrapper .search-sort-div .search-div input:focus {
-  outline: none;
-}
-.main-content-wrapper .search-sort-div .search-div img {
-  position: absolute;
-  left: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-.main-content-wrapper .search-sort-div .sort-div {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.main-content-wrapper .search-sort-div .sort-div p {
-  font-size: 18px;
-}
-.main-content-wrapper .search-sort-div .sort-div img {
-  cursor: pointer;
-}
 .main-content-wrapper .filter-books-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 35px;
 }
 .main-content-wrapper .filter-books-wrapper .filter-section {
   width: 360px;
@@ -465,76 +427,57 @@ button {
 }
 .main-content-wrapper .filter-books-wrapper .books-section {
   max-width: 1230px;
-  flex: 1;
-  background-color: white;
-  padding: 24px 29px;
-  border-radius: 10px;
   display: grid;
-  align-items: center;
   grid-template-columns: repeat(4, 1fr);
   -moz-column-gap: 24px;
        column-gap: 24px;
-  row-gap: 34px;
-}
-@media (max-width: 1760px) {
-  .main-content-wrapper .filter-books-wrapper .books-section {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (max-width: 1440px) {
-  .main-content-wrapper .filter-books-wrapper .books-section {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 1110px) {
-  .main-content-wrapper .filter-books-wrapper .books-section {
-    grid-template-columns: repeat(1, 1fr);
-  }
+  row-gap: 30px;
 }
 .main-content-wrapper .filter-books-wrapper .books-section .card {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
+  position: relative;
+  margin: 0;
+  border: 1px solid rgba(51, 51, 51, 0.3764705882);
+  border-radius: 10px;
 }
 .main-content-wrapper .filter-books-wrapper .books-section .card .book-cover {
-  height: 420px;
+  width: 260px;
+  height: 367px;
+  border-radius: 10px;
 }
 .main-content-wrapper .filter-books-wrapper .books-section .card .book-info {
-  width: 100%;
-  max-width: 275px;
-  padding: 16px;
-  margin-top: -3px;
-  border: 1px solid #c2c2c2;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  color: #000000;
-}
-.main-content-wrapper .filter-books-wrapper .books-section .card .book-info h2 {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 24px;
-  margin-bottom: 20px;
-}
-.main-content-wrapper .filter-books-wrapper .books-section .card .book-info p {
-  font-size: 16px;
-  line-height: 19.2px;
-  font-weight: 400;
-}
-.main-content-wrapper .filter-books-wrapper .books-section .card .book-info .book-additional-info {
-  margin-top: 23px;
+  position: absolute;
+  top: 0;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  height: 100%;
+  width: 100%;
 }
-.main-content-wrapper .filter-books-wrapper .books-section .card .book-info .book-additional-info .book-views {
+.main-content-wrapper .filter-books-wrapper .books-section .card .book-info .book-views {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  padding: 15px 12px 0 0;
 }
-.main-content-wrapper .filter-books-wrapper .books-section .card .book-info .book-additional-info .book-views p {
-  color: #13297f;
-  font-weight: 700;
-  margin-left: 4px;
+.main-content-wrapper .filter-books-wrapper .books-section .card .book-info .book-views p {
+  color: #ffffff;
+  font-family: FiraGo700;
+  font-size: 1rem;
+}
+.main-content-wrapper .filter-books-wrapper .books-section .card .book-info .title-share {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 12px 12px 16px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.main-content-wrapper .filter-books-wrapper .books-section .card .book-info .title-share h2 {
+  font-family: FiraGo600;
+  color: #333333;
+  font-size: 1rem;
 }
 .main-content-wrapper .pagination-container {
   display: flex;
