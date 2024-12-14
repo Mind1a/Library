@@ -1,0 +1,75 @@
+$header-blue: #0468dc;
+$text-color: #333333;
+
+.main-content-wrapper {
+  margin-top: 54px;
+}
+
+.about-main {
+  .landing-photo-wrapper::before {
+    display: none;
+  } //np need for overlay anymore
+
+  section {
+    margin-bottom: 144px;
+  }
+
+  h2 {
+    margin-bottom: 40px;
+    @include text_font_style($header-blue, inherit, 40px, bold);
+  }
+
+  p,
+  .instructions-page li {
+    @include text_font_style($text-color, inherit, 20px, normal);
+    line-height: 1.5;
+  }
+
+  .about-project-section article > p:last-child,
+  .funds-section article > p:last-child {
+    margin-top: 45px;
+  } //space between last <p> and previous one in articles
+
+  .instructions-page ul {
+    @include flex();
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contacts-section > div {
+    display: grid;
+    grid-template-columns: 45fr 55fr;
+
+    ul {
+      @include flex(space-around, baseline);
+      flex-direction: column;
+      padding: 30px 0;
+
+      li {
+        @include flex();
+        gap: 16px;
+
+        a {
+          @include text_font_style($text-color, inherit, 22px, 500);
+        }
+      }
+
+      img {
+        width: 27px;
+      }
+    }
+
+    .iframe-div {
+      display: flex;
+    } // stretching to 100%
+
+    iframe {
+      flex: 1; // stretching to 100%
+      width: 100%;
+      height: 288px;
+
+      border-radius: 10px;
+      border: 2px solid #0468dc;
+    }
+  }
+}
