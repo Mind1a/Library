@@ -654,7 +654,7 @@ header .header_wrapper .header_components .navigation nav li a {
   font-weight: 800;
   font-size: 28px;
   line-height: 38.4px;
-  color: #f5f5f5;
+  color: rgba(245, 245, 245, 0.3764705882);
 }
 @media (max-width: 1200px) {
   header .header_wrapper .header_components .navigation nav li a {
@@ -666,6 +666,9 @@ header .header_wrapper .header_components .navigation nav li a {
     font-size: 14px;
     line-height: 16.3px;
   }
+}
+header .header_wrapper .header_components .navigation nav li .active_header_nav {
+  color: #f5f5f5;
 }
 @media (max-width: 600px) {
   header .header_wrapper .header_components .navigation {

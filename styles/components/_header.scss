@@ -57,7 +57,7 @@ header {
               font-weight: 800;
               font-size: 28px;
               line-height: 38.4px;
-              color: $nav-element-color;
+              color: $nav-element-transparent;
 
               @media (max-width: $desktop-large-screen) {
                 font-size: 20px;
@@ -67,6 +67,10 @@ header {
                 font-size: 14px;
                 line-height: 16.3px;
               }
+            }
+
+            .active_header_nav{
+              color: $nav-element-active;
             }
           }
         }
