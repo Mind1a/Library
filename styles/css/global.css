@@ -964,4 +964,34 @@ header .header_wrapper .burger_menu .line {
   font-size: 16px;
   font-weight: bold;
   color: #13297f;
+}
+
+body {
+  background-color: #F5F5F5;
+}
+
+main {
+  min-height: calc(100dvh - 96px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .error-message {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+main .error-message h1 {
+  color: #022859;
+  font-family: FiraGo700;
+  font-size: 3rem;
+}
+main .error-message p {
+  color: #0468DC;
+  font-family: FiraGo700;
+  font-size: 1.5rem;
+  text-decoration-line: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
 }/*# sourceMappingURL=global.css.map */
