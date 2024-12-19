@@ -1,28 +1,30 @@
-body{
-    height: 100vh;
-    background-color: $body-background-color;
+body {
+  background-color: $body-background-color;
 }
 
-main{
-    .error-message{
-        padding-top: 288px; //384 - 96
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        text-align: center;
+main {
+  min-height: calc(100dvh - 96px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .error-message {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
 
-        h1{
-            color: $error-page-h1;
-            font-family: FiraGo700;
-            font-size: 3rem;
-        }
-
-        p{
-            color: $error-page-p;
-            font-family: FiraGo700;
-            font-size: 1.5rem;
-            text-decoration-line: underline;
-            text-decoration-skip-ink: none;
-        }
+    h1 {
+      color: $error-page-h1;
+      font-family: FiraGo700;
+      font-size: 3rem;
     }
+
+    p {
+      color: $error-page-p;
+      font-family: FiraGo700;
+      font-size: 1.5rem;
+      text-decoration-line: underline;
+      text-decoration-skip-ink: none;
+    }
+  }
 }

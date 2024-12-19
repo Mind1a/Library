@@ -1024,12 +1024,16 @@ header .header_wrapper .burger_menu .line {
 }
 
 body {
-  height: 100vh;
   background-color: #F5F5F5;
 }
 
+main {
+  min-height: calc(100dvh - 96px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 main .error-message {
-  padding-top: 288px;
   display: flex;
   flex-direction: column;
   gap: 2rem;
