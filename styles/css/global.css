@@ -252,97 +252,146 @@ body {
   justify-content: space-between;
 }
 .main-content-wrapper .filter-books-wrapper .filter-section {
-  width: 360px;
-  margin-right: 10px;
+  max-width: 402px;
 }
-.main-content-wrapper .filter-books-wrapper .filter-section .filter-clear-button {
-  width: 100%;
-  height: 58px;
-  border: 1px solid #022859;
-  border-radius: 10px;
-  background-color: white;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 21.6px;
-  color: #022859;
-}
-.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section {
-  margin-top: 32px;
-}
-.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .dropdown-head {
+.main-content-wrapper .filter-books-wrapper .filter-section .buttons-section {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  gap: 25px;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .buttons-section .search-container {
+  position: relative;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .buttons-section .search-container .search-icon {
+  position: absolute;
+  padding: 0 12px 0 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .buttons-section .search-container input[type=text] {
+  width: 100%;
+  height: 56px;
+  border-radius: 10px;
+  border: 1px solid #333333;
+  padding: 0 50px;
+  font-family: FiraGo400;
+  font-size: 20px;
+  color: 333333;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .buttons-section .search-container input[type=text]::-moz-placeholder {
+  color: rgba(60, 60, 67, 0.6);
+  font-family: FiraGO400;
+  font-size: 20px;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .buttons-section .search-container input[type=text]::placeholder {
+  color: rgba(60, 60, 67, 0.6);
+  font-family: FiraGO400;
+  font-size: 20px;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .buttons-section .blue-button {
+  width: 100%;
+  height: 61px;
+  background-color: #0468dc;
+  color: #FFFFFF;
+  font-family: "FiraGo400";
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 12px;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .buttons-section .dropdown-button {
+  width: 100%;
+  height: 59px;
+  border: 2px solid #0468dc;
+  border-radius: 15px;
+  background-color: #ffffff;
+  display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10px;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .buttons-section .dropdown-button .dropdown-text {
+  color: #0468dc;
   font-size: 24px;
-  font-weight: 200px;
-  line-height: 28.8px;
+  font-family: FiraGo400;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .clean-filters {
   cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin: 11px 0 19px;
 }
-.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .dropdown-head img {
-  cursor: pointer;
+.main-content-wrapper .filter-books-wrapper .filter-section .clean-filters .clean-filters-text {
+  color: rgba(60, 60, 67, 0.6);
+  font-family: FiraGo600;
+  font-size: 1rem;
 }
-.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .dropdown-head img.rotate {
-  transform: rotate(180deg);
+.main-content-wrapper .filter-books-wrapper .filter-section .dropdownUnderline {
+  width: 100%;
+  height: 2px;
+  background-color: #D8EBFC;
+  border-radius: 2px;
 }
-.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .dropdown-container {
-  height: 0;
-  overflow: hidden;
-  transition: height 0.3s ease-in-out;
+.main-content-wrapper .filter-books-wrapper .filter-section .media-type-section {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
 }
-.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .dropdown-container .dropdown {
+.main-content-wrapper .filter-books-wrapper .filter-section .media-type-section .dropdown-section-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .media-type-section .dropdown-section-wrapper h2 {
+  color: #333333;
+  font-size: 24px;
+  font-family: FiraGo700;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .media-type-section .dropdown-section-wrapper .dropdown {
   display: flex;
   flex-direction: column;
 }
-.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .dropdown-container .dropdown .dropdown-line {
-  width: 100%;
-  height: 1px;
-  border: 1px solid #d5d5d5;
-  border-radius: 5px;
-  color: #d5d5d5;
-  margin: 18px 0;
-}
-.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .dropdown-container .dropdown label {
+.main-content-wrapper .filter-books-wrapper .filter-section .media-type-section .dropdown-section-wrapper .dropdown label {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 24px;
+  font-size: 16px;
+  font-family: FiraGo400;
+  color: #333333;
   position: relative;
 }
-.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .dropdown-container .dropdown label:not(:last-child) {
-  margin-bottom: 20px;
+.main-content-wrapper .filter-books-wrapper .filter-section .media-type-section .dropdown-section-wrapper .dropdown label:not(:last-child) {
+  margin-bottom: 15px;
 }
-.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .dropdown-container .dropdown label input[type=checkbox] {
+.main-content-wrapper .filter-books-wrapper .filter-section .media-type-section .dropdown-section-wrapper .dropdown label input[type=checkbox] {
   -moz-appearance: none;
        appearance: none;
   -webkit-appearance: none;
   width: 22px;
   height: 22px;
   cursor: pointer;
-  border: 2px solid #515151;
+  border: 2px solid rgba(60, 60, 67, 0.3764705882);
   border-radius: 3px;
   position: relative;
   display: inline-block;
   vertical-align: middle;
 }
-.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .dropdown-container .dropdown label input[type=checkbox]::before {
+.main-content-wrapper .filter-books-wrapper .filter-section .media-type-section .dropdown-section-wrapper .dropdown label input[type=checkbox]::before {
   content: "";
   display: block;
   width: 100%;
   height: 100%;
 }
-.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .dropdown-container .dropdown label input[type=checkbox]:checked::before {
-  background-color: #022859;
+.main-content-wrapper .filter-books-wrapper .filter-section .media-type-section .dropdown-section-wrapper .dropdown label input[type=checkbox]:checked::before {
+  background-color: #0077ff;
 }
-.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .dropdown-container .dropdown label input[type=checkbox]:checked {
-  background-color: #022859;
-  border: 2px solid #022859;
+.main-content-wrapper .filter-books-wrapper .filter-section .media-type-section .dropdown-section-wrapper .dropdown label input[type=checkbox]:checked {
+  background-color: #0077ff;
+  border: 2px solid #0077ff;
 }
-.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .dropdown-container .dropdown label input[type=checkbox]:checked::after {
+.main-content-wrapper .filter-books-wrapper .filter-section .media-type-section .dropdown-section-wrapper .dropdown label input[type=checkbox]:checked::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -353,57 +402,42 @@ body {
   border-width: 0 2.5px 2.5px 0;
   transform: translate(-40%, -60%) rotate(45deg);
 }
-.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .dropdown-container.active {
-  height: 184px;
-}
-.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .publish-date {
-  height: 115px;
-}
-.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .publish-date .dropdown-line {
-  width: 100%;
-  height: 1px;
-  border: 1px solid #d5d5d5;
-  border-radius: 5px;
-  color: #d5d5d5;
-  margin: 25px 0;
-}
-.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .publish-date .date-wrapper {
+.main-content-wrapper .filter-books-wrapper .filter-section .media-type-section .dropdown-section-wrapper .publish-date .date-wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
-.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .publish-date .date-wrapper img {
+.main-content-wrapper .filter-books-wrapper .filter-section .media-type-section .dropdown-section-wrapper .publish-date .date-wrapper img {
   rotate: 270deg;
 }
-.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .publish-date .date-wrapper .date-input-container {
+.main-content-wrapper .filter-books-wrapper .filter-section .media-type-section .dropdown-section-wrapper .publish-date .date-wrapper .date-input-container {
   display: flex;
   align-items: center;
   position: relative;
-  border: 1px solid #000;
-  border-radius: 15px;
+  border: 1px solid rgba(60, 60, 67, 0.6);
+  border-radius: 8px;
   width: 145px;
   height: 54px;
   padding: 17px 16px;
   cursor: pointer;
 }
-.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .publish-date .date-wrapper .date-input-container label {
+.main-content-wrapper .filter-books-wrapper .filter-section .media-type-section .dropdown-section-wrapper .publish-date .date-wrapper .date-input-container label {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
-.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .publish-date .date-wrapper .date-input-container label .icon {
+.main-content-wrapper .filter-books-wrapper .filter-section .media-type-section .dropdown-section-wrapper .publish-date .date-wrapper .date-input-container label .calendar-icon {
   margin-right: 10px;
   rotate: 0deg;
 }
-.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .publish-date .date-wrapper .date-input-container label p {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 19.2px;
-  color: #7d7d7d;
+.main-content-wrapper .filter-books-wrapper .filter-section .media-type-section .dropdown-section-wrapper .publish-date .date-wrapper .date-input-container label p {
+  font-size: 16px;
+  font-family: FiraGo400;
+  color: rgba(60, 60, 67, 0.6);
 }
-.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .publish-date .date-wrapper .date-input-container label input[type=date] {
+.main-content-wrapper .filter-books-wrapper .filter-section .media-type-section .dropdown-section-wrapper .publish-date .date-wrapper .date-input-container label input[type=date] {
   position: absolute;
   border: none;
   outline: none;
@@ -413,17 +447,15 @@ body {
   left: 0;
   opacity: 0;
   z-index: 10;
+  width: 10px;
   cursor: pointer;
 }
-.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .publish-date .date-wrapper .date-input-container label input[type=date]::-webkit-inner-spin-button, .main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .publish-date .date-wrapper .date-input-container label input[type=date]::-webkit-clear-button {
+.main-content-wrapper .filter-books-wrapper .filter-section .media-type-section .dropdown-section-wrapper .publish-date .date-wrapper .date-input-container label input[type=date]::-webkit-inner-spin-button, .main-content-wrapper .filter-books-wrapper .filter-section .media-type-section .dropdown-section-wrapper .publish-date .date-wrapper .date-input-container label input[type=date]::-webkit-clear-button {
   display: none;
 }
-.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper .publish-date .date-wrapper .date-input-container label input[type=date]::-webkit-calendar-picker-indicator {
+.main-content-wrapper .filter-books-wrapper .filter-section .media-type-section .dropdown-section-wrapper .publish-date .date-wrapper .date-input-container label input[type=date]::-webkit-calendar-picker-indicator {
   opacity: 0;
   cursor: pointer;
-}
-.main-content-wrapper .filter-books-wrapper .filter-section .dropdown-section .dropdown-section-wrapper:not(:last-child) {
-  margin-bottom: 30px;
 }
 .main-content-wrapper .filter-books-wrapper .books-section {
   max-width: 1230px;
@@ -821,7 +853,7 @@ header .header_wrapper .burger_menu .line {
   gap: 46px;
 }
 .book-main .book-container .info-wrapper .button-wrapper button {
-  background-color: transparent;
+  background-color: red;
   color: #000;
   padding: 0 0 7px;
   border: none;
