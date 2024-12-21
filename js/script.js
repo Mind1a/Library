@@ -25,3 +25,25 @@ dateContainer.forEach((container) => {
     });
   });
 });
+
+//Hover on main page cards
+
+const bookCards = document.querySelectorAll('.card');
+
+
+
+bookCards.forEach((card) => {
+  
+  const bookInfoCard = card.querySelector('.title-share');
+  const bookInfoHover = card.querySelector('.title-share-hover');
+
+  
+
+  card.addEventListener('mouseover', () => {
+    bookInfoHover.style.display = "block";
+  });
+
+  card.addEventListener('mouseout', () => {
+    bookInfoHover.style.display = "none";
+  });
+})
