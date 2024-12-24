@@ -1,0 +1,79 @@
+$header-blue: #0468dc;
+$text-color: #333333;
+
+.about-main {
+  font-family: FiraGo400;
+
+  .landing-photo-wrapper::before {
+    display: none;
+  }
+
+  section {
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    margin-bottom: 16px;
+    @include text_font_style($header-blue, inherit, 40px, bold);
+  }
+
+  p,
+  .instructions-page li {
+    @include text_font_style($text-color, inherit, 20px, normal);
+    line-height: 1.5;
+  }
+
+  .about-project-section article > p:last-child {
+    margin-top: 45px;
+  } //space between last <p> and previous one in articles
+
+  .instructions-page ul {
+    @include flex();
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contacts-section {
+    margin-bottom: 64px;
+
+    & > div {
+      display: grid;
+      grid-template-columns: 45fr 55fr;
+
+      ul {
+        @include flex(space-around, baseline);
+        flex-direction: column;
+        padding: 30px 0;
+
+        li {
+          @include flex();
+          gap: 20px;
+
+          a {
+            @include text_font_style($text-color, inherit, 22px, 500);
+            font-family: Firago500;
+            line-height: 26px;
+          }
+        }
+
+        img {
+          width: 40px;
+          aspect-ratio: 1;
+        }
+      }
+
+      .iframe-div {
+        display: flex;
+      }
+
+      iframe {
+        flex: 1;
+        width: 100%;
+        height: 288px;
+
+        border-radius: 10px;
+        border: 2px solid #0468dc;
+      }
+    }
+  }
+}
