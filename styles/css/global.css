@@ -244,11 +244,41 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  transition: background-color 0.2s;
 }
 .main-content-wrapper .filter-books-wrapper .filter-section .buttons-section .dropdown-button .dropdown-text {
   color: #0468dc;
   font-size: 24px;
   font-family: FiraGo400;
+  transition: color 0.2s;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .buttons-section .dropdown-button.active-btn {
+  background-color: #0468dc;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .buttons-section .dropdown-button.active-btn .dropdown-text {
+  color: #ffffff;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .buttons-section .dropdown-options {
+  overflow: hidden;
+  height: 0;
+  transition: height 0.2s;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .buttons-section .dropdown-options li {
+  padding: 8px 24px;
+  color: hsla(240, 6%, 25%, 0.6);
+  font-family: FiraGO350;
+  font-size: 18px;
+  font-weight: 350;
+  line-height: normal;
+  cursor: pointer;
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .buttons-section .dropdown-options li:hover {
+  background-color: hsl(208, 86%, 92%);
+}
+.main-content-wrapper .filter-books-wrapper .filter-section .buttons-section .dropdown-options.displayed {
+  height: 156px;
+  outline: 2px solid hsla(240, 6%, 25%, 0.6);
+  border-radius: 15px;
 }
 .main-content-wrapper .filter-books-wrapper .filter-section .clean-filters {
   cursor: pointer;
