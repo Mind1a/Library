@@ -2,6 +2,7 @@
   background-color: #f5f5f5;
 
   .book-container {
+    max-width: 1140px;
     padding: 76px 6.2% 63px;
     display: flex;
     flex-direction: row;
@@ -84,6 +85,7 @@
 
         button {
           @include chooseButton();
+          background-color: transparent;
         }
       }
 
@@ -138,6 +140,8 @@
       }
 
       .searching-section {
+        max-width: 1140px;
+
         margin-top: 40px;
 
         .each_content_line {
