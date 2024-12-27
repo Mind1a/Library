@@ -33,6 +33,30 @@ const bookCards = document.querySelectorAll(".card");
 bookCards.forEach((card) => {
   const bookInfoCard = card.querySelector(".title-share");
   const bookInfoHover = card.querySelector(".title-share-hover");
+  card.addEventListener("mouseover", () => {
+    bookInfoHover.style.display = "block";
+  });
+
+  card.addEventListener("mouseout", () => {
+    bookInfoHover.style.display = "none";
+  });
+});
+
+const dropdownBTN = document.querySelector(".dropdown-button");
+const dropdownOptionsEl = document.querySelector(".dropdown-options");
+
+dropdownBTN.addEventListener("click", () => {
+  dropdownOptionsEl.classList.toggle("displayed");
+  dropdownBTN.classList.toggle("active-btn");
+
+  dropdownBTN.classList.contains("active-btn")
+    ? dropdownBTN
+        .querySelector("img")
+        .setAttribute("src", "./assets/white-arrow.svg")
+    : dropdownBTN
+        .querySelector("img")
+        .setAttribute("src", "./assets/blue-dropdown-icon.svg");
+});
 
   // card.addEventListener("mouseover", () => {
   //   bookInfoHover.style.display = "block";
