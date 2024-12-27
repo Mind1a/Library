@@ -14,7 +14,7 @@ const dateContainer = document.querySelectorAll(".date-input-container");
 dateContainer.forEach((container) => {
   container.addEventListener("click", () => {
     const dateInput = container.querySelector("#date-input");
- 
+
     dateInput.showPicker();
 
     const dateText = container.querySelector("#date-text");
@@ -28,20 +28,25 @@ dateContainer.forEach((container) => {
 
 //Hover on main page cards
 
-const bookCards = document.querySelectorAll('.card');
+const bookCards = document.querySelectorAll(".card");
 
 bookCards.forEach((card) => {
-  
-  const bookInfoCard = card.querySelector('.title-share');
-  const bookInfoHover = card.querySelector('.title-share-hover');
+  const bookInfoCard = card.querySelector(".title-share");
+  const bookInfoHover = card.querySelector(".title-share-hover");
 
-  
+  // card.addEventListener("mouseover", () => {
+  //   bookInfoHover.style.display = "block";
+  // });
 
-  card.addEventListener('mouseover', () => {
-    bookInfoHover.style.display = "block";
+  // card.addEventListener("mouseout", () => {
+  //   bookInfoHover.style.display = "none";
+  // });
+
+  card.addEventListener("mouseover", () => {
+    bookInfoHover.style.height = "50px";
   });
 
-  card.addEventListener('mouseout', () => {
-    bookInfoHover.style.display = "none";
+  card.addEventListener("mouseout", () => {
+    bookInfoHover.style.height = "0px";
   });
-})
+});

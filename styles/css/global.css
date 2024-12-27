@@ -448,7 +448,9 @@ body {
 }
 .main-content-wrapper .filter-books-wrapper .books-section .card .book-info .title-share .title-share-hover {
   padding-top: 4px;
-  display: none;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.4s;
 }
 .main-content-wrapper .filter-books-wrapper .books-section .card .book-info .title-share .title-share-hover p {
   color: rgba(60, 60, 67, 0.6);
