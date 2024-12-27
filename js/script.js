@@ -33,7 +33,6 @@ const bookCards = document.querySelectorAll(".card");
 bookCards.forEach((card) => {
   const bookInfoCard = card.querySelector(".title-share");
   const bookInfoHover = card.querySelector(".title-share-hover");
-
   card.addEventListener("mouseover", () => {
     bookInfoHover.style.display = "block";
   });
@@ -57,4 +56,21 @@ dropdownBTN.addEventListener("click", () => {
     : dropdownBTN
         .querySelector("img")
         .setAttribute("src", "./assets/blue-dropdown-icon.svg");
+});
+
+  // card.addEventListener("mouseover", () => {
+  //   bookInfoHover.style.display = "block";
+  // });
+
+  // card.addEventListener("mouseout", () => {
+  //   bookInfoHover.style.display = "none";
+  // });
+
+  card.addEventListener("mouseover", () => {
+    bookInfoHover.style.height = "50px";
+  });
+
+  card.addEventListener("mouseout", () => {
+    bookInfoHover.style.height = "0px";
+  });
 });

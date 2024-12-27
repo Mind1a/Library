@@ -1,6 +1,15 @@
 $header-blue: #0468dc;
 $text-color: #333333;
 
+.about-project-header {
+  a {
+    transition: color 0.2s;
+    &:hover {
+      color: #fff !important;
+    }
+  }
+}
+
 .about-main {
   font-family: FiraGo400;
 
@@ -14,12 +23,12 @@ $text-color: #333333;
 
   h2 {
     margin-bottom: 16px;
-    @include text_font_style($header-blue, inherit, 40px, bold);
+    @include text_font_style($header-blue, FiraGO700, 36px, bold);
   }
 
   p,
   .instructions-page li {
-    @include text_font_style($text-color, inherit, 20px, normal);
+    @include text_font_style($text-color, FiraGO350, 18px, 350);
     line-height: 1.5;
   }
 
@@ -46,12 +55,17 @@ $text-color: #333333;
         padding: 30px 0;
 
         li {
-          @include flex();
-          gap: 20px;
+          // @include flex();
+          // gap: 20px;
+
+          &:nth-of-type(2) {
+            text-decoration: underline;
+          }
 
           a {
-            @include text_font_style($text-color, inherit, 22px, 500);
-            font-family: Firago500;
+            @include flex();
+            gap: 20px;
+            @include text_font_style($text-color, Firago500, 22px, 500);
             line-height: 26px;
           }
         }
@@ -74,6 +88,53 @@ $text-color: #333333;
         border-radius: 10px;
         border: 2px solid #0468dc;
       }
+    }
+  }
+}
+
+.about-project-footer {
+  .contacts-container {
+    h2 {
+      @include text_font_style(#fff, FiraGO700, 22px, 700);
+    }
+  }
+
+  .contacts-wrapper {
+    a {
+      margin-top: 16px;
+
+      @include flex(flex-start);
+      gap: 20px;
+      @include text_font_style(#fff, inherit, 16px, 400);
+      font-family: Firago400;
+      line-height: 26px;
+
+      img {
+        height: 40px;
+        width: 40px;
+        aspect-ratio: 1;
+      }
+    }
+    li:nth-of-type(2),
+    li:nth-of-type(4) {
+      text-decoration: underline;
+    }
+  }
+  .usage-container > a:first-of-type {
+    @include text_font_style(#fff, FiraGO700, 22px, 700);
+  }
+
+  .usage-container > a:last-of-type {
+    margin-top: 40px;
+
+    @include text_font_style(#fff, FiraGO400, 16px, 400);
+  }
+
+  .footer-additional-info {
+    background-color: $header-blue;
+    & > aside p {
+      @include text_font_style(#fff, FiraGO300, 12px, 300);
+      padding: 30px;
     }
   }
 }

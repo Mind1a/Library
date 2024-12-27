@@ -77,17 +77,13 @@ body {
           align-items: center;
           justify-content: center;
           gap: 10px;
-
           transition: background-color 0.2s;
-
           .dropdown-text {
             color: $main-blue-color;
             font-size: 24px;
             font-family: FiraGo400;
-
             transition: color 0.2s;
           }
-
           &.active-btn {
             background-color: $main-blue-color;
 
@@ -96,6 +92,7 @@ body {
             }
           }
         }
+      }
 
         .dropdown-options {
           overflow: hidden;
@@ -141,6 +138,23 @@ body {
         @include dropdownUnderline;
       }
 
+      .clean-filters {
+        cursor: pointer;
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        margin: 11px 0 19px;
+
+        .clean-filters-text {
+          color: #3c3c4399;
+          font-family: FiraGo600;
+          font-size: 1rem;
+        }
+      }
+
+      .dropdownUnderline {
+        @include dropdownUnderline;
+      }
       .media-type-section {
         display: flex;
         flex-direction: column;
@@ -417,8 +431,9 @@ body {
 
             .title-share-hover {
               padding-top: 4px;
-              display: none;
-
+              height: 0;
+              overflow: hidden;
+              transition: height 0.4s;
               p {
                 color: #3c3c4399;
                 font-family: FiraGo400;
