@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip page</title>
+    <link rel="stylesheet" href="../styles/css/global.css" />
+
+    <!-- page-flip cdn-->
+    <script src="../node_modules/page-flip/dist/js/page-flip.browser.js"></script>
+    <!-- pdfjs-lib cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+</head>
+<body>
+    <section class="flip-page-header">
+        <a href="./book-details.html">
+            <img src="../assets/flip-page/Vector.png" alt="გადადით უკან">
+        </a>
+        <div class="flip-navbar-right">
+            <p class="main-chapter">ძირითადი ნაწილი</p>
+            <img src="../assets/flip-page/burger-menu.png" alt="ჩამონათვალი" id="menu">
+            <div id="menu-list-container"></div>
+            <a href="../assets/flip-page/განდეგილი 1957.pdf" download="book.pdf" id="menu">
+                <img src="../assets/flip-page/download.png" alt="ჩამოტვირთე">
+            </a>
+        </div>
+    </section>
+
+    <section id="main-content">
+        <div id="pdf-container">
+            <img src="../assets/flip-page/loader.gif" alt="იტვირთება" id="loader">
+            <img src="../assets/flip-page/open-book-transparent-background-png_185216-741.png">
+        </div>
+
+        <input type="number" id="page-number" placeholder="Enter page number" />
+        <button id="go-to-page">Go to Page</button>
+    </section>
+
+    <section id="footer">
+        <div>
+            <p>ილიას სახელმწიფო უნივერსიტეტი 2024. ყველა უფლება დაცულია.</p>
+        </div>
+    </section>
+
+    <script src="../js/flip-page.js"></script>
+</body>
+</html>

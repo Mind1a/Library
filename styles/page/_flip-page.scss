@@ -1,0 +1,69 @@
+
+.flip-page-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 23px 120px;
+    background-color: #0077FF;
+    color: white;
+
+    .flip-navbar-right{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 110px;
+        cursor: pointer;
+
+        p{
+         font-family: FiraGo600;
+         font-size: 20px;   
+        }
+    }
+}
+
+#main-content{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding: 120px;
+    position: relative;
+    height: calc(100vh - 200px);
+    overflow: hidden;
+    #loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+        visibility: visible;
+    }
+    
+    #pdf-container{
+        visibility: hidden;
+
+        .my-page{
+            background-color: #fff;
+            box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.2), 0px 0px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+        }
+    }
+}
+
+#footer{
+    width: 100%;
+    height: 73px;
+    background-color: #0468DC;
+    display: flex;
+    align-items: center;
+    padding-left: 120px;
+
+    div{
+        p{
+            color: white;
+            font-size: 12;
+            font-family: FiraGo600;
+        }
+    }
+}
