@@ -33,7 +33,7 @@ body {
       margin-right: 100px;
 
       @media (max-width: 1040px) {
-          display: none;
+        display: none;
       }
 
       .buttons-section {
@@ -122,7 +122,7 @@ body {
           }
         }
         &.displayed {
-          height: 156px;
+          height: auto;
           width: 100%;
           outline: 2px solid hsla(240, 6%, 25%, 0.6);
           border-radius: 15px;
@@ -318,21 +318,17 @@ body {
     row-gap: 32px;
     column-gap: 24px;
 
-    
-    @include responsive(l_pc){
+    @include responsive(l_pc) {
       grid-template-columns: repeat(3, 1fr);
     }
 
-    @include responsive(pc){
+    @include responsive(pc) {
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @include responsive(l-tablet){
+    @include responsive(l-tablet) {
       grid-template-columns: repeat(1, 1fr);
-    } 
-    
-    
-
+    }
 
     //   @media (max-width: 1760px) {
     //     grid-template-columns: repeat(3, 1fr);
@@ -459,14 +455,20 @@ body {
 
 .landing-photo-wrapper {
   width: 100%;
-  height: 294px;
+  max-height: 294px;
+  aspect-ratio: 8/3;
+
   overflow: hidden;
   position: relative;
 
   .landing-photo {
     width: 100%;
-    height: 294px;
+    height: 100%;
     object-fit: cover;
+
+    @include responsive(l-tablet) {
+      object-fit: cover;
+    }
   }
 
   &::before {
@@ -478,4 +480,8 @@ body {
     height: 100%;
     pointer-events: none;
   }
+
+  // @include responsive(l-tablet) {
+  //   height: 150px;
+  // }
 }
