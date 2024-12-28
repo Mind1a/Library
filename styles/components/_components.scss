@@ -26,11 +26,15 @@ body {
   .filter-books-wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
 
     .filter-section {
       max-width: 402px;
       position: relative;
+      margin-right: 100px;
+
+      @media (max-width: 1040px) {
+          display: none;
+      }
 
       .buttons-section {
         display: flex;
@@ -307,11 +311,28 @@ body {
   }
 
   .books-section {
-    max-width: 1230px;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    row-gap: 32px;
     column-gap: 24px;
-    row-gap: 30px;
+
+    
+    @include responsive(l_pc){
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include responsive(pc){
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include responsive(l-tablet){
+      grid-template-columns: repeat(1, 1fr);
+    } 
+    
+    
+
 
     //   @media (max-width: 1760px) {
     //     grid-template-columns: repeat(3, 1fr);
@@ -331,10 +352,13 @@ body {
       border: 1px solid #33333360;
       border-radius: 10px;
       overflow: hidden;
+      width: 260px;
+      height: 367px;
 
       .book-cover {
-        width: 260px;
-        height: 367px;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
       }
 
       .book-info {
