@@ -253,6 +253,7 @@ body {
 }
 .main-content-wrapper .filter-books-wrapper .filter-section {
   max-width: 402px;
+  position: relative;
 }
 .main-content-wrapper .filter-books-wrapper .filter-section .buttons-section {
   display: flex;
@@ -325,7 +326,10 @@ body {
 .main-content-wrapper .filter-books-wrapper .filter-section .dropdown-options {
   overflow: hidden;
   height: 0;
+  z-index: 10;
   transition: height 0.2s;
+  position: absolute;
+  background-color: #ffffff;
 }
 .main-content-wrapper .filter-books-wrapper .filter-section .dropdown-options li {
   padding: 8px 24px;
@@ -341,6 +345,7 @@ body {
 }
 .main-content-wrapper .filter-books-wrapper .filter-section .dropdown-options.displayed {
   height: 156px;
+  width: 100%;
   outline: 2px solid hsla(240, 6%, 25%, 0.6);
   border-radius: 15px;
 }
@@ -408,7 +413,6 @@ body {
   font-size: 16px;
   font-family: FiraGo400;
   color: #333333;
-  position: relative;
 }
 .main-content-wrapper .filter-books-wrapper .media-type-section .dropdown-section-wrapper .dropdown label:not(:last-child) {
   margin-bottom: 15px;

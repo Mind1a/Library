@@ -30,6 +30,7 @@ body {
 
     .filter-section {
       max-width: 402px;
+      position: relative;
 
       .buttons-section {
         display: flex;
@@ -98,7 +99,10 @@ body {
       .dropdown-options {
         overflow: hidden;
         height: 0;
+        z-index: 10;
         transition: height 0.2s;
+        position: absolute;
+        background-color: #ffffff;
 
         li {
           padding: 8px 24px;
@@ -115,6 +119,7 @@ body {
         }
         &.displayed {
           height: 156px;
+          width: 100%;
           outline: 2px solid hsla(240, 6%, 25%, 0.6);
           border-radius: 15px;
         }
@@ -183,7 +188,6 @@ body {
             font-size: 16px;
             font-family: FiraGo400;
             color: #333333;
-            position: relative;
 
             &:not(:last-child) {
               margin-bottom: 15px;
@@ -232,62 +236,7 @@ body {
           }
         }
 
-        // .dropdown-head {
-        //   display: flex;
-        //   flex-direction: row;
-        //   align-items: center;
-        //   justify-content: space-between;
-        //   font-size: 24px;
-        //   font-weight: 200px;
-        //   line-height: 28.8px;
-        //   cursor: pointer;
-
-        //   img {
-        //     cursor: pointer;
-
-        //     &.rotate {
-        //       transform: rotate(180deg);
-        //     }
-        //   }
-        // }
-
-        // .dropdown-container {
-        //   // height: 0;
-        //   // overflow: hidden;
-        //   // transition: height 0.3s ease-in-out;
-
-        //   .dropdown {
-        //     // display: flex;
-        //     // flex-direction: column;
-
-        //     // .dropdown-line {
-        //     //   width: 100%;
-        //     //   height: 1px;
-        //     //   border: 1px solid #d5d5d5;
-        //     //   border-radius: 5px;
-        //     //   color: #d5d5d5;
-        //     //   margin: 18px 0;
-        //     // }
-
-        //   }
-
-        //   &.active {
-        //     height: 184px;
-        //   }
-        // }
-
         .publish-date {
-          // height: 115px;
-
-          // .dropdown-line {
-          //   width: 100%;
-          //   height: 1px;
-          //   border: 1px solid #d5d5d5;
-          //   border-radius: 5px;
-          //   color: #d5d5d5;
-          //   margin: 25px 0;
-          // }
-
           .date-wrapper {
             display: flex;
             flex-direction: row;
@@ -359,11 +308,7 @@ body {
 
   .books-section {
     max-width: 1230px;
-    //flex: 1;
-    //padding: 24px 29px;
-    //border-radius: 10px;
     display: grid;
-    //align-items: center;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 24px;
     row-gap: 30px;
@@ -450,49 +395,6 @@ body {
           }
         }
       }
-
-      //     .book-info {
-      //       width: 100%;
-      //       max-width: 275px;
-      //       padding: 16px;
-      //       margin-top: -3px;
-      //       border: 1px solid #c2c2c2;
-      //       border-bottom-left-radius: 10px;
-      //       border-bottom-right-radius: 10px;
-      //       color: #000000;
-
-      //       h2 {
-      //         font-size: 20px;
-      //         font-weight: 500;
-      //         line-height: 24px;
-      //         margin-bottom: 20px;
-      //       }
-
-      //       p {
-      //         font-size: 16px;
-      //         line-height: 19.2px;
-      //         font-weight: 400;
-      //       }
-
-      //       .book-additional-info {
-      //         margin-top: 23px;
-      //         display: flex;
-      //         flex-direction: row;
-      //         justify-content: space-between;
-      //         align-items: center;
-
-      //         .book-views {
-      //           display: flex;
-      //           flex-direction: row;
-
-      //           p {
-      //             color: #13297f;
-      //             font-weight: 700;
-      //             margin-left: 4px;
-      //           }
-      //         }
-      //       }
-      //     }
     }
   }
 }
