@@ -1,3 +1,48 @@
+// For Response
+
+$l-pc: 1650px; // large PC screen size
+$pc: 1335px; // PC screen size.
+$l-tablet: 770px; // tablet screen size
+$tablet: 720px; // Tablet screen size.
+$phone: 375px; // Phone screen size.
+$s-phone: 360px; // Small Screen size.
+$tablet-max: $tablet - 1;
+$pc-max: $pc - 1;
+
+@mixin responsive($media) {
+  @if $media == l_pc {
+    @media only screen and (max-width: $l-pc) {
+      @content;
+    }
+  } @else if $media == pc {
+    @media only screen and (max-width: $pc) {
+      @content;
+    }
+  } @else if $media == l-tablet {
+    @media only screen and (max-width: $l-tablet) {
+      @content;
+    }
+  } @else if $media == tablet {
+    @media only screen and (max-width: $pc-max) {
+      @content;
+    }
+  } @else if $media == phone {
+    @media only screen and (max-width: $tablet-max) {
+      @content;
+    }
+  } @else if $media == small_phone {
+    @media only screen and (max-width: $phone) {
+      @content;
+    }
+  } @else if $media == smallest_phone {
+    @media only screen and (max-width: $s-phone) {
+      @content;
+    }
+  }
+}
+
+// For Styles
+
 @mixin flex($justify: center, $align: center) {
   display: flex;
   justify-content: $justify;
