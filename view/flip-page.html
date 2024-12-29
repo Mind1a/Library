@@ -10,6 +10,10 @@
     <script src="../node_modules/page-flip/dist/js/page-flip.browser.js"></script>
     <!-- pdfjs-lib cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <!-- boxicons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- or -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
 <body>
     <section class="flip-page-header">
@@ -17,11 +21,13 @@
             <img src="../assets/flip-page/Vector.png" alt="გადადით უკან">
         </a>
         <div class="flip-navbar-right">
-            <p class="main-chapter">ძირითადი ნაწილი</p>
-            <img src="../assets/flip-page/burger-menu.png" alt="ჩამონათვალი" id="menu">
-            <div id="menu-list-container"></div>
+            <p class="main-chapter" id="main-chapter">ძირითადი ნაწილი</p>
+            <div id="menu" style="cursor: pointer;">
+                <img src="../assets/flip-page/burger-menu.png" alt="ჩამონათვალი">
+            </div>
+
             <a href="../assets/flip-page/განდეგილი 1957.pdf" download="book.pdf" id="menu">
-                <img src="../assets/flip-page/download.png" alt="ჩამოტვირთე">
+                <img src="../assets/flip-page/download.png" alt="ჩამოტვირთე" id="download">
             </a>
         </div>
     </section>
@@ -31,14 +37,15 @@
             <img src="../assets/flip-page/loader.gif" alt="იტვირთება" id="loader">
             <img src="../assets/flip-page/open-book-transparent-background-png_185216-741.png">
         </div>
-
-        <input type="number" id="page-number" placeholder="Enter page number" />
-        <button id="go-to-page">Go to Page</button>
     </section>
 
-    <section id="footer">
-        <div>
-            <p>ილიას სახელმწიფო უნივერსიტეტი 2024. ყველა უფლება დაცულია.</p>
+    <section id="flip-page-footer">
+        <div class="page">
+            <i class='bx bx-chevron-left' id="prev"></i>
+            <p class="current-page" id="current-page">0</p>
+            <p>/</p>
+            <p class="total-pages" id="total-pages"></p>
+            <i class='bx bx-chevron-right' id="next"></i>
         </div>
     </section>
 
