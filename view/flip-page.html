@@ -10,10 +10,6 @@
     <script src="../node_modules/page-flip/dist/js/page-flip.browser.js"></script>
     <!-- pdfjs-lib cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
-    <!-- boxicons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <!-- or -->
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
 <body>
     <section class="flip-page-header">
@@ -32,21 +28,30 @@
         </div>
     </section>
 
-    <section id="main-content">
-        <div id="pdf-container">
-            <img src="../assets/flip-page/loader.gif" alt="იტვირთება" id="loader">
-            <img src="../assets/flip-page/open-book-transparent-background-png_185216-741.png">
-        </div>
+    <section id="main">
+        <section id="main-content">
+            <div id="pdf-container">
+                <img src="../assets/flip-page/open-book-transparent-background-png_185216-741.png">
+            </div>
+        </section>
+
+        <section id="flip-page-footer">
+            <div class="page">
+                <!-- <i class='bx bx-chevron-left' id="prev" style="cursor: pointer;"></i> -->
+                <img src="../assets/flip-page/arrow-left.png" id="prev" alt="მარცხნივ გადასვლა" style="cursor: pointer;">
+                <p class="current-page" id="current-page">0</p>
+                <p>/</p>
+                <p class="total-pages" id="total-pages"></p>
+                <img src="../assets/flip-page/arrow-right.png" id="next" alt="მარჯვნივ გადასვლა" style="cursor: pointer;">
+                <!-- <i class='bx bx-chevron-right' id="next" style="cursor: pointer;"></i> -->
+            </div>
+        </section>
     </section>
 
-    <section id="flip-page-footer">
-        <div class="page">
-            <i class='bx bx-chevron-left' id="prev"></i>
-            <p class="current-page" id="current-page">0</p>
-            <p>/</p>
-            <p class="total-pages" id="total-pages"></p>
-            <i class='bx bx-chevron-right' id="next"></i>
-        </div>
+    <section id="loader">
+        <img src="../assets/flip-page/loader-img.png" alt="წიგნი">
+        <h1>მიმდინარეობს წიგნის ჩატვირთვა</h1>
+        <a href="../index.html">დაბრუნდით მთავარ გვერდზე</a>
     </section>
 
     <script src="../js/flip-page.js"></script>

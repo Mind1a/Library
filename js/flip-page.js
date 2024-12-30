@@ -4,8 +4,10 @@ if (typeof pdfjsLib !== "undefined") {
     async function load() {
         const bookContainer = document.getElementById("pdf-container");
         const loader = document.getElementById("loader")
+        const main = document.getElementById("main")
         // page-flip library
-        loader.style.display = "block"
+        loader.style.display = "flex"
+        main.style.display="none"
         const pageFlip = new St.PageFlip(bookContainer, {
             width: 700,
             height: 1000, 
@@ -57,21 +59,23 @@ if (typeof pdfjsLib !== "undefined") {
             pageFlip.flip(savedPage);
 
             // წიგნის გვერდების გადაფურცვლა და გვერდების სისწორე ასევე გადასვლის ფუნციონალი
-            // გასაფიხსია prev და next 
-            pageFlip.on("flip", (e) => {
-                const nextPage = document.getElementById("next")
-                const prevPage = document.getElementById("prev")
+            // გასაფიქსია next არ მუშაობს 
+            const nextPage = document.getElementById("next")
+            const prevPage = document.getElementById("prev")
+            const current = document.getElementById("current-page")
+            let currentPage = parseInt(localStorage.getItem("currentPage"))
+            current.innerText = currentPage
+            nextPage.addEventListener("click", () => {
+                pageFlip.flip(currentPage + 1)
+            })
 
-                const currentPage = e.data;
-                const current = document.getElementById("current-page")
-                nextPage.addEventListener("click", () => {
-                    pageFlip.flip(currentPage + 2)
-                    current.innerText = currentPage + 2
-                })
-                prevPage.addEventListener("click", () => {
-                    pageFlip.flip(currentPage - 2)
-                    current.innerText = currentPage - 2
-                })
+            prevPage.addEventListener("click", () => {
+                pageFlip.flip(currentPage - 1)
+            })
+
+            pageFlip.on("flip", (e) => {
+
+                currentPage = e.data;
                 current.innerText = currentPage;
                 localStorage.setItem("currentPage", currentPage);
                 console.log(`Current page saved: ${currentPage}`);
@@ -102,6 +106,12 @@ if (typeof pdfjsLib !== "undefined") {
             async function changeChapter(chapter, index){
                 const chapterTitle = document.getElementById("main-chapter")
                 chapterTitle.innerText = chapter.innerText
+
+                const active = document.querySelector(".menu-li.hover")
+                if(active && active !== chapter){
+                    active.classList.remove("hover")
+                }
+                chapter.classList.toggle("hover")
                 // ინდექსის ადგილას ჩაიწერება თავის საწყისი გვერდი
                 pageFlip.flip(index * 4)
             }
@@ -117,10 +127,12 @@ if (typeof pdfjsLib !== "undefined") {
             menu.addEventListener("click", toggleMenu);
 
             loader.style.display = "none"
+            main.style.display = "block"
             bookContainer.style.visibility = "visible";
         } catch (error) {
             console.error("Error loading PDF:", error);
             loader.style.display = "none"
+            main.style.display = "block"
         }
     }
 
