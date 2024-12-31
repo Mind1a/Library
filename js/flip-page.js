@@ -96,14 +96,14 @@ if (typeof pdfjsLib !== "undefined") {
                     li.innerText = `${chapter} თავი`;
                     li.style.cursor = "pointer"
         
-                    li.addEventListener("click", () => changeChapter(li, 3))
+                    li.addEventListener("click", () => changeChapter(li, 3, ul))
                     ul.appendChild(li);
                 }
         
                 return ul;
             }
         
-            async function changeChapter(chapter, index){
+            async function changeChapter(chapter, index, ul){
                 const chapterTitle = document.getElementById("main-chapter")
                 chapterTitle.innerText = chapter.innerText
 
@@ -112,6 +112,10 @@ if (typeof pdfjsLib !== "undefined") {
                     active.classList.remove("hover")
                 }
                 chapter.classList.toggle("hover")
+
+                // დავამატე delay რომ გამოჩენილიყო ანიმაცია
+                await new Promise(resolve => setTimeout(resolve, 300))
+                ul.style.display = "none"
                 // ინდექსის ადგილას ჩაიწერება თავის საწყისი გვერდი
                 pageFlip.flip(index * 4)
             }
