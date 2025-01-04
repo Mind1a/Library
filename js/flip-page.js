@@ -19,6 +19,7 @@ const chapterToPageMap = {
   2: 8, // Chapter 3 starts at page 8
   3: 12, // Chapter 4 starts at page 12
   4: 16, // Chapter 5 starts at page 16
+  5: 22, // Chapter 5 starts at page 16
 };
 
 // Initialize DOM elements
@@ -92,29 +93,38 @@ function setupNavigation() {
   const nextBtn = document.getElementById("next");
   const prevBtn = document.getElementById("prev");
 
+  // Handle "Next" button click
   const handleNext = () => {
     if (state.currentPage < state.pageFlip.getPageCount() - 1) {
       state.currentPage += 1; // Update current page immediately
-      state.currentPageElement.innerText = state.currentPage + 1; // Display as 1-based index
-      state.pageFlip.flip(state.currentPage, true); // Flip instantly without animation
+      updatePageCountUI(); // Synchronize UI with the current page
+      state.pageFlip.flip(state.currentPage); // Flip the page
     }
   };
 
+  // Handle "Prev" button click
   const handlePrev = () => {
     if (state.currentPage > 0) {
       state.currentPage -= 1; // Update current page immediately
-      state.currentPageElement.innerText = state.currentPage + 1; // Display as 1-based index
-      state.pageFlip.flip(state.currentPage, true); // Flip instantly without animation
+      updatePageCountUI(); // Synchronize UI with the current page
+      state.pageFlip.flip(state.currentPage); // Flip the page
     }
   };
 
-  // Add passive event listeners
+  // Update UI to reflect the current page count
+  const updatePageCountUI = () => {
+    state.currentPageElement.innerText = state.currentPage + 1; // Display as 1-based index
+  };
+
+  // Add event listeners for the buttons
   nextBtn.addEventListener("click", handleNext, { passive: true });
   prevBtn.addEventListener("click", handlePrev, { passive: true });
 
-  // Add touch events with passive listeners
-  nextBtn.addEventListener("touchstart", handleNext, { passive: true });
-  prevBtn.addEventListener("touchstart", handlePrev, { passive: true });
+  // Listen for manual page flips and synchronize the page count
+  state.pageFlip.on("flip", (event) => {
+    state.currentPage = event.data; // Update current page based on the event
+    updatePageCountUI(); // Synchronize UI with the current page
+  });
 }
 
 // Setup chapter menu with passive event listeners
