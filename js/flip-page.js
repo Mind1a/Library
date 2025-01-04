@@ -1,146 +1,250 @@
-if (typeof pdfjsLib !== "undefined") {
-  const pdfUrl = "../assets/flip-page/განდეგილი 1957.pdf";
+// Set up PDF.js worker
+pdfjsLib.GlobalWorkerOptions.workerSrc =
+  "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js";
 
-  async function load() {
-    const bookContainer = document.getElementById("pdf-container");
-    const loader = document.getElementById("loader");
-    const main = document.getElementById("main");
-    // page-flip library
-    loader.style.display = "flex";
-    main.style.display = "none";
-    const pageFlip = new St.PageFlip(bookContainer, {
+const state = {
+  bookContainer: null,
+  loader: null,
+  main: null,
+  currentPageElement: null,
+  totalPagesElement: null,
+  pageFlip: null,
+  currentPage: 0,
+  isAnimating: false,
+};
+
+const chapterToPageMap = {
+  0: 0, // Chapter 1 starts at page 0
+  1: 4, // Chapter 2 starts at page 4
+  2: 8, // Chapter 3 starts at page 8
+  3: 12, // Chapter 4 starts at page 12
+  4: 16, // Chapter 5 starts at page 16
+};
+
+// Initialize DOM elements
+function initializeElements() {
+  state.bookContainer = document.getElementById("pdf-container");
+  state.loader = document.getElementById("loader");
+  state.main = document.getElementById("main");
+  state.currentPageElement = document.getElementById("current-page");
+  state.totalPagesElement = document.getElementById("total-pages");
+}
+
+// Optimized page creation with proper cleanup
+async function createPage(pdf, pageNum) {
+  const page = await pdf.getPage(pageNum);
+  const scale = 2;
+  const viewport = page.getViewport({ scale });
+
+  const canvas = document.createElement("canvas");
+  const context = canvas.getContext("2d", { alpha: false }); // Optimize canvas
+  canvas.width = viewport.width;
+  canvas.height = viewport.height;
+
+  const pageContainer = document.createElement("div");
+  pageContainer.className = "my-page";
+  Object.assign(pageContainer.style, {
+    position: "relative",
+    width: `${viewport.width}px`,
+    height: `${viewport.height}px`,
+    background: "#fff",
+    overflow: "hidden",
+    willChange: "transform", // Optimize animations
+  });
+
+  await page.render({
+    canvasContext: context,
+    viewport: viewport,
+    intent: "display", // Optimize rendering
+  }).promise;
+
+  const img = new Image();
+  img.decoding = "async"; // Optimize image loading
+  img.loading = "eager";
+
+  return new Promise((resolve) => {
+    img.onload = () => {
+      img.style.width = "100%";
+      img.style.height = "100%";
+      pageContainer.appendChild(img);
+      canvas.remove();
+      resolve(pageContainer);
+    };
+    img.src = canvas.toDataURL("image/png");
+  });
+}
+
+async function setupPages(pdf) {
+  const numPages = pdf.numPages;
+  state.totalPagesElement.innerText = numPages;
+
+  const pages = await Promise.all(
+    Array.from({ length: numPages }, (_, i) => createPage(pdf, i + 1))
+  );
+
+  pages.forEach((page) => state.bookContainer.appendChild(page));
+  state.pageFlip.loadFromHTML(document.querySelectorAll(".my-page"));
+  state.pageFlip.flip(state.currentPage);
+}
+
+// Setup navigation with passive event listeners
+function setupNavigation() {
+  const nextBtn = document.getElementById("next");
+  const prevBtn = document.getElementById("prev");
+
+  const handleNext = () => {
+    if (state.currentPage < state.pageFlip.getPageCount() - 1) {
+      state.currentPage += 1; // Update current page immediately
+      state.currentPageElement.innerText = state.currentPage + 1; // Display as 1-based index
+      state.pageFlip.flip(state.currentPage, true); // Flip instantly without animation
+    }
+  };
+
+  const handlePrev = () => {
+    if (state.currentPage > 0) {
+      state.currentPage -= 1; // Update current page immediately
+      state.currentPageElement.innerText = state.currentPage + 1; // Display as 1-based index
+      state.pageFlip.flip(state.currentPage, true); // Flip instantly without animation
+    }
+  };
+
+  // Add passive event listeners
+  nextBtn.addEventListener("click", handleNext, { passive: true });
+  prevBtn.addEventListener("click", handlePrev, { passive: true });
+
+  // Add touch events with passive listeners
+  nextBtn.addEventListener("touchstart", handleNext, { passive: true });
+  prevBtn.addEventListener("touchstart", handlePrev, { passive: true });
+}
+
+// Setup chapter menu with passive event listeners
+function setupChapterMenu() {
+  const menu = document.getElementById("menu");
+  let menuList = null;
+
+  function createChapterList() {
+    const ul = document.createElement("ul");
+    ul.className = "menu-ul";
+    ul.style.display = "none";
+
+    const chapters = Object.keys(chapterToPageMap).length; // Total number of chapters
+    Array.from({ length: chapters }, (_, i) => {
+      const li = document.createElement("li");
+      li.className = "menu-li";
+      li.textContent = `${i + 1} თავი`;
+
+      // Add click and touch event listeners for chapter selection
+      li.addEventListener("click", () => changeChapter(li, i, ul), {
+        passive: true,
+      });
+      li.addEventListener("touchstart", () => changeChapter(li, i, ul), {
+        passive: true,
+      });
+
+      ul.appendChild(li);
+    });
+
+    return ul;
+  }
+
+  menu.addEventListener(
+    "click",
+    () => {
+      if (!menuList) {
+        menuList = createChapterList();
+        menu.parentElement.appendChild(menuList);
+      }
+      menuList.style.display =
+        menuList.style.display === "none" ? "block" : "none";
+    },
+    { passive: true }
+  );
+
+  menu.addEventListener(
+    "touchstart",
+    () => {
+      if (!menuList) {
+        menuList = createChapterList();
+        menu.parentElement.appendChild(menuList);
+      }
+      menuList.style.display =
+        menuList.style.display === "none" ? "block" : "none";
+    },
+    { passive: true }
+  );
+}
+
+async function changeChapter(chapter, index, ul) {
+  const chapterTitle = document.getElementById("main-chapter");
+  chapterTitle.textContent = chapter.textContent;
+
+  const active = ul.querySelector(".menu-li.hover");
+  if (active && active !== chapter) {
+    active.classList.remove("hover");
+  }
+  chapter.classList.toggle("hover");
+
+  ul.style.display = "none";
+
+  if (!state.isAnimating) {
+    const targetPage = chapterToPageMap[index];
+    if (targetPage !== undefined) {
+      state.currentPage = targetPage; // Update current page
+      state.currentPageElement.innerText = state.currentPage + 1; // Display as 1-based index
+      state.pageFlip.flip(state.currentPage, true); // Flip instantly to the page
+    } else {
+      console.error("Chapter-to-page mapping is missing for chapter:", index);
+    }
+  }
+}
+
+function showLoader() {
+  state.loader.style.display = "flex";
+  state.main.style.display = "none";
+}
+
+function hideLoader() {
+  state.loader.style.display = "none";
+  state.main.style.display = "block";
+  state.bookContainer.style.visibility = "visible";
+}
+
+// Main initialization function with performance optimizations
+async function initializeViewer(pdfUrl) {
+  try {
+    initializeElements();
+    showLoader();
+
+    // Initialize PageFlip with optimized settings
+    state.pageFlip = new St.PageFlip(state.bookContainer, {
       width: 700,
       height: 1000,
       showCover: true,
       drawShadow: true,
       flippingTime: 2000,
+      usePortrait: false,
+      startZIndex: 0,
+      minWidth: 300,
+      maxWidth: 1000,
+      useMouseEvents: true,
+      swipeDistance: 30,
+      preventTouchEvents: false, // Allow touch events
     });
 
-    try {
-      const pdf = await pdfjsLib.getDocument(pdfUrl).promise;
-      const numPages = pdf.numPages;
-      const totalPage = document.getElementById("total-pages");
-      totalPage.innerText = numPages;
-
-      // დინამიურად შეიქმნა წიგნის გვერდები
-      for (let pageNum = 1; pageNum <= numPages; pageNum++) {
-        const page = await pdf.getPage(pageNum);
-
-        const scale = 2;
-        const viewport = page.getViewport({ scale });
-
-        const svgContainer = document.createElement("div");
-        svgContainer.classList.add("my-page");
-        svgContainer.style.position = "relative";
-        svgContainer.style.width = `${viewport.width}px`;
-        svgContainer.style.height = `${viewport.height}px`;
-        svgContainer.style.background = "#fff";
-        svgContainer.style.overflow = "hidden";
-
-        // pdf ფორმატი svg-ში
-        const svg = await page.getOperatorList().then((opList) => {
-          const svgBuilder = new pdfjsLib.SVGGraphics(
-            page.commonObjs,
-            page.objs
-          );
-          return svgBuilder.getSVG(opList, viewport);
-        });
-
-        svg.style.position = "absolute";
-        svg.style.top = "0";
-        svg.style.left = "0";
-        svgContainer.appendChild(svg);
-
-        bookContainer.appendChild(svgContainer);
-      }
-
-      pageFlip.loadFromHTML(document.querySelectorAll(".my-page"));
-
-      const savedPage = parseInt(localStorage.getItem("currentPage")) || 0;
-      pageFlip.flip(savedPage);
-
-      // წიგნის გვერდების გადაფურცვლა და გვერდების სისწორე ასევე გადასვლის ფუნციონალი
-      // გასაფიქსია next არ მუშაობს
-      const nextPage = document.getElementById("next");
-      const prevPage = document.getElementById("prev");
-      const current = document.getElementById("current-page");
-      let currentPage = parseInt(localStorage.getItem("currentPage"));
-      current.innerText = currentPage;
-      nextPage.addEventListener("click", () => {
-        pageFlip.flip(currentPage + 1);
-      });
-
-      prevPage.addEventListener("click", () => {
-        pageFlip.flip(currentPage - 1);
-      });
-
-      pageFlip.on("flip", (e) => {
-        currentPage = e.data;
-        current.innerText = currentPage;
-        localStorage.setItem("currentPage", currentPage);
-        console.log(`Current page saved: ${currentPage}`);
-      });
-
-      const menu = document.getElementById("menu");
-
-      // ფუნცცია სადაც დინამიურად შეიქმნება menu bar
-      async function createUl() {
-        const ul = document.createElement("ul");
-        ul.style.display = "none";
-        ul.classList.add("menu-ul");
-
-        let pageNumber = 5; //აქ ჩაიწერება სათაურების რაოდენობა
-        for (let chapter = 1; chapter <= pageNumber; chapter++) {
-          const li = document.createElement("li");
-          li.classList.add("menu-li");
-          li.innerText = `${chapter} თავი`;
-          li.style.cursor = "pointer";
-
-          li.addEventListener("click", () => changeChapter(li, 3, ul));
-          ul.appendChild(li);
-        }
-
-        return ul;
-      }
-
-      async function changeChapter(chapter, index, ul) {
-        const chapterTitle = document.getElementById("main-chapter");
-        chapterTitle.innerText = chapter.innerText;
-
-        const active = document.querySelector(".menu-li.hover");
-        if (active && active !== chapter) {
-          active.classList.remove("hover");
-        }
-        chapter.classList.toggle("hover");
-
-        // დავამატე delay რომ გამოჩენილიყო ანიმაცია
-        await new Promise((resolve) => setTimeout(resolve, 300));
-        ul.style.display = "none";
-        // ინდექსის ადგილას ჩაიწერება თავის საწყისი გვერდი
-        pageFlip.flip(index * 4);
-      }
-      async function toggleMenu() {
-        let ul = document.querySelector(".menu-ul");
-        if (!ul) {
-          ul = await createUl();
-          menu.parentElement.appendChild(ul);
-        }
-        ul.style.display = ul.style.display === "none" ? "block" : "none";
-      }
-
-      menu.addEventListener("click", toggleMenu);
-
-      loader.style.display = "none";
-      main.style.display = "block";
-      bookContainer.style.visibility = "visible";
-    } catch (error) {
-      console.error("Error loading PDF:", error);
-      loader.style.display = "none";
-      main.style.display = "block";
-    }
+    const pdf = await pdfjsLib.getDocument(pdfUrl).promise;
+    await setupPages(pdf);
+    setupNavigation();
+    setupChapterMenu();
+    hideLoader();
+  } catch (error) {
+    console.error("Error initializing book viewer:", error);
+    hideLoader();
   }
+}
 
-  load();
+// Initialize when PDF.js is available
+if (typeof pdfjsLib !== "undefined") {
+  initializeViewer("../assets/flip-page/განდეგილი 1957.pdf");
 } else {
   console.error("PDF.js is not available");
 }
