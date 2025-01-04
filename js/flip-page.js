@@ -19,6 +19,7 @@ const chapterToPageMap = {
   2: 8, // Chapter 3 starts at page 8
   3: 12, // Chapter 4 starts at page 12
   4: 16, // Chapter 5 starts at page 16
+  5: 22, // Chapter 5 starts at page 16
 };
 
 // Initialize DOM elements
