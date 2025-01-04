@@ -28,7 +28,11 @@ header {
         width: 11.83%;
 
         @media (max-width: $tablet) {
-          width: 14.48%;
+          width: 17.48%;
+        }
+
+        @media (max-width: $s-phone) {
+          width: 23%;
         }
 
         a {
@@ -59,8 +63,8 @@ header {
               line-height: 1.2;
               color: $nav-element-color;
               transition: color 0.5s;
-              
-              &:hover{
+
+              &:hover {
                 color: $nav-element-color-active;
               }
 
@@ -74,8 +78,8 @@ header {
               }
             }
 
-            .active-header{
-                color: $nav-element-color-active;
+            .active-header {
+              color: $nav-element-color-active;
             }
           }
         }
