@@ -6,6 +6,7 @@
 
   main {
     flex: 1;
+    background-color: white;
   }
 }
 
@@ -24,7 +25,11 @@
       justify-content: center;
       gap: 110px;
       cursor: pointer;
-
+      #main-chapter{
+        text-align: center;
+        width: auto;
+        max-width: 250px;
+      }
       p {
         font-family: FiraGo400;
         font-size: 24px;
@@ -37,20 +42,25 @@
       position: absolute;
       top: 96px;
       border-radius: 10px;
-      border: 1px solid grey;
+      border: 1px solid #333333;
       overflow: hidden;
       z-index: 100;
     }
     .menu-li {
+      font-family: FiraGo400;
       font-size: 20px;
-      width: 223px;
+      width: auto;
+      min-width: 223px;
+      max-width: 100%;
       height: 46px;
       padding-left: 16px;
-      border-bottom: 1px solid black;
+      padding-right: 16px;
+      border-bottom: 1px solid #333333;
       display: flex;
       align-items: center;
       transition: background-color 0.3s, color 0.3s;
       cursor: pointer;
+      color: #333333;
     }
     .menu-li:last-child {
       border-bottom: none;
@@ -90,7 +100,7 @@
   }
 }
 
-#flip-page-footer {
+#flip-pages {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -118,11 +128,13 @@
   align-items: center;
   gap: 32px;
   flex: 1;
+  background-color: white;
 
   img {
-    width: 123px;
-    height: 124px;
-    animation: rotate 2s linear infinite;
+    width: 200px;
+    height: 190px;
+    mix-blend-mode: multiply;
+    // animation: rotate 2s linear infinite;
   }
 
   h1 {
@@ -143,7 +155,7 @@
   }
 
   a {
-    color: #0468dc;
+    color: #0468DC;
     font-size: 24px;
     font-family: Firago500;
     text-decoration: underline;

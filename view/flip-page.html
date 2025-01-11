@@ -11,14 +11,50 @@
     <!-- pdfjs-lib cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
   </head>
-  <body class="main-body-container">
-    <header class="flip-page-header">
+  <body class="main-body-container" id="body">
+    <!-- main header -->
+    <header id="main-header">
+      <div class="header_wrapper container">
+        <div class="header_components">
+          <!-- Logo -->
+          <div class="logo">
+            <a href="index.html"
+              ><img src="../assets/index.html/logo.svg" alt="logo"
+            /></a>
+          </div>
+
+          <!-- Navigation -->
+          <div class="navigation">
+            <nav>
+              <ul>
+                <li>
+                  <a href="./index.html" class="active-header">მთავარი</a>
+                </li>
+                <li>
+                  <a href="./view/about-project.html">პროექტის შესახებ</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Burger Menu Icon -->
+          <div class="burger_menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <header class="flip-page-header" id="flip-page-header">
       <div class="flip-page-header-container container">
         <a href="./book-details.html">
           <img src="../assets/flip-page/Vector.png" alt="გადადით უკან" />
         </a>
 
-        <div id="flip-page-footer">
+        <div id="flip-pages">
           <div class="container page">
             <!-- <i class='bx-chevron-left bx' id="prev" style="cursor: pointer;"></i> -->
             <img
@@ -41,7 +77,7 @@
         </div>
 
         <div class="flip-navbar-right">
-          <p class="main-chapter" id="main-chapter">ძირითადი ნაწილი</p>
+          <p class="main-chapter" id="main-chapter">განდეგილი - თავი I</p>
           <div id="menu" style="cursor: pointer">
             <img src="../assets/flip-page/burger-menu.png" alt="ჩამონათვალი" />
           </div>
@@ -69,11 +105,13 @@
 
     <!-- adding loading -->
     <section id="loader">
-      <img src="../assets/flip-page/loader-img.png" alt="წიგნი" />
+      <img src="../assets/flip-page/Animation - 1736632045640.gif" alt="წიგნი" />
+      <!-- <dotlottie-player src="https://lottie.host/68bcedd6-8aef-413d-9bed-603b9566a20b/MAqfUGeO4L.lottie" background="transparent" speed="1" style="width: 260px; height: 185px" loop autoplay></dotlottie-player> -->
       <h1>მიმდინარეობს წიგნის ჩატვირთვა<span class="dots"></span></h1>
       <a href="../index.html">დაბრუნდით მთავარ გვერდზე</a>
     </section>
 
+    <!-- <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script> -->
     <script src="../js/flip-page.js"></script>
   </body>
 </html>
