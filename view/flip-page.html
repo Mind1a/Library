@@ -17,6 +17,29 @@
         <a href="./book-details.html">
           <img src="../assets/flip-page/Vector.png" alt="გადადით უკან" />
         </a>
+
+        <div id="flip-page-footer">
+          <div class="container page">
+            <!-- <i class='bx-chevron-left bx' id="prev" style="cursor: pointer;"></i> -->
+            <img
+              src="../assets/flip-page/arrow-left.png"
+              id="prev"
+              alt="მარცხნივ გადასვლა"
+              style="cursor: pointer"
+            />
+            <p class="current-page" id="current-page">0</p>
+            <p>/</p>
+            <p class="total-pages" id="total-pages"></p>
+            <img
+              src="../assets/flip-page/arrow-right.png"
+              id="next"
+              alt="მარჯვნივ გადასვლა"
+              style="cursor: pointer"
+            />
+            <!-- <i class='bx-chevron-right bx' id="next" style="cursor: pointer;"></i> -->
+          </div>
+        </div>
+
         <div class="flip-navbar-right">
           <p class="main-chapter" id="main-chapter">ძირითადი ნაწილი</p>
           <div id="menu" style="cursor: pointer">
@@ -50,28 +73,6 @@
       <h1>მიმდინარეობს წიგნის ჩატვირთვა<span class="dots"></span></h1>
       <a href="../index.html">დაბრუნდით მთავარ გვერდზე</a>
     </section>
-
-    <footer id="flip-page-footer">
-      <div class="container page">
-        <!-- <i class='bx-chevron-left bx' id="prev" style="cursor: pointer;"></i> -->
-        <img
-          src="../assets/flip-page/arrow-left.png"
-          id="prev"
-          alt="მარცხნივ გადასვლა"
-          style="cursor: pointer"
-        />
-        <p class="current-page" id="current-page">0</p>
-        <p>/</p>
-        <p class="total-pages" id="total-pages"></p>
-        <img
-          src="../assets/flip-page/arrow-right.png"
-          id="next"
-          alt="მარჯვნივ გადასვლა"
-          style="cursor: pointer"
-        />
-        <!-- <i class='bx-chevron-right bx' id="next" style="cursor: pointer;"></i> -->
-      </div>
-    </footer>
 
     <script src="../js/flip-page.js"></script>
   </body>

@@ -91,13 +91,9 @@
 }
 
 #flip-page-footer {
-  width: 100%;
-  height: 96px;
-  background-color: #0077ff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   .page {
     display: flex;
     align-items: center;
