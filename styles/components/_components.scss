@@ -440,20 +440,29 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 20px;
 
-    * {
-      cursor: pointer;
+    
+
+    .pagination-numbers{
+      display: flex;
+      gap: 4px;
+
+      * {
+        cursor: pointer;
+      }
     }
 
     p {
       font-size: 24px;
-      font-weight: 500;
-      color: $dark-blue-color;
+      font-family: FiraGO700;
+      font-weight: 350;
+      color: #3C3C4399;
       padding: 5px 10px;
       border-radius: 8px;
 
       &.active {
-        background-color: #064aa2;
+        background-color: $header-background;
         color: white;
       }
     }
