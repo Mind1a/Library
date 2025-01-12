@@ -23,7 +23,7 @@ $text-color: #333333;
 
   h2 {
     margin-bottom: 16px;
-    @include text_font_style($header-blue, FiraGO700, 36px, bold);
+    @include text_font_style($header-blue, FiraGO700, 32px, bold);
   }
 
   p,
