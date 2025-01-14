@@ -25,6 +25,7 @@
         @include Bookbutton();
         font-family: $font-family;
       }
+
     }
 
     .info-wrapper {
@@ -87,6 +88,7 @@
           @include chooseButton();
           background-color: transparent;
         }
+        
       }
 
       .anotation-section {
@@ -181,8 +183,12 @@
 
   .similar-books {
     margin-bottom: 179px;
-    padding: 36px 6.8%;
+    /*padding: 36px 6.8%;*/
     background-color: #fff;
+
+    .similar-books-container {
+      padding: 36px 6.8%;
+    }
 
     h3 {
       margin-bottom: 48px;
