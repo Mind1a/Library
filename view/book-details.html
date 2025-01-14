@@ -7,11 +7,12 @@
 
     <!-- css link -->
     <link rel="stylesheet" href="../styles/css/global.css" />
+    <link rel="stylesheet" href="../styles/page/_book-details.scss" />
   </head>
   <body>
     <!-- Header -->
     <header>
-      <div class="header_wrapper container">
+      <div class="container header_wrapper">
         <div class="header_components">
           <!-- Logo -->
           <div class="logo">
@@ -24,8 +25,8 @@
           <div class="navigation">
             <nav>
               <ul>
-                <li><a href="#">მთავარი</a></li>
-                <li><a href="#">პროექტის შესახებ</a></li>
+                <li><a href="../index.html">მთავარი</a></li>
+                <li><a href="about-project.html">პროექტის შესახებ</a></li>
               </ul>
             </nav>
           </div>
@@ -45,7 +46,7 @@
       <section class="book-container">
         <div class="cover-wrapper">
           <img src="../assets/landing-page-cards/motkhrobebi.jpg" alt="book cover image" />
-          <button>წაკითხვა (PDF)</button>
+          <a href="flip-page.html">წაკითხვა (PDF)</a>
         </div>
         <div class="info-wrapper">
           <div class="main-info">
@@ -155,7 +156,10 @@
           <h3>მსგავსი წიგნები</h3>
           <div class="cards-wrapper">
             <div class="card">
-              <img src="../assets/marx.png" alt="author photo" />
+              <img src="../assets/marx.png" alt="author photo" /> 
+            <div>
+              <h4>კარლ მარქსი</h4>
+              <p>გამომცემლობა</p>
               <div>
                 <h4>კარლ მარქსი</h4>
                 <p>გამომცემლობა</p>
@@ -226,6 +230,10 @@
             </div>
           </div>
         </div>
+        <ion-icon
+          class="icon-right icon"
+          name="chevron-forward-outline"
+        ></ion-icon>
       </section>
     </main>
 
@@ -277,5 +285,13 @@
 
     <!-- JavaScript link -->
     <script src="../js/book-details.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>

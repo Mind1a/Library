@@ -1,5 +1,6 @@
 body {
   background-color: $body-background-color;
+  font-family: "FiraGO400", Helvetica, sans-serif !important;
 }
 
 .container {
@@ -14,7 +15,7 @@ body {
 
 .main-content-wrapper {
   max-width: 1680px;
-  width: 100%;
+  //width: 100%;
   margin: 0 auto;
   padding-top: 64px;
 
@@ -25,10 +26,15 @@ body {
   .filter-books-wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    gap: 70px;
 
     .filter-section {
       max-width: 402px;
+      position: relative;
+
+      @media (max-width: 1040px) {
+        display: none;
+      }
 
       .buttons-section {
         display: flex;
@@ -77,421 +83,411 @@ body {
           align-items: center;
           justify-content: center;
           gap: 10px;
-
+          transition: background-color 0.2s;
           .dropdown-text {
             color: $main-blue-color;
             font-size: 24px;
             font-family: FiraGo400;
+            transition: color 0.2s;
+          }
+          &.active-btn {
+            background-color: $main-blue-color;
+
+            .dropdown-text {
+              color: #ffffff;
+            }
           }
         }
       }
 
-      .clean-filters {
-        cursor: pointer;
-        display: flex;
-        justify-content: flex-end;
-        gap: 10px;
-        margin: 11px 0 19px;
+      .dropdown-options {
+        overflow: hidden;
+        height: 0;
+        z-index: 10;
+        transition: height 0.2s;
+        position: absolute;
+        background-color: #ffffff;
 
-        .clean-filters-text {
-          color: #3c3c4399;
-          font-family: FiraGo600;
-          font-size: 1rem;
+        li {
+          padding: 8px 24px;
+          @include text_font_style(
+            hsla(240, 6%, 25%, 0.6),
+            FiraGO350,
+            18px,
+            350
+          );
+          cursor: pointer;
+          &:hover {
+            background-color: hsla(208, 86%, 92%, 1);
+          }
         }
-      }
-
-      .dropdownUnderline {
-        @include dropdownUnderline;
-      }
-
-      .media-type-section {
-        display: flex;
-        flex-direction: column;
-        gap: 36px;
-
-        .dropdown-section-wrapper {
-          display: flex;
-          flex-direction: column;
-          gap: 15px;
-
-          h2 {
-            @include dropdownTitles;
-          }
-
-          .dropdown {
-            display: flex;
-            flex-direction: column;
-
-            label {
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: space-between;
-              cursor: pointer;
-              font-size: 16px;
-              font-family: FiraGo400;
-              color: #333333;
-              position: relative;
-
-              &:not(:last-child) {
-                margin-bottom: 15px;
-              }
-
-              input[type="checkbox"] {
-                appearance: none;
-                -webkit-appearance: none;
-                width: 22px;
-                height: 22px;
-                cursor: pointer;
-                border: 2px solid #3c3c4360;
-                border-radius: 3px;
-                position: relative;
-                display: inline-block;
-                vertical-align: middle;
-
-                &::before {
-                  content: "";
-                  display: block;
-                  width: 100%;
-                  height: 100%;
-                }
-
-                &:checked::before {
-                  background-color: #0077ff;
-                }
-
-                &:checked {
-                  background-color: #0077ff;
-                  border: 2px solid #0077ff;
-                }
-
-                &:checked::after {
-                  content: "";
-                  position: absolute;
-                  top: 50%;
-                  left: 50%;
-                  width: 8px;
-                  height: 14px;
-                  border: solid #ffffff;
-                  border-width: 0 2.5px 2.5px 0;
-                  transform: translate(-40%, -60%) rotate(45deg);
-                }
-              }
-            }
-          }
-
-          // .dropdown-head {
-          //   display: flex;
-          //   flex-direction: row;
-          //   align-items: center;
-          //   justify-content: space-between;
-          //   font-size: 24px;
-          //   font-weight: 200px;
-          //   line-height: 28.8px;
-          //   cursor: pointer;
-
-          //   img {
-          //     cursor: pointer;
-
-          //     &.rotate {
-          //       transform: rotate(180deg);
-          //     }
-          //   }
-          // }
-
-          // .dropdown-container {
-          //   // height: 0;
-          //   // overflow: hidden;
-          //   // transition: height 0.3s ease-in-out;
-
-          //   .dropdown {
-          //     // display: flex;
-          //     // flex-direction: column;
-
-          //     // .dropdown-line {
-          //     //   width: 100%;
-          //     //   height: 1px;
-          //     //   border: 1px solid #d5d5d5;
-          //     //   border-radius: 5px;
-          //     //   color: #d5d5d5;
-          //     //   margin: 18px 0;
-          //     // }
-
-          //   }
-
-          //   &.active {
-          //     height: 184px;
-          //   }
-          // }
-
-          .publish-date {
-            // height: 115px;
-
-            // .dropdown-line {
-            //   width: 100%;
-            //   height: 1px;
-            //   border: 1px solid #d5d5d5;
-            //   border-radius: 5px;
-            //   color: #d5d5d5;
-            //   margin: 25px 0;
-            // }
-
-            .date-wrapper {
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: space-between;
-
-              img {
-                rotate: 270deg;
-              }
-
-              .date-input-container {
-                display: flex;
-                align-items: center;
-                position: relative;
-                border: 1px solid #3c3c4399;
-                border-radius: 8px;
-                width: 145px;
-                height: 54px;
-                padding: 17px 16px;
-                cursor: pointer;
-
-                label {
-                  display: flex;
-                  flex-direction: row;
-                  align-items: center;
-                  justify-content: center;
-
-                  .calendar-icon {
-                    margin-right: 10px;
-                    rotate: 0deg;
-                  }
-
-                  p {
-                    font-size: 16px;
-                    font-family: FiraGo400;
-                    color: #3c3c4399;
-                  }
-
-                  input[type="date"] {
-                    position: absolute;
-                    border: none;
-                    outline: none;
-                    width: 100%;
-                    height: 100%;
-                    top: 0;
-                    left: 0;
-                    opacity: 0;
-                    z-index: 10;
-                    width: 10px;
-                    cursor: pointer;
-
-                    &::-webkit-inner-spin-button,
-                    &::-webkit-clear-button {
-                      display: none;
-                    }
-
-                    &::-webkit-calendar-picker-indicator {
-                      opacity: 0;
-                      cursor: pointer;
-                    }
-                  }
-                }
-              }
-            }
-          }
+        &.displayed {
+          height: auto;
+          width: 100%;
+          outline: 2px solid hsla(240, 6%, 25%, 0.6);
+          border-radius: 15px;
         }
       }
     }
 
-    .books-section {
-      max-width: 1230px;
-      //flex: 1;
-      //padding: 24px 29px;
-      //border-radius: 10px;
-      display: grid;
-      //align-items: center;
-      grid-template-columns: repeat(4, 1fr);
-      column-gap: 24px;
-      row-gap: 30px;
+    .clean-filters {
+      cursor: pointer;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin: 11px 0 19px;
 
-      //   @media (max-width: 1760px) {
-      //     grid-template-columns: repeat(3, 1fr);
-      //   }
+      .clean-filters-text {
+        color: #3c3c4399;
+        font-family: FiraGo600;
+        font-size: 1rem;
+      }
+    }
 
-      //   @media (max-width: 1440px) {
-      //     grid-template-columns: repeat(2, 1fr);
-      //   }
+    .dropdownUnderline {
+      @include dropdownUnderline;
+    }
 
-      //   @media (max-width: 1110px) {
-      //     grid-template-columns: repeat(1, 1fr);
-      //   }
+    .clean-filters {
+      cursor: pointer;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin: 11px 0 19px;
 
-      .card {
-        position: relative;
-        margin: 0;
-        border: 1px solid #33333360;
-        border-radius: 10px;
-        overflow: hidden;
+      .clean-filters-text {
+        color: #3c3c4399;
+        font-family: FiraGo600;
+        font-size: 1rem;
+      }
+    }
 
-        .book-cover {
-          width: 260px;
-          height: 367px;
+    .dropdownUnderline {
+      @include dropdownUnderline;
+    }
+    .media-type-section {
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+
+      .dropdown-section-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        h2 {
+          @include dropdownTitles;
         }
 
-        .book-info {
-          position: absolute;
-          top: 0;
+        .dropdown {
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
-          height: 100%;
-          width: 100%;
 
-          .book-views {
+          label {
             display: flex;
+            flex-direction: row;
             align-items: center;
-            justify-content: flex-end;
-            gap: 4px;
-            padding: 15px 12px 0 0;
+            justify-content: space-between;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: FiraGo400;
+            color: #333333;
 
-            p {
-              color: #ffffff;
-              font-family: FiraGo700;
-              font-size: 1rem;
-            }
-          }
-
-          .title-share {
-            background-color: white;
-            padding: 12px 12px 16px;
-
-            .title-share-default {
-              display: flex;
-              justify-content: space-between;
-
-              h2 {
-                font-family: FiraGo600;
-                color: $card-title;
-                font-size: 1rem;
-              }
+            &:not(:last-child) {
+              margin-bottom: 15px;
             }
 
-            .title-share-hover {
-              padding-top: 4px;
-              height: 0;
+            input[type="checkbox"] {
+              appearance: none;
+              -webkit-appearance: none;
+              width: 22px;
+              height: 22px;
+              cursor: pointer;
+              border: 2px solid #3c3c4360;
+              border-radius: 3px;
+              position: relative;
+              display: inline-block;
+              vertical-align: middle;
 
-              overflow: hidden;
-              transition: height 0.4s;
-
-              p {
-                color: #3c3c4399;
-                font-family: FiraGo400;
-                font-size: 0.75rem;
-                padding: 4px 0 12px;
+              &::before {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 100%;
               }
 
-              span {
-                color: #3c3c4399;
-                font-family: FiraGo400;
-                font-size: 0.75rem;
+              &:checked::before {
+                background-color: #0077ff;
+              }
+
+              &:checked {
+                background-color: #0077ff;
+                border: 2px solid #0077ff;
+              }
+
+              &:checked::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 8px;
+                height: 14px;
+                border: solid #ffffff;
+                border-width: 0 2.5px 2.5px 0;
+                transform: translate(-40%, -60%) rotate(45deg);
               }
             }
           }
         }
 
-        //     .book-info {
-        //       width: 100%;
-        //       max-width: 275px;
-        //       padding: 16px;
-        //       margin-top: -3px;
-        //       border: 1px solid #c2c2c2;
-        //       border-bottom-left-radius: 10px;
-        //       border-bottom-right-radius: 10px;
-        //       color: #000000;
+        .publish-date {
+          .date-wrapper {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 26px;
 
-        //       h2 {
-        //         font-size: 20px;
-        //         font-weight: 500;
-        //         line-height: 24px;
-        //         margin-bottom: 20px;
-        //       }
+            img {
+              rotate: 270deg;
+            }
 
-        //       p {
-        //         font-size: 16px;
-        //         line-height: 19.2px;
-        //         font-weight: 400;
-        //       }
+            .date-input-container {
+              display: flex;
+              align-items: center;
+              position: relative;
+              border: 1px solid #3c3c4399;
+              border-radius: 8px;
+              width: 170px;
+              height: 54px;
+              padding: 17px 16px;
+              cursor: pointer;
 
-        //       .book-additional-info {
-        //         margin-top: 23px;
-        //         display: flex;
-        //         flex-direction: row;
-        //         justify-content: space-between;
-        //         align-items: center;
+              label {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
 
-        //         .book-views {
-        //           display: flex;
-        //           flex-direction: row;
+                .calendar-icon {
+                  margin-right: 10px;
+                  rotate: 0deg;
+                }
 
-        //           p {
-        //             color: #13297f;
-        //             font-weight: 700;
-        //             margin-left: 4px;
-        //           }
-        //         }
-        //       }
-        //     }
+                p {
+                  font-size: 16px;
+                  font-family: FiraGo400;
+                  color: #3c3c4399;
+                }
+
+                input[type="date"] {
+                  position: absolute;
+                  border: none;
+                  outline: none;
+                  width: 100%;
+                  height: 100%;
+                  top: 0;
+                  left: 0;
+                  opacity: 0;
+                  z-index: 10;
+                  width: 10px;
+                  cursor: pointer;
+
+                  &::-webkit-inner-spin-button,
+                  &::-webkit-clear-button {
+                    display: none;
+                  }
+
+                  &::-webkit-calendar-picker-indicator {
+                    opacity: 0;
+                    cursor: pointer;
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
 
-  .pagination-container {
-    display: flex;
-    justify-content: flex-end;
+  .books-section {
     width: 100%;
-    margin: 124px 0 112px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    row-gap: 32px;
+    column-gap: 24px;
 
-    .pagination-wrapper {
+    @include responsive(l_pc) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include responsive(pc) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include responsive(l-tablet) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    //   @media (max-width: 1760px) {
+    //     grid-template-columns: repeat(3, 1fr);
+    //   }
+
+    //   @media (max-width: 1440px) {
+    //     grid-template-columns: repeat(2, 1fr);
+    //   }
+
+    //   @media (max-width: 1110px) {
+    //     grid-template-columns: repeat(1, 1fr);
+    //   }
+
+    .card {
+      position: relative;
+      margin: 0;
+      border-radius: 10px;
+      overflow: hidden;
+      width: 260px;
+      height: 367px;
+
+      img {
+        border-radius: 10px;
+      }
+
+      .book-cover {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      .book-info {
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+
+        .book-views {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          gap: 4px;
+          padding: 15px 12px 0 0;
+
+          p {
+            color: #ffffff;
+            font-family: FiraGo700;
+            font-size: 1rem;
+          }
+        }
+
+        .title-share {
+          background-color: white;
+          border: 1px solid #3c3c4399;
+          padding: 12px 12px 16px;
+          border-bottom-right-radius: 10px;
+          border-bottom-left-radius: 10px;
+
+          .title-share-default {
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+
+            h2 {
+              font-family: FiraGo600;
+              color: $card-title;
+              font-size: 16px;
+              color: #333333;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+          }
+
+          .title-share-hover {
+            padding-top: 4px;
+            height: 0;
+            overflow: hidden;
+            transition: height 0.4s;
+            p {
+              color: #3c3c4399;
+              font-family: FiraGo400;
+              font-size: 0.75rem;
+              padding: 4px 0 12px;
+            }
+
+            span {
+              color: #3c3c4399;
+              font-family: FiraGo400;
+              font-size: 0.75rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin: 36px 0 64px;
+
+  .pagination-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+
+    .pagination-numbers {
       display: flex;
-      flex-direction: row;
-      align-items: center;
+      gap: 4px;
 
       * {
         cursor: pointer;
       }
+    }
 
-      p {
-        font-size: 24px;
-        font-weight: 500;
-        color: $dark-blue-color;
-        padding: 5px 10px;
-        border-radius: 8px;
+    p {
+      font-size: 24px;
+      font-family: FiraGO700;
+      font-weight: 350;
+      color: #3c3c4399;
+      padding: 5px 10px;
+      border-radius: 8px;
 
-        &.active {
-          background-color: #064aa2;
-          color: white;
-        }
+      &.active {
+        background-color: $header-background;
+        color: white;
       }
+    }
 
-      & img:last-child {
-        rotate: 180deg;
-      }
+    & img:last-child {
+      rotate: 180deg;
     }
   }
 }
 
 .landing-photo-wrapper {
   width: 100%;
-  height: 294px;
+  max-height: 294px;
+  aspect-ratio: 8/3;
+
   overflow: hidden;
   position: relative;
 
   .landing-photo {
     width: 100%;
-    height: 294px;
+    height: 100%;
     object-fit: cover;
+
+    @include responsive(l-tablet) {
+      object-fit: cover;
+    }
   }
 
   &::before {
@@ -503,4 +499,8 @@ body {
     height: 100%;
     pointer-events: none;
   }
+
+  // @include responsive(l-tablet) {
+  //   height: 150px;
+  // }
 }

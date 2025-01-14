@@ -39,6 +39,12 @@
             text-decoration: underline;
           }
         }
+        @include responsive(l-tablet) {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          justify-content: space-around;
+        }
       }
     }
 
@@ -53,27 +59,52 @@
         &:not(:last-child) {
           margin-bottom: 22px;
         }
+
+        @include responsive(l-tablet) {
+          text-align: center;
+          display: block;
+          height: 100%;
+        }
+      }
+
+      @include responsive(l-tablet) {
+        flex-direction: row;
+        justify-content: center;
+        row-gap: 10px;
+        column-gap: 35px;
+        flex-wrap: wrap;
       }
     }
 
     .unilab-team-container {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      justify-content: end;
 
       .logo-container {
         width: 100%;
         display: flex;
         flex-direction: row;
-        // align-items: center;
-        justify-content: space-between;
+        justify-content: end;
+        gap: 25px;
+
+        img {
+          height: 80px;
+        }
       }
 
       p {
         margin-top: 24px;
         font-size: 14px;
         line-height: 16.8px;
+        font-weight: 400;
+        font-family: FiraGO400;
       }
+    }
+
+    @include responsive(l-tablet) {
+      flex-direction: column;
+      gap: 40px;
     }
   }
 }

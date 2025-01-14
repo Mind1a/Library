@@ -1,8 +1,9 @@
 .book-main {
   background-color: #f5f5f5;
+  max-width: 1900px;
+  margin: auto;
 
   .book-container {
-    max-width: 1140px;
     padding: 76px 6.2% 63px;
     display: flex;
     flex-direction: row;
@@ -21,9 +22,17 @@
         border-radius: 20px;
       }
 
-      button {
+      a {
         @include Bookbutton();
         font-family: $font-family;
+        background-color: #0468dc;
+        padding: 17px 0;
+        text-align: center;
+        transition: background-color 0.3s;
+      }
+
+      a:hover {
+        background-color: #0077ff;
       }
 
     }
@@ -39,17 +48,19 @@
         h3 {
           margin-bottom: 28px;
           font-family: $font-family;
-          font-size: 48px;
-          font-weight: bold;
-          color: #000;
+          font-size: 36px;
+          line-height: 1.2;
+          font-weight: 700;
+          color: #333;
         }
 
         p {
           margin-bottom: 40px;
           font-family: $font-family;
-          font-size: 24px;
-          font-weight: normal;
-          color: #555;
+          font-size: 18px;
+          letter-spacing: 0.2px;
+          font-weight: 600;
+          color: #3c3c4399;
         }
 
         .book-info {
@@ -65,14 +76,15 @@
 
             img {
               width: 20px;
-              height: 17.5px;
+              height: 20px;
+              filter: opacity(50%);
             }
 
             span {
               font-family: $font-family;
               font-size: 16px;
               font-weight: normal;
-              color: #000;
+              color: #3c3c4399;
             }
           }
         }
@@ -85,11 +97,21 @@
         gap: 46px;
 
         button {
-          @include chooseButton();
+          transition: color 0.3s;
+          height: 40px;
+          /*@include chooseButton();*/
+          font-family: $font-family;
+          color: #333;
+          font-size: 20px;
+          font-weight: 600;
+          border: none;
           background-color: transparent;
         }
         
-      }
+        button:hover {
+          color: #0468dc;
+          border-bottom: 3px solid #0468dc;
+        }
 
       .anotation-section {
         width: 100%;
@@ -99,10 +121,11 @@
         p {
           margin-bottom: 32px;
           font-family: $font-family;
-          font-size: 24px;
+          font-size: 18px;
           font-weight: normal;
           line-height: 1.5;
-          color: #000;
+          color: #333;
+          text-align: justify;
         }
 
         div {
@@ -114,7 +137,8 @@
             font-family: $font-family;
             font-size: 16px;
             font-weight: normal;
-            color: #000;
+            color: #333;
+            filter: opacity(70%);
           }
         }
       }
@@ -130,9 +154,9 @@
             padding-bottom: 16px;
             border-bottom: 1px dashed #d0d0d0;
             font-family: $font-family;
-            font-size: 24px;
-            font-weight: normal;
-            color: #000;
+            font-size: 18px;
+            font-weight: 400;
+            color: #333;
 
             &:last-child {
               border-bottom: 0;
@@ -142,8 +166,6 @@
       }
 
       .searching-section {
-        max-width: 1140px;
-
         margin-top: 40px;
 
         .each_content_line {
@@ -155,7 +177,7 @@
             font-family: $font-family;
             font-size: 18px;
             font-weight: 400;
-            color: #000;
+            color: #333;
             line-height: 21.6px;
 
             &:nth-child(2) {
@@ -185,6 +207,7 @@
     margin-bottom: 179px;
     /*padding: 36px 6.8%;*/
     background-color: #fff;
+    position: relative;
 
     .similar-books-container {
       padding: 36px 6.8%;
@@ -196,6 +219,20 @@
       font-size: 36px;
       font-weight: 600;
       color: #000;
+    }
+    .icon {
+      font-size: 50px;
+      color: #0468dc;
+    }
+    .icon-left {
+      position: absolute;
+      top: 50%;
+      left: 3%;
+    }
+    .icon-right {
+      position: absolute;
+      top: 50%;
+      right: 3%;
     }
 
     .cards-wrapper {
