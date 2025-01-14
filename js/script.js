@@ -43,18 +43,31 @@ bookCards.forEach((card) => {
   });
 });
 
+
+
 const dropdownBTN = document.querySelector(".dropdown-button");
 const dropdownOptionsEl = document.querySelector(".dropdown-options");
+const dropdownTextEl = document.querySelector(".dropdown-text");
+const dropdownOptions = document.querySelectorAll(".option");
 
 dropdownBTN.addEventListener("click", () => {
   dropdownOptionsEl.classList.toggle("displayed");
   dropdownBTN.classList.toggle("active-btn");
 
-  dropdownBTN.classList.contains("active-btn")
-    ? dropdownBTN
-        .querySelector("img")
-        .setAttribute("src", "./assets/white-arrow.svg")
-    : dropdownBTN
-        .querySelector("img")
-        .setAttribute("src", "./assets/blue-dropdown-icon.svg");
+  if (dropdownBTN.classList.contains("active-btn")) {
+    dropdownBTN.querySelector("img").setAttribute("src", "./assets/white-arrow.svg");
+  } else {
+    dropdownBTN.querySelector("img").setAttribute("src", "./assets/blue-dropdown-icon.svg");
+  }
+});
+
+dropdownOptions.forEach((option) => {
+  option.addEventListener("click", (option) => {
+    const selectedOption = option.target.textContent;
+    dropdownTextEl.textContent = selectedOption;
+    dropdownOptionsEl.classList.remove("displayed");
+    dropdownBTN.classList.remove("active-btn");
+    dropdownBTN.querySelector("img").setAttribute("src", "./assets/blue-dropdown-icon.svg");
+    dropdownTextEl.style.fontSize = "18px";
+  });
 });
