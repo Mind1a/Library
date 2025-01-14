@@ -10,7 +10,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    // align-items: center;
 
     .contacts-container {
       display: flex;
@@ -56,10 +55,6 @@
       a {
         color: white;
         cursor: pointer;
-
-        // &:not(:last-child) {
-        //   margin-bottom: 22px;
-        // }
 
         @include responsive(l-tablet) {
           text-align: center;
@@ -115,7 +110,6 @@
   color: white;
 
   .container {
-    // padding: 15px 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
