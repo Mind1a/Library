@@ -29,6 +29,8 @@ function initializeElements() {
   state.main = document.getElementById("main");
   state.currentPageElement = document.getElementById("current-page");
   state.totalPagesElement = document.getElementById("total-pages");
+  state.mainHeader = document.getElementById("main-header");
+  state.flipHeader = document.getElementById("flip-page-header");
 }
 
 // Optimized page creation with proper cleanup
@@ -141,7 +143,7 @@ function setupChapterMenu() {
     Array.from({ length: chapters }, (_, i) => {
       const li = document.createElement("li");
       li.className = "menu-li";
-      li.textContent = `${i + 1} თავი`;
+      li.textContent = `თავი ${i + 1} - ლორემ იპსუმ მოგვარიდა აღზრდილებისთვის`;
 
       // Add click and touch event listeners for chapter selection
       li.addEventListener("click", () => changeChapter(li, i, ul), {
@@ -157,6 +159,7 @@ function setupChapterMenu() {
     return ul;
   }
 
+  
   menu.addEventListener(
     "click",
     () => {
@@ -211,13 +214,25 @@ async function changeChapter(chapter, index, ul) {
 function showLoader() {
   state.loader.style.display = "flex";
   state.main.style.display = "none";
+  state.flipHeader.style.display = "none";
 }
 
 function hideLoader() {
   state.loader.style.display = "none";
   state.main.style.display = "block";
+  state.mainHeader.style.display = "none";
+  state.flipHeader.style.display = "flex";
   state.bookContainer.style.visibility = "visible";
 }
+
+// function showMainHeader(){
+//   state.flipHeader.style.display = "none";
+//   state.mainHeader.style.display = "flex";
+// }
+// function hideMainHeader(){
+//   state.flipHeader.style.display = "flex";
+//   state.mainHeader.style.display = "none";
+// }
 
 // Main initialization function with performance optimizations
 async function initializeViewer(pdfUrl) {
