@@ -1099,9 +1099,12 @@ header .header_wrapper .burger_menu .line {
 }
 .book-main .similar-books {
   margin-bottom: 179px;
-  padding: 36px 6.8%;
+  /*padding: 36px 6.8%;*/
   background-color: #fff;
   position: relative;
+}
+.book-main .similar-books .similar-books-container {
+  padding: 36px 6.8%;
 }
 .book-main .similar-books h3 {
   margin-bottom: 48px;
