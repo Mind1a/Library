@@ -1199,11 +1199,15 @@ header .header_wrapper .burger_menu .line {
 .about-main {
   font-family: FiraGo400;
 }
+.about-main .main-content-wrapper {
+  padding-top: 0;
+}
 .about-main .landing-photo-wrapper::before {
   display: none;
 }
 .about-main section {
-  margin-bottom: 40px;
+  margin-top: 64px;
+  padding-top: 0;
 }
 .about-main h2 {
   margin-bottom: 16px;
@@ -1225,6 +1229,9 @@ header .header_wrapper .burger_menu .line {
 .about-main .about-project-section article > p:last-child {
   margin-top: 45px;
 }
+.about-main .instructions-page {
+  margin-top: 64px;
+}
 .about-main .instructions-page ul {
   display: flex;
   justify-content: center;
@@ -1237,14 +1244,27 @@ header .header_wrapper .burger_menu .line {
 }
 .about-main .contacts-section > div {
   display: grid;
-  grid-template-columns: 45fr 55fr;
+  grid-template-columns: auto 1fr;
+  gap: 154px;
+}
+.about-main .contacts-section > div > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 56px;
+}
+.about-main .contacts-section > div > div > h2 {
+  margin-bottom: 0;
 }
 .about-main .contacts-section > div ul {
   display: flex;
   justify-content: space-around;
   align-items: baseline;
   flex-direction: column;
-  padding: 30px 0;
+  padding: 0;
+  width: 100%;
+  gap: 8px;
 }
 .about-main .contacts-section > div ul li:nth-of-type(2) {
   text-decoration: underline;
@@ -1253,7 +1273,7 @@ header .header_wrapper .burger_menu .line {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
   color: #333333;
   font-family: Firago500;
   font-size: 22px;
@@ -1276,6 +1296,9 @@ header .header_wrapper .burger_menu .line {
   border: 2px solid #0468dc;
 }
 
+.about-project-footer .contacts-container {
+  gap: 40px;
+}
 .about-project-footer .contacts-container h2 {
   color: #fff;
   font-family: FiraGO700;
@@ -1283,8 +1306,11 @@ header .header_wrapper .burger_menu .line {
   font-weight: 700;
   line-height: normal;
 }
+.about-project-footer .contacts-wrapper {
+  margin-top: 0 !important;
+}
 .about-project-footer .contacts-wrapper a {
-  margin-top: 16px;
+  margin-bottom: 16px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1314,12 +1340,15 @@ header .header_wrapper .burger_menu .line {
   line-height: normal;
 }
 .about-project-footer .usage-container > a:last-of-type {
-  margin-top: 40px;
+  margin-top: 18px;
   color: #fff;
   font-family: FiraGO400;
   font-size: 16px;
   font-weight: 400;
   line-height: normal;
+}
+.about-project-footer .footer-main-info .container {
+  padding: 46px 0;
 }
 .about-project-footer .footer-additional-info {
   background-color: #0468dc;

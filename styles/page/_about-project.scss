@@ -13,12 +13,17 @@ $text-color: #333333;
 .about-main {
   font-family: FiraGo400;
 
+  .main-content-wrapper {
+    padding-top: 0;
+  }
+
   .landing-photo-wrapper::before {
     display: none;
   }
 
   section {
-    margin-bottom: 40px;
+    margin-top: 64px;
+    padding-top: 0;
   }
 
   h2 {
@@ -36,10 +41,13 @@ $text-color: #333333;
     margin-top: 45px;
   } //space between last <p> and previous one in articles
 
-  .instructions-page ul {
-    @include flex();
-    flex-direction: column;
-    gap: 20px;
+  .instructions-page {
+    margin-top: 64px;
+    ul {
+      @include flex();
+      flex-direction: column;
+      gap: 20px;
+    }
   }
 
   .contacts-section {
@@ -47,24 +55,35 @@ $text-color: #333333;
 
     & > div {
       display: grid;
-      grid-template-columns: 45fr 55fr;
+      grid-template-columns: auto 1fr;
+      gap: 154px;
 
+      // grid-template-columns: 3fr 7fr;
+
+      & > div {
+        @include flex(space-between, center);
+        flex-direction: column;
+        gap: 56px;
+
+        > h2 {
+          margin-bottom: 0;
+        }
+      }
       ul {
         @include flex(space-around, baseline);
         flex-direction: column;
-        padding: 30px 0;
+        padding: 0;
+        width: 100%;
+        gap: 8px;
 
         li {
-          // @include flex();
-          // gap: 20px;
-
           &:nth-of-type(2) {
             text-decoration: underline;
           }
 
           a {
             @include flex();
-            gap: 20px;
+            gap: 16px;
             @include text_font_style($text-color, Firago500, 22px, 500);
             line-height: 26px;
           }
@@ -83,6 +102,7 @@ $text-color: #333333;
       iframe {
         flex: 1;
         width: 100%;
+        // width: 1111px;
         height: 288px;
 
         border-radius: 10px;
@@ -94,14 +114,16 @@ $text-color: #333333;
 
 .about-project-footer {
   .contacts-container {
+    gap: 40px;
     h2 {
       @include text_font_style(#fff, FiraGO700, 22px, 700);
     }
   }
 
   .contacts-wrapper {
+    margin-top: 0 !important;
     a {
-      margin-top: 16px;
+      margin-bottom: 16px;
 
       @include flex(flex-start);
       gap: 20px;
@@ -125,9 +147,15 @@ $text-color: #333333;
   }
 
   .usage-container > a:last-of-type {
-    margin-top: 40px;
+    margin-top: 18px;
 
     @include text_font_style(#fff, FiraGO400, 16px, 400);
+  }
+
+  .footer-main-info {
+    .container {
+      padding: 46px 0;
+    }
   }
 
   .footer-additional-info {
