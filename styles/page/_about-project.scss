@@ -11,8 +11,6 @@ $text-color: #333333;
 }
 
 .about-main {
-  font-family: FiraGo400;
-
   .main-content-wrapper {
     padding-top: 0;
   }
@@ -28,12 +26,12 @@ $text-color: #333333;
 
   h2 {
     margin-bottom: 16px;
-    @include text_font_style($header-blue, FiraGO700, 32px, bold);
+    @include text_font_style($header-blue, FiraGo700, 32px, bold);
   }
 
   p,
   .instructions-page li {
-    @include text_font_style($text-color, FiraGO350, 18px, 350);
+    @include text_font_style($text-color, FiraGo350, 18px, 350);
     line-height: 1.5;
   }
 
@@ -85,6 +83,7 @@ $text-color: #333333;
             @include flex();
             gap: 16px;
             @include text_font_style($text-color, Firago500, 22px, 500);
+            font-family: inherit;
             line-height: 26px;
           }
         }
@@ -116,7 +115,7 @@ $text-color: #333333;
   .contacts-container {
     gap: 40px;
     h2 {
-      @include text_font_style(#fff, FiraGO700, 22px, 700);
+      @include text_font_style(#fff, FiraGo700, 22px, 700);
     }
   }
 
@@ -141,15 +140,18 @@ $text-color: #333333;
     li:nth-of-type(4) {
       text-decoration: underline;
     }
+    li:last-child a {
+      margin-bottom: 0;
+    }
   }
   .usage-container > a:first-of-type {
-    @include text_font_style(#fff, FiraGO700, 22px, 700);
+    @include text_font_style(#fff, FiraGo700, 22px, 700);
   }
 
   .usage-container > a:last-of-type {
-    margin-top: 18px;
+    // margin-top: 18px;
 
-    @include text_font_style(#fff, FiraGO400, 16px, 400);
+    @include text_font_style(#fff, FiraGo400, 16px, 400);
   }
 
   .footer-main-info {
@@ -161,8 +163,8 @@ $text-color: #333333;
   .footer-additional-info {
     background-color: $header-blue;
     & > aside p {
-      @include text_font_style(#fff, FiraGO300, 12px, 300);
-      padding: 30px;
+      @include text_font_style(#fff, FiraGo300, 12px, 300);
+      padding: 30px 0;
     }
   }
 }
