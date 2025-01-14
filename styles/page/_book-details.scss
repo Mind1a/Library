@@ -34,6 +34,7 @@
       a:hover {
         background-color: #0077ff;
       }
+
     }
 
     .info-wrapper {
@@ -106,11 +107,11 @@
           border: none;
           background-color: transparent;
         }
+        
         button:hover {
           color: #0468dc;
           border-bottom: 3px solid #0468dc;
         }
-      }
 
       .anotation-section {
         width: 100%;
@@ -204,9 +205,13 @@
 
   .similar-books {
     margin-bottom: 179px;
-    padding: 36px 6.8%;
+    /*padding: 36px 6.8%;*/
     background-color: #fff;
     position: relative;
+
+    .similar-books-container {
+      padding: 36px 6.8%;
+    }
 
     h3 {
       margin-bottom: 48px;
