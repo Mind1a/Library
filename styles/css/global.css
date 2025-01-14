@@ -248,11 +248,11 @@ body {
 .main-content-wrapper .filter-books-wrapper {
   display: flex;
   flex-direction: row;
+  gap: 70px;
 }
 .main-content-wrapper .filter-books-wrapper .filter-section {
   max-width: 402px;
   position: relative;
-  margin-right: 100px;
 }
 @media (max-width: 1040px) {
   .main-content-wrapper .filter-books-wrapper .filter-section {
@@ -463,6 +463,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  gap: 26px;
 }
 .main-content-wrapper .filter-books-wrapper .media-type-section .dropdown-section-wrapper .publish-date .date-wrapper img {
   rotate: 270deg;
@@ -473,7 +474,7 @@ body {
   position: relative;
   border: 1px solid rgba(60, 60, 67, 0.6);
   border-radius: 8px;
-  width: 145px;
+  width: 170px;
   height: 54px;
   padding: 17px 16px;
   cursor: pointer;
