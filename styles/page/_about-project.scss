@@ -10,7 +10,19 @@ $text-color: #333333;
   }
 }
 
+.a-b {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+
+  header {
+    min-height: 96px;
+  }
+}
+
 .about-main {
+  flex: 1;
+
   .main-content-wrapper {
     padding-top: 0;
   }
@@ -44,12 +56,12 @@ $text-color: #333333;
     ul {
       @include flex();
       flex-direction: column;
-      gap: 20px;
+      gap: 24px;
     }
   }
 
   .contacts-section {
-    margin-bottom: 64px;
+    margin-bottom: 74px;
 
     & > div {
       display: grid;
@@ -72,7 +84,7 @@ $text-color: #333333;
         flex-direction: column;
         padding: 0;
         width: 100%;
-        gap: 8px;
+        gap: 15px;
 
         li {
           &:nth-of-type(2) {
@@ -120,7 +132,6 @@ $text-color: #333333;
   }
 
   .contacts-wrapper {
-    margin-top: 0 !important;
     a {
       margin-bottom: 16px;
 
