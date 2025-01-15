@@ -819,9 +819,6 @@ header .header_wrapper .burger_menu .line {
   display: flex;
   flex-direction: column;
 }
-.footer-main-info .container .contacts-container .contacts-wrapper {
-  margin-top: 40px;
-}
 .footer-main-info .container .contacts-container .contacts-wrapper .contacts {
   display: flex;
   flex-direction: row;
@@ -850,13 +847,11 @@ header .header_wrapper .burger_menu .line {
 .footer-main-info .container .usage-container {
   display: flex;
   flex-direction: column;
+  gap: 40px;
 }
 .footer-main-info .container .usage-container a {
   color: white;
   cursor: pointer;
-}
-.footer-main-info .container .usage-container a:not(:last-child) {
-  margin-bottom: 22px;
 }
 @media only screen and (max-width: 820px) {
   .footer-main-info .container .usage-container a {
@@ -891,7 +886,7 @@ header .header_wrapper .burger_menu .line {
   height: 80px;
 }
 .footer-main-info .container .unilab-team-container p {
-  margin-top: 24px;
+  margin-top: 12px;
   font-size: 14px;
   line-height: 16.8px;
   font-weight: 400;
@@ -909,7 +904,6 @@ header .header_wrapper .burger_menu .line {
   color: white;
 }
 .footer-additional-info .container {
-  padding: 15px 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1202,19 +1196,32 @@ header .header_wrapper .burger_menu .line {
   color: #fff !important;
 }
 
+.a-b {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+}
+.a-b header {
+  min-height: 96px;
+}
+
 .about-main {
-  font-family: FiraGo400;
+  flex: 1;
+}
+.about-main .main-content-wrapper {
+  padding-top: 0;
 }
 .about-main .landing-photo-wrapper::before {
   display: none;
 }
 .about-main section {
-  margin-bottom: 40px;
+  margin-top: 64px;
+  padding-top: 0;
 }
 .about-main h2 {
   margin-bottom: 16px;
   color: #0468dc;
-  font-family: FiraGO700;
+  font-family: FiraGo700;
   font-size: 32px;
   font-weight: bold;
   line-height: normal;
@@ -1222,7 +1229,7 @@ header .header_wrapper .burger_menu .line {
 .about-main p,
 .about-main .instructions-page li {
   color: #333333;
-  font-family: FiraGO350;
+  font-family: FiraGo350;
   font-size: 18px;
   font-weight: 350;
   line-height: normal;
@@ -1231,26 +1238,42 @@ header .header_wrapper .burger_menu .line {
 .about-main .about-project-section article > p:last-child {
   margin-top: 45px;
 }
+.about-main .instructions-page {
+  margin-top: 64px;
+}
 .about-main .instructions-page ul {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
 }
 .about-main .contacts-section {
-  margin-bottom: 64px;
+  margin-bottom: 74px;
 }
 .about-main .contacts-section > div {
   display: grid;
-  grid-template-columns: 45fr 55fr;
+  grid-template-columns: auto 1fr;
+  gap: 154px;
+}
+.about-main .contacts-section > div > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 56px;
+}
+.about-main .contacts-section > div > div > h2 {
+  margin-bottom: 0;
 }
 .about-main .contacts-section > div ul {
   display: flex;
   justify-content: space-around;
   align-items: baseline;
   flex-direction: column;
-  padding: 30px 0;
+  padding: 0;
+  width: 100%;
+  gap: 15px;
 }
 .about-main .contacts-section > div ul li:nth-of-type(2) {
   text-decoration: underline;
@@ -1259,12 +1282,13 @@ header .header_wrapper .burger_menu .line {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
   color: #333333;
   font-family: Firago500;
   font-size: 22px;
   font-weight: 500;
   line-height: normal;
+  font-family: inherit;
   line-height: 26px;
 }
 .about-main .contacts-section > div ul img {
@@ -1282,15 +1306,18 @@ header .header_wrapper .burger_menu .line {
   border: 2px solid #0468dc;
 }
 
+.about-project-footer .contacts-container {
+  gap: 40px;
+}
 .about-project-footer .contacts-container h2 {
   color: #fff;
-  font-family: FiraGO700;
+  font-family: FiraGo700;
   font-size: 22px;
   font-weight: 700;
   line-height: normal;
 }
 .about-project-footer .contacts-wrapper a {
-  margin-top: 16px;
+  margin-bottom: 16px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1312,31 +1339,36 @@ header .header_wrapper .burger_menu .line {
 .about-project-footer .contacts-wrapper li:nth-of-type(4) {
   text-decoration: underline;
 }
+.about-project-footer .contacts-wrapper li:last-child a {
+  margin-bottom: 0;
+}
 .about-project-footer .usage-container > a:first-of-type {
   color: #fff;
-  font-family: FiraGO700;
+  font-family: FiraGo700;
   font-size: 22px;
   font-weight: 700;
   line-height: normal;
 }
 .about-project-footer .usage-container > a:last-of-type {
-  margin-top: 40px;
   color: #fff;
-  font-family: FiraGO400;
+  font-family: FiraGo400;
   font-size: 16px;
   font-weight: 400;
   line-height: normal;
+}
+.about-project-footer .footer-main-info .container {
+  padding: 46px 0;
 }
 .about-project-footer .footer-additional-info {
   background-color: #0468dc;
 }
 .about-project-footer .footer-additional-info > aside p {
   color: #fff;
-  font-family: FiraGO300;
+  font-family: FiraGo300;
   font-size: 12px;
   font-weight: 300;
   line-height: normal;
-  padding: 30px;
+  padding: 30px 0;
 }
 
 body {
