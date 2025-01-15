@@ -248,11 +248,11 @@ body {
 .main-content-wrapper .filter-books-wrapper {
   display: flex;
   flex-direction: row;
+  gap: 70px;
 }
 .main-content-wrapper .filter-books-wrapper .filter-section {
   max-width: 402px;
   position: relative;
-  margin-right: 100px;
 }
 @media (max-width: 1040px) {
   .main-content-wrapper .filter-books-wrapper .filter-section {
@@ -463,6 +463,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  gap: 26px;
 }
 .main-content-wrapper .filter-books-wrapper .media-type-section .dropdown-section-wrapper .publish-date .date-wrapper img {
   rotate: 270deg;
@@ -473,7 +474,7 @@ body {
   position: relative;
   border: 1px solid rgba(60, 60, 67, 0.6);
   border-radius: 8px;
-  width: 145px;
+  width: 170px;
   height: 54px;
   padding: 17px 16px;
   cursor: pointer;
@@ -522,7 +523,7 @@ body {
   -moz-column-gap: 24px;
        column-gap: 24px;
 }
-@media only screen and (max-width: 1650px) {
+@media only screen and (max-width: 1670px) {
   .main-content-wrapper .books-section {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -545,8 +546,9 @@ body {
   width: 260px;
   height: 367px;
 }
-.main-content-wrapper .books-section .card img {
+.main-content-wrapper .books-section .card .book-cover {
   border-radius: 10px;
+  height: 90%;
 }
 .main-content-wrapper .books-section .card .book-cover {
   width: 100%;
@@ -588,6 +590,7 @@ body {
   overflow: hidden;
 }
 .main-content-wrapper .books-section .card .book-info .title-share .title-share-default h2 {
+  line-height: 2;
   font-family: FiraGo600;
   color: #333333;
   font-size: 16px;
@@ -634,9 +637,13 @@ body {
   cursor: pointer;
 }
 .pagination-container .pagination-wrapper p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 38px;
+  width: 38px;
   font-size: 24px;
   font-family: FiraGO700;
-  font-weight: 350;
   color: rgba(60, 60, 67, 0.6);
   padding: 5px 10px;
   border-radius: 8px;
@@ -812,9 +819,6 @@ header .header_wrapper .burger_menu .line {
   display: flex;
   flex-direction: column;
 }
-.footer-main-info .container .contacts-container .contacts-wrapper {
-  margin-top: 40px;
-}
 .footer-main-info .container .contacts-container .contacts-wrapper .contacts {
   display: flex;
   flex-direction: row;
@@ -843,13 +847,11 @@ header .header_wrapper .burger_menu .line {
 .footer-main-info .container .usage-container {
   display: flex;
   flex-direction: column;
+  gap: 40px;
 }
 .footer-main-info .container .usage-container a {
   color: white;
   cursor: pointer;
-}
-.footer-main-info .container .usage-container a:not(:last-child) {
-  margin-bottom: 22px;
 }
 @media only screen and (max-width: 820px) {
   .footer-main-info .container .usage-container a {
@@ -871,18 +873,24 @@ header .header_wrapper .burger_menu .line {
 .footer-main-info .container .unilab-team-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: end;
 }
 .footer-main-info .container .unilab-team-container .logo-container {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: end;
+  gap: 25px;
+}
+.footer-main-info .container .unilab-team-container .logo-container img {
+  height: 80px;
 }
 .footer-main-info .container .unilab-team-container p {
-  margin-top: 24px;
+  margin-top: 12px;
   font-size: 14px;
   line-height: 16.8px;
+  font-weight: 400;
+  font-family: FiraGO400;
 }
 @media only screen and (max-width: 820px) {
   .footer-main-info .container {
@@ -896,7 +904,6 @@ header .header_wrapper .burger_menu .line {
   color: white;
 }
 .footer-additional-info .container {
-  padding: 15px 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1092,9 +1099,12 @@ header .header_wrapper .burger_menu .line {
 }
 .book-main .similar-books {
   margin-bottom: 179px;
-  padding: 36px 6.8%;
+  /*padding: 36px 6.8%;*/
   background-color: #fff;
   position: relative;
+}
+.book-main .similar-books .similar-books-container {
+  padding: 36px 6.8%;
 }
 .book-main .similar-books h3 {
   margin-bottom: 48px;
@@ -1186,27 +1196,40 @@ header .header_wrapper .burger_menu .line {
   color: #fff !important;
 }
 
+.a-b {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+}
+.a-b header {
+  min-height: 96px;
+}
+
 .about-main {
-  font-family: FiraGo400;
+  flex: 1;
+}
+.about-main .main-content-wrapper {
+  padding-top: 0;
 }
 .about-main .landing-photo-wrapper::before {
   display: none;
 }
 .about-main section {
-  margin-bottom: 40px;
+  margin-top: 64px;
+  padding-top: 0;
 }
 .about-main h2 {
   margin-bottom: 16px;
   color: #0468dc;
-  font-family: FiraGO700;
-  font-size: 36px;
+  font-family: FiraGo700;
+  font-size: 32px;
   font-weight: bold;
   line-height: normal;
 }
 .about-main p,
 .about-main .instructions-page li {
   color: #333333;
-  font-family: FiraGO350;
+  font-family: FiraGo350;
   font-size: 18px;
   font-weight: 350;
   line-height: normal;
@@ -1215,26 +1238,42 @@ header .header_wrapper .burger_menu .line {
 .about-main .about-project-section article > p:last-child {
   margin-top: 45px;
 }
+.about-main .instructions-page {
+  margin-top: 64px;
+}
 .about-main .instructions-page ul {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
 }
 .about-main .contacts-section {
-  margin-bottom: 64px;
+  margin-bottom: 74px;
 }
 .about-main .contacts-section > div {
   display: grid;
-  grid-template-columns: 45fr 55fr;
+  grid-template-columns: auto 1fr;
+  gap: 154px;
+}
+.about-main .contacts-section > div > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 56px;
+}
+.about-main .contacts-section > div > div > h2 {
+  margin-bottom: 0;
 }
 .about-main .contacts-section > div ul {
   display: flex;
   justify-content: space-around;
   align-items: baseline;
   flex-direction: column;
-  padding: 30px 0;
+  padding: 0;
+  width: 100%;
+  gap: 15px;
 }
 .about-main .contacts-section > div ul li:nth-of-type(2) {
   text-decoration: underline;
@@ -1243,12 +1282,13 @@ header .header_wrapper .burger_menu .line {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
   color: #333333;
   font-family: Firago500;
   font-size: 22px;
   font-weight: 500;
   line-height: normal;
+  font-family: inherit;
   line-height: 26px;
 }
 .about-main .contacts-section > div ul img {
@@ -1266,15 +1306,18 @@ header .header_wrapper .burger_menu .line {
   border: 2px solid #0468dc;
 }
 
+.about-project-footer .contacts-container {
+  gap: 40px;
+}
 .about-project-footer .contacts-container h2 {
   color: #fff;
-  font-family: FiraGO700;
+  font-family: FiraGo700;
   font-size: 22px;
   font-weight: 700;
   line-height: normal;
 }
 .about-project-footer .contacts-wrapper a {
-  margin-top: 16px;
+  margin-bottom: 16px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1296,31 +1339,36 @@ header .header_wrapper .burger_menu .line {
 .about-project-footer .contacts-wrapper li:nth-of-type(4) {
   text-decoration: underline;
 }
+.about-project-footer .contacts-wrapper li:last-child a {
+  margin-bottom: 0;
+}
 .about-project-footer .usage-container > a:first-of-type {
   color: #fff;
-  font-family: FiraGO700;
+  font-family: FiraGo700;
   font-size: 22px;
   font-weight: 700;
   line-height: normal;
 }
 .about-project-footer .usage-container > a:last-of-type {
-  margin-top: 40px;
   color: #fff;
-  font-family: FiraGO400;
+  font-family: FiraGo400;
   font-size: 16px;
   font-weight: 400;
   line-height: normal;
+}
+.about-project-footer .footer-main-info .container {
+  padding: 46px 0;
 }
 .about-project-footer .footer-additional-info {
   background-color: #0468dc;
 }
 .about-project-footer .footer-additional-info > aside p {
   color: #fff;
-  font-family: FiraGO300;
+  font-family: FiraGo300;
   font-size: 12px;
   font-weight: 300;
   line-height: normal;
-  padding: 30px;
+  padding: 30px 0;
 }
 
 body {
@@ -1361,6 +1409,7 @@ body {
 }
 .main-body-container main {
   flex: 1;
+  background-color: white;
 }
 
 .flip-page-header {
@@ -1380,6 +1429,11 @@ body {
   gap: 110px;
   cursor: pointer;
 }
+.flip-page-header .flip-page-header-container .flip-navbar-right #main-chapter {
+  text-align: center;
+  width: auto;
+  max-width: 250px;
+}
 .flip-page-header .flip-page-header-container .flip-navbar-right p {
   font-family: FiraGo400;
   font-size: 24px;
@@ -1390,20 +1444,25 @@ body {
   position: absolute;
   top: 96px;
   border-radius: 10px;
-  border: 1px solid grey;
+  border: 1px solid #333333;
   overflow: hidden;
   z-index: 100;
 }
 .flip-page-header .flip-page-header-container .menu-li {
+  font-family: FiraGo400;
   font-size: 20px;
-  width: 223px;
+  width: auto;
+  min-width: 223px;
+  max-width: 100%;
   height: 46px;
   padding-left: 16px;
-  border-bottom: 1px solid black;
+  padding-right: 16px;
+  border-bottom: 1px solid #333333;
   display: flex;
   align-items: center;
   transition: background-color 0.3s, color 0.3s;
   cursor: pointer;
+  color: #333333;
 }
 .flip-page-header .flip-page-header-container .menu-li:last-child {
   border-bottom: none;
@@ -1411,12 +1470,14 @@ body {
 .flip-page-header .flip-page-header-container .menu-li:hover {
   background-color: #0468dc;
   color: #fff;
-  font-size: 24px;
 }
 .flip-page-header .flip-page-header-container .menu-li.hover {
   background-color: #022859;
   color: #fff;
-  font-size: 24px;
+}
+
+.over-hidden {
+  overflow: hidden;
 }
 
 #main-content {
@@ -1438,15 +1499,12 @@ body {
   border-radius: 4px;
 }
 
-#flip-page-footer {
-  width: 100%;
-  height: 96px;
-  background-color: #0077ff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#flip-pages {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
-#flip-page-footer .page {
+#flip-pages .page {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1454,7 +1512,7 @@ body {
   font-size: 26px;
   gap: 22px;
 }
-#flip-page-footer .page .current-page {
+#flip-pages .page .current-page {
   padding: 4px 8px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 6px;
@@ -1468,11 +1526,12 @@ body {
   align-items: center;
   gap: 32px;
   flex: 1;
+  background-color: white;
 }
 #loader img {
-  width: 123px;
-  height: 124px;
-  animation: rotate 2s linear infinite;
+  width: 200px;
+  height: 190px;
+  mix-blend-mode: multiply;
 }
 #loader h1 {
   font-size: 48px;
@@ -1511,4 +1570,11 @@ body {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
   backface-visibility: hidden;
+}
+
+.main-chapter {
+  font-family: FiraGo400;
+  font-size: 24px;
+  margin-top: 30px;
+  text-align: center;
 }/*# sourceMappingURL=global.css.map */

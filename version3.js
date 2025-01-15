@@ -240,20 +240,36 @@ async function initializeViewer(pdfUrl) {
     initializeElements();
     showLoader();
 
-    // Initialize PageFlip with optimized settings
+    // Dynamically calculate settings based on device type
+    const isMobile = window.innerWidth <= 768;
+    const isTablet = window.innerWidth > 768 && window.innerWidth <= 1024;
+
+    const width = isMobile ? 300 : isTablet ? 600 : 700;
+    const height = isMobile ? 500 : isTablet ? 800 : 1000;
+
+    // Initialize PageFlip with responsive settings
     state.pageFlip = new St.PageFlip(state.bookContainer, {
-      width: 700,
-      height: 1000,
+      width,
+      height,
       showCover: true,
       drawShadow: true,
       flippingTime: 2000,
-      usePortrait: false,
-      startZIndex: 0,
-      minWidth: 300,
+      // პორტრეტი
+      usePortrait: isMobile,
+      size: "stretch",
+      // Threshold values
+      minWidth: isMobile ? 200 : 315,
       maxWidth: 1000,
+      minHeight: isMobile ? 400 : 420,
+      maxHeight: 1000,
+      mobileScrollSupport: true,
       useMouseEvents: true,
       swipeDistance: 30,
       preventTouchEvents: false, // Allow touch events
+
+      // Custom properties
+      changeOrientation: isMobile ? 'portrait' : 'landscape',
+      state: 'read',
     });
 
     const pdf = await pdfjsLib.getDocument(pdfUrl).promise;
@@ -261,6 +277,11 @@ async function initializeViewer(pdfUrl) {
     setupNavigation();
     setupChapterMenu();
     hideLoader();
+
+    // Add event listener for screen resize to reinitialize PageFlip
+    window.addEventListener("resize", async () => {
+      await initializeViewer(pdfUrl);
+    }, { passive: true });
   } catch (error) {
     console.error("Error initializing book viewer:", error);
     hideLoader();
