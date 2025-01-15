@@ -1470,12 +1470,10 @@ body {
 .flip-page-header .flip-page-header-container .menu-li:hover {
   background-color: #0468dc;
   color: #fff;
-  font-size: 24px;
 }
 .flip-page-header .flip-page-header-container .menu-li.hover {
   background-color: #022859;
   color: #fff;
-  font-size: 24px;
 }
 
 #main-content {
@@ -1568,4 +1566,11 @@ body {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
   backface-visibility: hidden;
+}
+
+.main-chapter {
+  font-family: FiraGo400;
+  font-size: 24px;
+  margin-top: 30px;
+  text-align: center;
 }/*# sourceMappingURL=global.css.map */

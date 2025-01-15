@@ -68,12 +68,12 @@
     .menu-li:hover {
       background-color: #0468dc;
       color: #fff;
-      font-size: 24px;
+      // font-size: 24px;
     }
     .menu-li.hover {
       background-color: #022859;
       color: #fff;
-      font-size: 24px;
+      // font-size: 24px;
     }
   }
 }
@@ -180,4 +180,11 @@
   image-rendering: crisp-edges;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+
+.main-chapter{
+  font-family: FiraGo400;
+  font-size: 24px;
+  margin-top: 30px;
+  text-align: center;
 }
