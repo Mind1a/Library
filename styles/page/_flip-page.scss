@@ -25,7 +25,7 @@
       justify-content: center;
       gap: 110px;
       cursor: pointer;
-      #main-chapter{
+      #main-chapter {
         text-align: center;
         width: auto;
         max-width: 250px;
@@ -68,16 +68,18 @@
     .menu-li:hover {
       background-color: #0468dc;
       color: #fff;
-      font-size: 24px;
+      // font-size: 24px;
     }
     .menu-li.hover {
       background-color: #022859;
       color: #fff;
-      font-size: 24px;
+      // font-size: 24px;
     }
   }
 }
-
+.over-hidden {
+  overflow: hidden;
+}
 #main-content {
   display: flex;
   flex: 1;
@@ -155,7 +157,7 @@
   }
 
   a {
-    color: #0468DC;
+    color: #0468dc;
     font-size: 24px;
     font-family: Firago500;
     text-decoration: underline;
@@ -180,4 +182,11 @@
   image-rendering: crisp-edges;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+
+.main-chapter {
+  font-family: FiraGo400;
+  font-size: 24px;
+  margin-top: 30px;
+  text-align: center;
 }

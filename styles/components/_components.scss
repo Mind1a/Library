@@ -351,8 +351,9 @@ body {
       width: 260px;
       height: 367px;
 
-      img {
+      .book-cover {
         border-radius: 10px;
+        height: 90%;
       }
 
       .book-cover {
@@ -397,6 +398,7 @@ body {
             overflow: hidden;
 
             h2 {
+              line-height: 2;
               font-family: FiraGo600;
               color: $card-title;
               font-size: 16px;
@@ -453,9 +455,13 @@ body {
     }
 
     p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 38px;
+      width: 38px;
       font-size: 24px;
       font-family: FiraGO700;
-      font-weight: 350;
       color: #3c3c4399;
       padding: 5px 10px;
       border-radius: 8px;

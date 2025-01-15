@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="../styles/css/global.css" />
 
     <!-- page-flip cdn-->
-    <script src="../node_modules/page-flip/dist/js/page-flip.browser.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/page-flip@latest/dist/js/page-flip.browser.js"></script>
     <!-- pdfjs-lib cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
   </head>
   <body class="main-body-container" id="body">
     <!-- main header -->
     <header id="main-header">
-      <div class="header_wrapper container">
+      <div class="container header_wrapper">
         <div class="header_components">
           <!-- Logo -->
           <div class="logo">
@@ -47,7 +47,6 @@
       </div>
     </header>
 
-
     <header class="flip-page-header" id="flip-page-header">
       <div class="flip-page-header-container container">
         <a href="./book-details.html">
@@ -77,7 +76,7 @@
         </div>
 
         <div class="flip-navbar-right">
-          <p class="main-chapter" id="main-chapter">განდეგილი - თავი I</p>
+          <!-- <p class="main-chapter" id="main-chapter">განდეგილი - თავი I</p> -->
           <div id="menu" style="cursor: pointer">
             <img src="../assets/flip-page/burger-menu.png" alt="ჩამონათვალი" />
           </div>
@@ -98,6 +97,7 @@
     </header>
 
     <main id="main">
+      <p class="main-chapter" id="main-chapter">განდეგილი - თავი I</p>
       <section id="main-content">
         <div id="pdf-container"></div>
       </section>
@@ -105,7 +105,10 @@
 
     <!-- adding loading -->
     <section id="loader">
-      <img src="../assets/flip-page/Animation - 1736632045640.gif" alt="წიგნი" />
+      <img
+        src="../assets/flip-page/Animation - 1736632045640.gif"
+        alt="წიგნი"
+      />
       <!-- <dotlottie-player src="https://lottie.host/68bcedd6-8aef-413d-9bed-603b9566a20b/MAqfUGeO4L.lottie" background="transparent" speed="1" style="width: 260px; height: 185px" loop autoplay></dotlottie-player> -->
       <h1>მიმდინარეობს წიგნის ჩატვირთვა<span class="dots"></span></h1>
       <a href="../index.html">დაბრუნდით მთავარ გვერდზე</a>
