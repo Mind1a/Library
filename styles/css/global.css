@@ -523,7 +523,7 @@ body {
   -moz-column-gap: 24px;
        column-gap: 24px;
 }
-@media only screen and (max-width: 1650px) {
+@media only screen and (max-width: 1670px) {
   .main-content-wrapper .books-section {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -546,8 +546,9 @@ body {
   width: 260px;
   height: 367px;
 }
-.main-content-wrapper .books-section .card img {
+.main-content-wrapper .books-section .card .book-cover {
   border-radius: 10px;
+  height: 90%;
 }
 .main-content-wrapper .books-section .card .book-cover {
   width: 100%;
@@ -589,6 +590,7 @@ body {
   overflow: hidden;
 }
 .main-content-wrapper .books-section .card .book-info .title-share .title-share-default h2 {
+  line-height: 2;
   font-family: FiraGo600;
   color: #333333;
   font-size: 16px;
@@ -635,9 +637,13 @@ body {
   cursor: pointer;
 }
 .pagination-container .pagination-wrapper p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 38px;
+  width: 38px;
   font-size: 24px;
   font-family: FiraGO700;
-  font-weight: 350;
   color: rgba(60, 60, 67, 0.6);
   padding: 5px 10px;
   border-radius: 8px;
