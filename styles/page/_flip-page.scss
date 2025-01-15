@@ -25,7 +25,7 @@
       justify-content: center;
       gap: 110px;
       cursor: pointer;
-      #main-chapter{
+      #main-chapter {
         text-align: center;
         width: auto;
         max-width: 250px;
@@ -77,7 +77,9 @@
     }
   }
 }
-
+.over-hidden {
+  overflow: hidden;
+}
 #main-content {
   display: flex;
   flex: 1;
@@ -155,7 +157,7 @@
   }
 
   a {
-    color: #0468DC;
+    color: #0468dc;
     font-size: 24px;
     font-family: Firago500;
     text-decoration: underline;
@@ -182,7 +184,7 @@
   backface-visibility: hidden;
 }
 
-.main-chapter{
+.main-chapter {
   font-family: FiraGo400;
   font-size: 24px;
   margin-top: 30px;

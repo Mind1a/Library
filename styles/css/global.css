@@ -1476,6 +1476,10 @@ body {
   color: #fff;
 }
 
+.over-hidden {
+  overflow: hidden;
+}
+
 #main-content {
   display: flex;
   flex: 1;
@@ -1545,7 +1549,7 @@ body {
   animation: dots 1.5s steps(3, end) infinite;
 }
 #loader a {
-  color: #0468DC;
+  color: #0468dc;
   font-size: 24px;
   font-family: Firago500;
   text-decoration: underline;
