@@ -123,59 +123,54 @@ $text-color: #333333;
   }
 }
 
-.about-project-footer {
-  .contacts-container {
-    gap: 40px;
-    h2 {
-      @include text_font_style(#fff, FiraGo700, 22px, 700);
-    }
-  }
+// .about-project-footer {
+//   // .contacts-container {
+//   //   gap: 40px;
+//   //   h2 {
+//   //     @include text_font_style(#fff, FiraGo700, 22px, 700);
+//   //   }
+//   // }
 
-  .contacts-wrapper {
-    a {
-      margin-bottom: 16px;
+//   .contacts-wrapper {
+//     // a {
+//     //   margin-bottom: 16px;
 
-      @include flex(flex-start);
-      gap: 20px;
-      @include text_font_style(#fff, inherit, 16px, 400);
-      font-family: Firago400;
-      line-height: 26px;
+//     //   @include flex(flex-start);
+//     //   gap: 20px;
+//     //   @include text_font_style(#fff, inherit, 16px, 400);
+//     //   font-family: Firago400;
+//     //   line-height: 26px;
 
-      img {
-        height: 40px;
-        width: 40px;
-        aspect-ratio: 1;
-      }
-    }
-    li:nth-of-type(2),
-    li:nth-of-type(4) {
-      text-decoration: underline;
-    }
-    li:last-child a {
-      margin-bottom: 0;
-    }
-  }
-  .usage-container > a:first-of-type {
-    @include text_font_style(#fff, FiraGo700, 22px, 700);
-  }
+//     //   img {
+//     //     height: 40px;
+//     //     width: 40px;
+//     //     aspect-ratio: 1;
+//     //   }
+//     // }
+//     // li:nth-of-type(2),
+//     // li:nth-of-type(4) {
+//     //   text-decoration: underline;
+//     // }
+//     // li:last-child a {
+//     //   margin-bottom: 0;
+//     // }
+//   }
 
-  .usage-container > a:last-of-type {
-    // margin-top: 18px;
+//   // .usage-container > a:first-of-type {
+//   //   @include text_font_style(#fff, FiraGo700, 22px, 700);
+//   // }
 
-    @include text_font_style(#fff, FiraGo400, 16px, 400);
-  }
+//   // .footer-main-info {
+//   //   .container {
+//   //     padding: 46px 0;
+//   //   }
+//   // }
 
-  .footer-main-info {
-    .container {
-      padding: 46px 0;
-    }
-  }
-
-  .footer-additional-info {
-    background-color: $header-blue;
-    & > aside p {
-      @include text_font_style(#fff, FiraGo300, 12px, 300);
-      padding: 30px 0;
-    }
-  }
-}
+//   .footer-additional-info {
+//     background-color: $header-blue;
+//     & > aside p {
+//       @include text_font_style(#fff, FiraGo300, 12px, 300);
+//       padding: 30px 0;
+//     }
+//   }
+// }
