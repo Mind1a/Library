@@ -1409,7 +1409,7 @@ body {
 }
 .main-body-container main {
   flex: 1;
-  background-color: white;
+  background-color: #EDF6FB;
 }
 
 .flip-page-header {

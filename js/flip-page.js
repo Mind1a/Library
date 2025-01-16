@@ -143,7 +143,7 @@ function setupChapterMenu() {
     Array.from({ length: chapters }, (_, i) => {
       const li = document.createElement("li");
       li.className = "menu-li";
-      li.textContent = `თავი ${i + 1} - ლორემ იპსუმ მოგვარიდა აღზრდილებისთვის`;
+      li.textContent = `თავი ${i + 1}`;
 
       // Add click and touch event listeners for chapter selection
       li.addEventListener("click", () => changeChapter(li, i, ul), {
