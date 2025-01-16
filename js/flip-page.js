@@ -14,10 +14,10 @@ const state = {
 };
 
 const chapterToPageMap = {
-  0: 0, // Chapter 1 starts at page 0
-  1: 3, // Chapter 2 starts at page 3
-  2: 3, // Chapter 3 starts at page 8
-  3: 4, // Chapter 4 starts at page 12
+  0: 0, // Chapter 0 starts at page 0
+  1: 3, // Chapter 1 starts at page 3
+  2: 3, // Chapter 2 starts at page 3
+  3: 4, // Chapter 3 starts at page 4
   4: 5,
   5: 5,
   6: 6,
