@@ -961,7 +961,7 @@ header .header_wrapper .burger_menu .line {
 .book-main .book-container .info-wrapper {
   display: flex;
   flex-direction: column;
-  overflow-x: scroll;
+  overflow: auto;
 }
 .book-main .book-container .info-wrapper .main-info {
   display: flex;
@@ -1055,7 +1055,7 @@ header .header_wrapper .burger_menu .line {
   gap: 18px;
 }
 .book-main .book-container .info-wrapper .feature-section ul li {
-  padding-bottom: 16px;
+  padding-bottom: 8px;
   border-bottom: 1px dashed #d0d0d0;
   font-family: "FiraGO400", sans-serif;
   font-size: 24px;
@@ -1190,7 +1190,7 @@ header .header_wrapper .burger_menu .line {
 .book-main .similar-books .books-box {
   display: flex;
   justify-content: space-between;
-  overflow-x: scroll;
+  overflow: auto;
 }
 .book-main .similar-books .books-box .book-cover {
   width: 100%;
