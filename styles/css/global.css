@@ -224,6 +224,15 @@ body {
   font-family: "FiraGO400", Helvetica, sans-serif !important;
 }
 
+.landing-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.landing-page main {
+  flex: 1;
+}
+
 .container {
   max-width: 1680px;
   width: 100%;
@@ -969,6 +978,15 @@ header .header_wrapper .burger_menu .line {
   overflow: hidden;
 }
 
+.book-details-body-container {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+.book-details-body-container main {
+  flex: 1;
+}
+
 .book-main {
   background-color: #f5f5f5;
 }
@@ -1122,6 +1140,7 @@ header .header_wrapper .burger_menu .line {
   gap: 16px;
 }
 .book-main .book-container .info-wrapper .searching-section .each_content_line p {
+  min-width: 100px;
   margin-bottom: 34px;
   font-family: "FiraGO400", sans-serif;
   font-size: 18px;
@@ -1395,19 +1414,33 @@ body {
           text-decoration-skip-ink: none;
 }
 
-.main-body-container {
+.flip-body-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   font-family: FiraGo;
 }
-.main-body-container main {
+.flip-body-container main {
   flex: 1;
   background-color: white;
 }
 
+.flip-page-main {
+  background-color: #edf6fb !important;
+}
+
+a#menu .svg-path {
+  fill: rgba(255, 255, 255, 0.3764705882);
+  transition: fill 0.3s ease;
+}
+a#menu .svg-path:hover {
+  fill: white;
+}
+a#menu:hover .svg-path {
+  fill: #ffffff;
+}
+
 .flip-page-header {
-  padding: 23px 161px 23px 120px;
   background-color: #0077ff;
   color: white;
 }
@@ -1417,10 +1450,11 @@ body {
   align-items: center;
 }
 .flip-page-header .flip-page-header-container .flip-navbar-right {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 110px;
+  gap: 99px;
   cursor: pointer;
 }
 .flip-page-header .flip-page-header-container .flip-navbar-right #main-chapter {
@@ -1432,15 +1466,24 @@ body {
   font-family: FiraGo400;
   font-size: 24px;
 }
+.flip-page-header .flip-page-header-container .flip-navbar-right .svg-path {
+  transition: fill 0.3s ease;
+}
+.flip-page-header .flip-page-header-container .flip-navbar-right .svg-path {
+  fill: #ffffff;
+}
 .flip-page-header .flip-page-header-container .menu-ul {
   background-color: white;
   color: black;
   position: absolute;
-  top: 96px;
+  top: 69px;
+  right: 45px;
   border-radius: 10px;
   border: 1px solid #333333;
   overflow: hidden;
   z-index: 100;
+  max-height: 500px;
+  overflow-y: auto;
 }
 .flip-page-header .flip-page-header-container .menu-li {
   font-family: FiraGo400;
@@ -1520,7 +1563,7 @@ body {
   align-items: center;
   gap: 32px;
   flex: 1;
-  background-color: white;
+  background-color: #edf6fb;
 }
 #loader img {
   width: 200px;

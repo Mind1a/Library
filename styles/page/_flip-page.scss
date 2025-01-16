@@ -1,4 +1,4 @@
-.main-body-container {
+.flip-body-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -9,9 +9,29 @@
     background-color: white;
   }
 }
+.flip-page-main {
+  background-color: #edf6fb !important;
+}
+
+a#menu {
+  .svg-path {
+    fill: #ffffff60;
+    transition: fill 0.3s ease;
+
+    // Change fill color on hover
+    &:hover {
+      fill: white;
+    }
+  }
+
+  &:hover {
+    .svg-path {
+      fill: #ffffff;
+    }
+  }
+}
 
 .flip-page-header {
-  padding: 23px 161px 23px 120px;
   background-color: #0077ff;
   color: white;
 
@@ -20,10 +40,11 @@
     justify-content: space-between;
     align-items: center;
     .flip-navbar-right {
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 110px;
+      gap: 99px;
       cursor: pointer;
       #main-chapter {
         text-align: center;
@@ -34,17 +55,27 @@
         font-family: FiraGo400;
         font-size: 24px;
       }
+
+      .svg-path {
+        transition: fill 0.3s ease;
+      }
+      .svg-path {
+        fill: #ffffff;
+      }
     }
 
     .menu-ul {
       background-color: white;
       color: black;
       position: absolute;
-      top: 96px;
+      top: 69px;
+      right: 45px;
       border-radius: 10px;
       border: 1px solid #333333;
       overflow: hidden;
       z-index: 100;
+      max-height: 500px; // Adjust the height as needed
+      overflow-y: auto;
     }
     .menu-li {
       font-family: FiraGo400;
@@ -77,6 +108,7 @@
     }
   }
 }
+
 .over-hidden {
   overflow: hidden;
 }
@@ -130,7 +162,7 @@
   align-items: center;
   gap: 32px;
   flex: 1;
-  background-color: white;
+  background-color: #edf6fb;
 
   img {
     width: 200px;
