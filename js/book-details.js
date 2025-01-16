@@ -4,10 +4,27 @@ const featureBtn = document.getElementById("feature");
 const anotationSection = document.querySelector(".anotation-section");
 const featureSection = document.querySelector(".feature-section");
 const searchingSection = document.querySelector(".searching-section");
+const dots = document.querySelectorAll(".dotted-line");
 
-anotationBtn.addEventListener("click", () => openBookInfo("anotation"));
-featureBtn.addEventListener("click", () => openBookInfo("feature"));
-searchBtn.addEventListener("click", () => openBookInfo("search"));
+// dots.forEach((el) => {
+//   console.log(el.textContent.length);
+// });
+
+const btns = [anotationBtn, featureBtn, searchBtn];
+btns[0].classList.add("focused");
+
+btns.forEach((el, i) => {
+  let k = ["anotation", "feature", "search"];
+
+  el.addEventListener("click", (e) => {
+    btns.forEach((el) => {
+      el.classList.remove("focused");
+    });
+
+    e.target.classList.add("focused");
+    openBookInfo(k[i]);
+  });
+});
 
 function openBookInfo(section) {
   [anotationSection, featureSection, searchingSection].forEach((sec) => {

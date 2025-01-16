@@ -915,43 +915,53 @@ header .header_wrapper .burger_menu .line {
   font-weight: 700;
 }
 
+.dotted-line {
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
 .book-main {
   background-color: #f5f5f5;
-  max-width: 1900px;
 }
 .book-main .book-container {
-  padding: 76px 6.2% 63px;
+  max-width: 1680px;
+  margin: 64px auto;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   gap: 72px;
-  background-color: #f5f5f5;
 }
 .book-main .book-container .cover-wrapper {
   display: flex;
   flex-direction: column;
 }
 .book-main .book-container .cover-wrapper img {
-  width: 504px;
+  max-width: 504px;
   height: 685px;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
   border-radius: 20px;
 }
 .book-main .book-container .cover-wrapper a {
-  background-color: #203a9c;
-  color: #fff;
-  padding: 32px 116px;
-  border-radius: 20px;
+  background-color: #0468dc;
+  color: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 350;
   border: none;
   cursor: pointer;
   font-family: "FiraGO400", sans-serif;
-  padding: 16px 116px;
+  text-align: center;
+  height: 61px;
+  transition: all 0.2s;
+}
+.book-main .book-container .cover-wrapper a:hover {
+  background-color: rgb(0, 119, 255);
 }
 .book-main .book-container .info-wrapper {
   display: flex;
   flex-direction: column;
+  overflow-x: scroll;
 }
 .book-main .book-container .info-wrapper .main-info {
   display: flex;
@@ -967,9 +977,9 @@ header .header_wrapper .burger_menu .line {
 .book-main .book-container .info-wrapper .main-info p {
   margin-bottom: 40px;
   font-family: "FiraGO400", sans-serif;
-  font-size: 16px;
-  font-weight: 350;
-  color: #3C3C43;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(60, 60, 67, 0.6);
 }
 .book-main .book-container .info-wrapper .main-info .book-info {
   display: flex;
@@ -991,41 +1001,28 @@ header .header_wrapper .burger_menu .line {
   font-family: "FiraGO400", sans-serif;
   font-size: 16px;
   font-weight: 350;
-  color: #3c3c43;
+  color: rgba(60, 60, 67, 0.6);
 }
 .book-main .book-container .info-wrapper .button-wrapper {
-  margin: 75px 0 24px;
+  margin: 40px 0 16px 0;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   gap: 46px;
-  /*#anotation {
-    color:#0468DC;
-    border-bottom: 3px solid #0468DC;
-  }*/
 }
 .book-main .book-container .info-wrapper .button-wrapper button {
-  background-color: red;
-  color: #000;
-  padding: 0 0 7px;
+  background-color: transparent;
+  color: #333333;
+  padding: 0 0 8px 0;
   border: none;
-  border-radius: 0;
-  font-family: "FiraGO";
+  font-family: FiraGO500;
   font-size: 20px;
   font-weight: 500;
-  border: none;
-  cursor: pointer;
-  background-color: transparent;
-  font-size: 20px;
-  font-weight: 550;
-  color: #333;
 }
-.book-main .book-container .info-wrapper .button-wrapper button:active {
-  color: #112f91;
-}
-.book-main .book-container .info-wrapper .button-wrapper button:focus {
-  color: #112f91;
-  border-bottom: #112f91 solid 3px;
+.book-main .book-container .info-wrapper .button-wrapper button.focused {
+  color: #0468dc;
+  border-bottom: #0468dc solid 3px;
 }
 .book-main .book-container .info-wrapper .anotation-section {
   width: 100%;
@@ -1070,11 +1067,10 @@ header .header_wrapper .burger_menu .line {
 }
 .book-main .book-container .info-wrapper .searching-section {
   max-width: 1140px;
-  margin-top: 40px;
 }
 .book-main .book-container .info-wrapper .searching-section .each_content_line {
   display: flex;
-  justify-content: space-between;
+  gap: 16px;
 }
 .book-main .book-container .info-wrapper .searching-section .each_content_line p {
   margin-bottom: 34px;
@@ -1098,14 +1094,14 @@ header .header_wrapper .burger_menu .line {
 .book-main .book-container .info-wrapper .feature-section ul li {
   font-size: 14px;
   font-weight: 350;
-  color: #3c3c43;
+  color: rgba(60, 60, 67, 0.6);
 }
 .book-main .book-container .info-wrapper .open {
-  max-height: 100%;
+  max-height: 100% !important;
   opacity: 1;
 }
 .book-main .similar-books {
-  margin-bottom: 179px;
+  margin-bottom: 110px;
   background-color: #fff;
   /*.cards-wrapper {
     /*display: flex;
@@ -1178,10 +1174,14 @@ header .header_wrapper .burger_menu .line {
   }*/
 }
 .book-main .similar-books .similar-books-container {
-  padding: 36px 6.8%;
+  max-width: 1680px;
+}
+.book-main .similar-books .similar-books-container.main-content-wrapper {
+  padding-top: 36px;
+  padding-bottom: 43px;
 }
 .book-main .similar-books h3 {
-  margin-bottom: 48px;
+  margin-bottom: 28px;
   font-family: "FiraGO400", sans-serif;
   font-size: 36px;
   font-weight: 600;
@@ -1189,7 +1189,8 @@ header .header_wrapper .burger_menu .line {
 }
 .book-main .similar-books .books-box {
   display: flex;
-  padding: 0 80px;
+  justify-content: space-between;
+  overflow-x: scroll;
 }
 .book-main .similar-books .books-box .book-cover {
   width: 100%;
