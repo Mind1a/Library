@@ -143,7 +143,7 @@ function setupChapterMenu() {
     Array.from({ length: chapters }, (_, i) => {
       const li = document.createElement("li");
       li.className = "menu-li";
-      li.textContent = `თავი ${i + 1} - ლორემ იპსუმ მოგვარიდა აღზრდილებისთვის`;
+      li.textContent = `თავი ${i + 1}`;
 
       // Add click and touch event listeners for chapter selection
       li.addEventListener("click", () => changeChapter(li, i, ul), {
@@ -159,7 +159,6 @@ function setupChapterMenu() {
     return ul;
   }
 
-  
   menu.addEventListener(
     "click",
     () => {
@@ -268,8 +267,8 @@ async function initializeViewer(pdfUrl) {
       preventTouchEvents: false, // Allow touch events
 
       // Custom properties
-      changeOrientation: isMobile ? 'portrait' : 'landscape',
-      state: 'read',
+      changeOrientation: isMobile ? "portrait" : "landscape",
+      state: "read",
     });
 
     const pdf = await pdfjsLib.getDocument(pdfUrl).promise;
@@ -279,9 +278,13 @@ async function initializeViewer(pdfUrl) {
     hideLoader();
 
     // Add event listener for screen resize to reinitialize PageFlip
-    window.addEventListener("resize", async () => {
-      await initializeViewer(pdfUrl);
-    }, { passive: true });
+    window.addEventListener(
+      "resize",
+      async () => {
+        await initializeViewer(pdfUrl);
+      },
+      { passive: true }
+    );
   } catch (error) {
     console.error("Error initializing book viewer:", error);
     hideLoader();

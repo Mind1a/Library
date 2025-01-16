@@ -301,13 +301,13 @@ body {
   font-family: "FiraGo400";
   font-size: 1.5rem;
   border: none;
-  border-radius: 12px;
+  border-radius: 10px;
 }
 .main-content-wrapper .filter-books-wrapper .filter-section .buttons-section .dropdown-button {
   width: 100%;
   height: 59px;
   border: 2px solid #0468dc;
-  border-radius: 15px;
+  border-radius: 10px;
   background-color: #ffffff;
   display: flex;
   align-items: center;
@@ -810,7 +810,7 @@ header .header_wrapper .burger_menu .line {
   line-height: 21.6px;
 }
 .footer-main-info .container {
-  padding: 88px 0;
+  padding: 46px 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -818,6 +818,33 @@ header .header_wrapper .burger_menu .line {
 .footer-main-info .container .contacts-container {
   display: flex;
   flex-direction: column;
+  gap: 40px;
+}
+.footer-main-info .container .contacts-container h2 {
+  color: #fff;
+  font-family: FiraGo700;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: normal;
+}
+.footer-main-info .container .contacts-container .contacts-wrapper a {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  font-family: Firago400;
+  line-height: 26px;
+}
+.footer-main-info .container .contacts-container .contacts-wrapper a img {
+  height: 40px;
+  width: 40px;
+  aspect-ratio: 1;
 }
 .footer-main-info .container .contacts-container .contacts-wrapper .contacts {
   display: flex;
@@ -844,10 +871,24 @@ header .header_wrapper .burger_menu .line {
     justify-content: space-around;
   }
 }
+.footer-main-info .container .contacts-container .contacts-wrapper li:nth-of-type(2),
+.footer-main-info .container .contacts-container .contacts-wrapper li:nth-of-type(4) {
+  text-decoration: underline;
+}
+.footer-main-info .container .contacts-container .contacts-wrapper li:last-child a {
+  margin-bottom: 0;
+}
 .footer-main-info .container .usage-container {
   display: flex;
   flex-direction: column;
   gap: 40px;
+}
+.footer-main-info .container .usage-container > a:first-of-type {
+  color: #fff;
+  font-family: FiraGo700;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: normal;
 }
 .footer-main-info .container .usage-container a {
   color: white;
@@ -900,8 +941,16 @@ header .header_wrapper .burger_menu .line {
 }
 
 .footer-additional-info {
-  background-color: #064aa2;
+  background-color: #0468dc;
   color: white;
+}
+.footer-additional-info > aside p {
+  color: #fff;
+  font-family: FiraGo300;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: normal;
+  padding: 30px 0;
 }
 .footer-additional-info .container {
   display: flex;
@@ -915,43 +964,53 @@ header .header_wrapper .burger_menu .line {
   font-weight: 700;
 }
 
+.dotted-line {
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
 .book-main {
   background-color: #f5f5f5;
-  max-width: 1900px;
 }
 .book-main .book-container {
-  padding: 76px 6.2% 63px;
+  max-width: 1680px;
+  margin: 64px auto;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   gap: 72px;
-  background-color: #f5f5f5;
 }
 .book-main .book-container .cover-wrapper {
   display: flex;
   flex-direction: column;
 }
 .book-main .book-container .cover-wrapper img {
-  width: 504px;
+  max-width: 504px;
   height: 685px;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
   border-radius: 20px;
 }
 .book-main .book-container .cover-wrapper a {
-  background-color: #203a9c;
-  color: #fff;
-  padding: 32px 116px;
-  border-radius: 20px;
+  background-color: #0468dc;
+  color: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 350;
   border: none;
   cursor: pointer;
   font-family: "FiraGO400", sans-serif;
-  padding: 16px 116px;
+  text-align: center;
+  height: 61px;
+  transition: all 0.2s;
+}
+.book-main .book-container .cover-wrapper a:hover {
+  background-color: rgb(0, 119, 255);
 }
 .book-main .book-container .info-wrapper {
   display: flex;
   flex-direction: column;
+  overflow: auto;
 }
 .book-main .book-container .info-wrapper .main-info {
   display: flex;
@@ -967,9 +1026,9 @@ header .header_wrapper .burger_menu .line {
 .book-main .book-container .info-wrapper .main-info p {
   margin-bottom: 40px;
   font-family: "FiraGO400", sans-serif;
-  font-size: 16px;
-  font-weight: 350;
-  color: #3C3C43;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(60, 60, 67, 0.6);
 }
 .book-main .book-container .info-wrapper .main-info .book-info {
   display: flex;
@@ -991,41 +1050,28 @@ header .header_wrapper .burger_menu .line {
   font-family: "FiraGO400", sans-serif;
   font-size: 16px;
   font-weight: 350;
-  color: #3c3c43;
+  color: rgba(60, 60, 67, 0.6);
 }
 .book-main .book-container .info-wrapper .button-wrapper {
-  margin: 75px 0 24px;
+  margin: 40px 0 16px 0;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   gap: 46px;
-  /*#anotation {
-    color:#0468DC;
-    border-bottom: 3px solid #0468DC;
-  }*/
 }
 .book-main .book-container .info-wrapper .button-wrapper button {
-  background-color: red;
-  color: #000;
-  padding: 0 0 7px;
+  background-color: transparent;
+  color: #333333;
+  padding: 0 0 8px 0;
   border: none;
-  border-radius: 0;
-  font-family: "FiraGO";
+  font-family: FiraGO500;
   font-size: 20px;
   font-weight: 500;
-  border: none;
-  cursor: pointer;
-  background-color: transparent;
-  font-size: 20px;
-  font-weight: 550;
-  color: #333;
 }
-.book-main .book-container .info-wrapper .button-wrapper button:active {
-  color: #112f91;
-}
-.book-main .book-container .info-wrapper .button-wrapper button:focus {
-  color: #112f91;
-  border-bottom: #112f91 solid 3px;
+.book-main .book-container .info-wrapper .button-wrapper button.focused {
+  color: #0468dc;
+  border-bottom: #0468dc solid 3px;
 }
 .book-main .book-container .info-wrapper .anotation-section {
   width: 100%;
@@ -1058,7 +1104,7 @@ header .header_wrapper .burger_menu .line {
   gap: 18px;
 }
 .book-main .book-container .info-wrapper .feature-section ul li {
-  padding-bottom: 16px;
+  padding-bottom: 8px;
   border-bottom: 1px dashed #d0d0d0;
   font-family: "FiraGO400", sans-serif;
   font-size: 24px;
@@ -1070,11 +1116,10 @@ header .header_wrapper .burger_menu .line {
 }
 .book-main .book-container .info-wrapper .searching-section {
   max-width: 1140px;
-  margin-top: 40px;
 }
 .book-main .book-container .info-wrapper .searching-section .each_content_line {
   display: flex;
-  justify-content: space-between;
+  gap: 16px;
 }
 .book-main .book-container .info-wrapper .searching-section .each_content_line p {
   margin-bottom: 34px;
@@ -1098,14 +1143,14 @@ header .header_wrapper .burger_menu .line {
 .book-main .book-container .info-wrapper .feature-section ul li {
   font-size: 14px;
   font-weight: 350;
-  color: #3c3c43;
+  color: rgba(60, 60, 67, 0.6);
 }
 .book-main .book-container .info-wrapper .open {
-  max-height: 100%;
+  max-height: 100% !important;
   opacity: 1;
 }
 .book-main .similar-books {
-  margin-bottom: 179px;
+  margin-bottom: 110px;
   background-color: #fff;
   /*.cards-wrapper {
     /*display: flex;
@@ -1178,10 +1223,14 @@ header .header_wrapper .burger_menu .line {
   }*/
 }
 .book-main .similar-books .similar-books-container {
-  padding: 36px 6.8%;
+  max-width: 1680px;
+}
+.book-main .similar-books .similar-books-container.main-content-wrapper {
+  padding-top: 36px;
+  padding-bottom: 43px;
 }
 .book-main .similar-books h3 {
-  margin-bottom: 48px;
+  margin-bottom: 28px;
   font-family: "FiraGO400", sans-serif;
   font-size: 36px;
   font-weight: 600;
@@ -1189,7 +1238,8 @@ header .header_wrapper .burger_menu .line {
 }
 .book-main .similar-books .books-box {
   display: flex;
-  padding: 0 80px;
+  justify-content: space-between;
+  overflow: auto;
 }
 .book-main .similar-books .books-box .book-cover {
   width: 100%;
@@ -1315,71 +1365,6 @@ header .header_wrapper .burger_menu .line {
   border: 2px solid #0468dc;
 }
 
-.about-project-footer .contacts-container {
-  gap: 40px;
-}
-.about-project-footer .contacts-container h2 {
-  color: #fff;
-  font-family: FiraGo700;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: normal;
-}
-.about-project-footer .contacts-wrapper a {
-  margin-bottom: 16px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 20px;
-  color: #fff;
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: normal;
-  font-family: Firago400;
-  line-height: 26px;
-}
-.about-project-footer .contacts-wrapper a img {
-  height: 40px;
-  width: 40px;
-  aspect-ratio: 1;
-}
-.about-project-footer .contacts-wrapper li:nth-of-type(2),
-.about-project-footer .contacts-wrapper li:nth-of-type(4) {
-  text-decoration: underline;
-}
-.about-project-footer .contacts-wrapper li:last-child a {
-  margin-bottom: 0;
-}
-.about-project-footer .usage-container > a:first-of-type {
-  color: #fff;
-  font-family: FiraGo700;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: normal;
-}
-.about-project-footer .usage-container > a:last-of-type {
-  color: #fff;
-  font-family: FiraGo400;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: normal;
-}
-.about-project-footer .footer-main-info .container {
-  padding: 46px 0;
-}
-.about-project-footer .footer-additional-info {
-  background-color: #0468dc;
-}
-.about-project-footer .footer-additional-info > aside p {
-  color: #fff;
-  font-family: FiraGo300;
-  font-size: 12px;
-  font-weight: 300;
-  line-height: normal;
-  padding: 30px 0;
-}
-
 body {
   background-color: #f5f5f5;
 }
@@ -1477,12 +1462,12 @@ body {
   border-bottom: none;
 }
 .flip-page-header .flip-page-header-container .menu-li:hover {
-  background-color: #0468dc;
-  color: #fff;
+  background-color: #d8ebfc;
+  color: #333333;
 }
 .flip-page-header .flip-page-header-container .menu-li.hover {
-  background-color: #022859;
-  color: #fff;
+  background-color: #d8ebfc;
+  color: #333333;
 }
 
 .over-hidden {
@@ -1495,7 +1480,7 @@ body {
   flex-direction: column;
   gap: 30px;
   align-items: center;
-  padding: 120px;
+  padding-top: 50px;
   position: relative;
 }
 #main-content #pdf-container {

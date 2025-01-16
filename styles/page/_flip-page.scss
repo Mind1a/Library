@@ -66,13 +66,13 @@
       border-bottom: none;
     }
     .menu-li:hover {
-      background-color: #0468dc;
-      color: #fff;
+      background-color: #d8ebfc;
+      color: #333333;
       // font-size: 24px;
     }
     .menu-li.hover {
-      background-color: #022859;
-      color: #fff;
+      background-color: #d8ebfc;
+      color: #333333;
       // font-size: 24px;
     }
   }
@@ -86,7 +86,7 @@
   flex-direction: column;
   gap: 30px;
   align-items: center;
-  padding: 120px;
+  padding-top: 50px;
   position: relative;
 
   #pdf-container {
