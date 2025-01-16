@@ -1,4 +1,4 @@
-.main-body-container {
+.flip-body-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -40,6 +40,7 @@ a#menu {
     justify-content: space-between;
     align-items: center;
     .flip-navbar-right {
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -67,12 +68,13 @@ a#menu {
       background-color: white;
       color: black;
       position: absolute;
-      top: 96px;
+      top: 69px;
+      right: 45px;
       border-radius: 10px;
       border: 1px solid #333333;
       overflow: hidden;
       z-index: 100;
-      max-height: 300px; // Adjust the height as needed
+      max-height: 500px; // Adjust the height as needed
       overflow-y: auto;
     }
     .menu-li {
