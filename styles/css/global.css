@@ -1462,12 +1462,12 @@ body {
   border-bottom: none;
 }
 .flip-page-header .flip-page-header-container .menu-li:hover {
-  background-color: #0468dc;
-  color: #fff;
+  background-color: #d8ebfc;
+  color: #333333;
 }
 .flip-page-header .flip-page-header-container .menu-li.hover {
-  background-color: #022859;
-  color: #fff;
+  background-color: #d8ebfc;
+  color: #333333;
 }
 
 .over-hidden {
@@ -1480,7 +1480,7 @@ body {
   flex-direction: column;
   gap: 30px;
   align-items: center;
-  padding: 120px;
+  padding-top: 50px;
   position: relative;
 }
 #main-content #pdf-container {
