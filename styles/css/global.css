@@ -301,13 +301,13 @@ body {
   font-family: "FiraGo400";
   font-size: 1.5rem;
   border: none;
-  border-radius: 12px;
+  border-radius: 10px;
 }
 .main-content-wrapper .filter-books-wrapper .filter-section .buttons-section .dropdown-button {
   width: 100%;
   height: 59px;
   border: 2px solid #0468dc;
-  border-radius: 15px;
+  border-radius: 10px;
   background-color: #ffffff;
   display: flex;
   align-items: center;
