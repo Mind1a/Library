@@ -1161,7 +1161,7 @@ header .header_wrapper .burger_menu .line {
 .book-main .book-container .info-wrapper .searching-section {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+  transition: max-height 0s ease-out, opacity 0.4s ease-out;
   opacity: 0;
 }
 .book-main .book-container .info-wrapper .feature-section ul li {
