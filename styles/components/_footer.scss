@@ -82,12 +82,13 @@ $header-blue: #0468dc;
       flex-direction: column;
       gap: 40px;
 
-      & > a:first-of-type {
-        @include text_font_style(#fff, FiraGo700, 22px, 700);
+      a {
+        @include text_font_style(#fff, FiraGo700, 18px, 700);
       }
       a {
         color: white;
         cursor: pointer;
+        @include text_font_style(#fff, FiraGo700, 18px, 700);
 
         @include responsive(l-tablet) {
           text-align: center;
