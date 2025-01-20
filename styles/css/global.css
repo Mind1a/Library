@@ -892,16 +892,21 @@ header .header_wrapper .burger_menu .line {
   flex-direction: column;
   gap: 40px;
 }
-.footer-main-info .container .usage-container > a:first-of-type {
+.footer-main-info .container .usage-container a {
   color: #fff;
   font-family: FiraGo700;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
   line-height: normal;
 }
 .footer-main-info .container .usage-container a {
   color: white;
   cursor: pointer;
+  color: #fff;
+  font-family: FiraGo700;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
 }
 @media only screen and (max-width: 820px) {
   .footer-main-info .container .usage-container a {
