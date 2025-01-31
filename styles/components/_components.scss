@@ -140,34 +140,22 @@ body {
     }
 
     .clean-filters {
-      cursor: pointer;
       display: flex;
       justify-content: flex-end;
       gap: 10px;
-      margin: 11px 0 19px;
+      margin: 11px 0 24px;
 
-      .clean-filters-text {
-        color: #3c3c4399;
-        font-family: FiraGo600;
-        font-size: 1rem;
+      button {
+        display: flex;
+        gap: 10px;
+        background-color: transparent;
+        border: none;
       }
-    }
-
-    .dropdownUnderline {
-      @include dropdownUnderline;
-    }
-
-    .clean-filters {
-      cursor: pointer;
-      display: flex;
-      justify-content: flex-end;
-      gap: 10px;
-      margin: 11px 0 19px;
 
       .clean-filters-text {
-        color: #3c3c4399;
+        color: rgba(60, 60, 67, 0.6);
         font-family: FiraGo600;
-        font-size: 1rem;
+        font-size: 16px;
       }
     }
 
@@ -184,9 +172,14 @@ body {
         flex-direction: column;
         gap: 15px;
 
-        h2 {
+        legend {
           @include dropdownTitles;
+          margin-bottom: 16px;
         }
+
+        // h2 {
+        //   @include dropdownTitles;
+        // }
 
         .dropdown {
           display: flex;
