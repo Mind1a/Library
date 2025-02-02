@@ -273,14 +273,14 @@ async function initializeViewer(pdfUrl) {
       height: 1000,
       showCover: true,
       drawShadow: true,
-      flippingTime: 2000,
+      flippingTime: 600, // Reduced flip animation time
       usePortrait: false,
       startZIndex: 0,
       minWidth: 300,
       maxWidth: 1000,
       useMouseEvents: true,
       swipeDistance: 30,
-      preventTouchEvents: false, // Allow touch events
+      preventTouchEvents: false,
     });
 
     const pdf = await pdfjsLib.getDocument(pdfUrl).promise;

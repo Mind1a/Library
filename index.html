@@ -58,194 +58,210 @@
       <div class="main-content-wrapper">
         <div class="filter-books-wrapper">
           <aside class="filter-section">
-            <section class="buttons-section">
-              <div class="search-container">
-                <img
-                  src="./assets/search-icon.svg"
-                  alt="search-icon"
-                  class="search-icon"
-                />
-                <input type="text" placeholder="ძიება" />
-              </div>
-
-              <button class="blue-button">ძებნა</button>
-
-              <button class="dropdown-button">
-                <p class="dropdown-text">სორტირება</p>
-                <img
-                  src="./assets/blue-dropdown-icon.svg"
-                  alt="dropdown-icon"
-                  class="dropdown-icon"
-                />
-              </button>
-
-              <section>
-                <ul class="dropdown-options">
-                  <li class="option" data-value="name-asc">დასახელება (ა-ჰ)</li>
-                  <li class="option" data-value="name-desc">
-                    დასახელება (ჰ-ა)
-                  </li>
-                  <li class="option" data-value="year-asc">
-                    მონაცემთა წელი (ზრდადი)
-                  </li>
-                  <li class="option" data-value="year-desc">
-                    მონაცემთა წელი (კლებადი)
-                  </li>
-                </ul>
-              </section>
-            </section>
-
-            <div class="dropdownUnderline"></div>
-
-            <div class="clean-filters">
-              <img
-                src="./assets/trash-icon.svg"
-                alt="trash-icon"
-                class="trash-icon"
-              />
-              <p class="clean-filters-text">ფილტრაციის გასუფთავება</p>
-            </div>
-
-            <section class="media-type-section">
-              <div class="dropdown-section-wrapper">
-                <h2>მედიის ტიპი</h2>
-                <div class="dropdownUnderline"></div>
-
-                <div class="dropdown">
-                  <label>
-                    წიგნები
-                    <input type="checkbox" name="option1" value="1" />
+            <form action="" id="main-form">
+              <section class="buttons-section">
+                <div class="search-container">
+                  <label for="search-input">
+                    <img
+                      src="./assets/search-icon.svg"
+                      alt="search-icon"
+                      class="search-icon"
+                    />
                   </label>
-                  <label>
-                    პერიოდიკა
-                    <input type="checkbox" name="option2" value="2" />
-                  </label>
-                  <label>
-                    წერილები
-                    <input type="checkbox" name="option3" value="3" />
-                  </label>
-                  <label>
-                    ხელნაწერები
-                    <input type="checkbox" name="option1" value="1" />
-                  </label>
-                  <label>
-                    აუდიო
-                    <input type="checkbox" name="option2" value="2" />
-                  </label>
-                  <label>
-                    ფოტო
-                    <input type="checkbox" name="option3" value="3" />
-                  </label>
+                  <input
+                    id="search-input"
+                    type="text"
+                    placeholder="ძიება"
+                    name="searchQuery"
+                  />
                 </div>
+
+                <button type="submit" class="blue-button">ძებნა</button>
+
+                <button type="button" class="dropdown-button">
+                  <p class="dropdown-text">სორტირება</p>
+                  <img
+                    src="./assets/blue-dropdown-icon.svg"
+                    alt="dropdown-icon"
+                    class="dropdown-icon"
+                  />
+                </button>
+
+                <fieldset>
+                  <ul class="dropdown-options">
+                    <li class="option" data-value="name-asc">
+                      დასახელება (ა-ჰ)
+                    </li>
+                    <li class="option" data-value="name-desc">
+                      დასახელება (ჰ-ა)
+                    </li>
+                    <li class="option" data-value="year-asc">
+                      მონაცემთა წელი (ზრდადი)
+                    </li>
+                    <li class="option" data-value="year-desc">
+                      მონაცემთა წელი (კლებადი)
+                    </li>
+                  </ul>
+                </fieldset>
+              </section>
+
+              <div class="dropdownUnderline"></div>
+
+              <div class="clean-filters">
+                <button type="reset" class="resetBTN">
+                  <img
+                    src="./assets/trash-icon.svg"
+                    alt="trash-icon"
+                    class="trash-icon"
+                  />
+                  <span class="clean-filters-text">ფილტრაციის გასუფთავება</span>
+                </button>
               </div>
 
-              <div class="dropdown-section-wrapper">
-                <h2>გამოცემის წელი</h2>
-                <div class="dropdownUnderline"></div>
+              <section class="media-type-section">
+                <fieldset class="dropdown-section-wrapper">
+                  <legend>მედიის ტიპი</legend>
+                  <div class="dropdownUnderline"></div>
 
-                <div class="publish-date">
-                  <div class="date-wrapper">
-                    <div class="date-input-container">
-                      <label for="date-input">
-                        <img
-                          src="./assets/calendar-icon.svg"
-                          alt="calendar-icon"
-                          class="calendar-icon"
-                        />
-                        <p id="date-text">-დან</p>
-                        <input type="date" id="date-input" name="date" />
-                      </label>
-                    </div>
+                  <div class="dropdown">
+                    <label>
+                      წიგნები
+                      <input type="checkbox" name="mediaType" value="1" />
+                    </label>
+                    <label>
+                      პერიოდიკა
+                      <input type="checkbox" name="mediaType" value="2" />
+                    </label>
+                    <label>
+                      წერილები
+                      <input type="checkbox" name="mediaType" value="3" />
+                    </label>
+                    <label>
+                      ხელნაწერები
+                      <input type="checkbox" name="mediaType" value="4" />
+                    </label>
+                    <label>
+                      აუდიო
+                      <input type="checkbox" name="mediaType" value="5" />
+                    </label>
+                    <label>
+                      ფოტო
+                      <input type="checkbox" name="mediaType" value="6" />
+                    </label>
+                  </div>
+                </fieldset>
 
-                    <img src="./assets/dropdown-icon.svg" alt="dropdown-icon" />
+                <fieldset class="dropdown-section-wrapper">
+                  <legend>გამოცემის წელი</legend>
+                  <div class="dropdownUnderline"></div>
 
-                    <div class="date-input-container">
-                      <label for="date-input">
-                        <img
-                          src="./assets/calendar-icon.svg"
-                          alt="calendar-icon"
-                          class="calendar-icon"
-                        />
-                        <p id="date-text">-მდე</p>
-                        <input type="date" id="date-input" name="date" />
-                      </label>
+                  <div class="publish-date">
+                    <div class="date-wrapper">
+                      <div class="date-input-container">
+                        <label for="date-from-input">
+                          <img
+                            src="./assets/calendar-icon.svg"
+                            alt="calendar-icon"
+                            class="calendar-icon"
+                          />
+                          <p class="date-text">-დან</p>
+                          <input type="date" id="date-input" name="dateFrom" />
+                        </label>
+                      </div>
+
+                      <img
+                        src="./assets/dropdown-icon.svg"
+                        alt="dropdown-icon"
+                      />
+
+                      <div class="date-input-container">
+                        <label for="date-to-input" name="dateTo">
+                          <img
+                            src="./assets/calendar-icon.svg"
+                            alt="calendar-icon"
+                            class="calendar-icon"
+                          />
+                          <p class="date-text">-მდე</p>
+                          <input name="dateTo" type="date" id="date-input" />
+                        </label>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
+                </fieldset>
 
-              <div class="dropdown-section-wrapper">
-                <h2>ჟანრი</h2>
-                <div class="dropdownUnderline"></div>
+                <fieldset class="dropdown-section-wrapper">
+                  <legend>ჟანრი</legend>
+                  <div class="dropdownUnderline"></div>
 
-                <div class="dropdown">
-                  <label>
-                    პოეზია
-                    <input type="checkbox" name="option1" value="1" />
-                  </label>
-                  <label>
-                    პროზა
-                    <input type="checkbox" name="option2" value="2" />
-                  </label>
-                  <label>
-                    წერილები
-                    <input type="checkbox" name="option3" value="3" />
-                  </label>
-                  <label>
-                    სხვა
-                    <input type="checkbox" name="option1" value="1" />
-                  </label>
-                </div>
-              </div>
+                  <div class="dropdown">
+                    <label>
+                      პოეზია
+                      <input type="checkbox" name="genre" value="1" />
+                    </label>
+                    <label>
+                      პროზა
+                      <input type="checkbox" name="genre" value="2" />
+                    </label>
+                    <label>
+                      წერილები
+                      <input type="checkbox" name="genre" value="3" />
+                    </label>
+                    <label>
+                      სხვა
+                      <input type="checkbox" name="genre" value="1" />
+                    </label>
+                  </div>
+                </fieldset>
 
-              <div class="dropdown-section-wrapper">
-                <h2>ენა</h2>
-                <div class="dropdownUnderline"></div>
+                <fieldset class="dropdown-section-wrapper">
+                  <legend>ენა</legend>
+                  <div class="dropdownUnderline"></div>
 
-                <div class="dropdown">
-                  <label>
-                    ქართული
-                    <input type="checkbox" name="option1" value="1" />
-                  </label>
-                  <label>
-                    ინგლისური
-                    <input type="checkbox" name="option2" value="2" />
-                  </label>
-                  <label>
-                    რუსული
-                    <input type="checkbox" name="option3" value="3" />
-                  </label>
-                </div>
-              </div>
+                  <div class="dropdown">
+                    <label>
+                      ქართული
+                      <input type="checkbox" name="language" value="1" />
+                    </label>
+                    <label>
+                      ინგლისური
+                      <input type="checkbox" name="language" value="2" />
+                    </label>
+                    <label>
+                      რუსული
+                      <input type="checkbox" name="language" value="3" />
+                    </label>
+                  </div>
+                </fieldset>
 
-              <div class="dropdown-section-wrapper">
-                <h2>ფონდი</h2>
-                <div class="dropdownUnderline"></div>
+                <fieldset class="dropdown-section-wrapper">
+                  <legend>ფონდი</legend>
+                  <div class="dropdownUnderline"></div>
 
-                <div class="dropdown">
-                  <label>
-                    საჯარო
-                    <input type="checkbox" name="option1" value="1" />
-                  </label>
-                  <label>
-                    ილიას სახელმწიფო უნივ...
-                    <input type="checkbox" name="option2" value="2" />
-                  </label>
-                  <label>
-                    ხელნაწერები
-                    <input type="checkbox" name="option3" value="3" />
-                  </label>
-                  <label>
-                    მუზეუმი
-                    <input type="checkbox" name="option1" value="1" />
-                  </label>
-                  <label>
-                    სხვა
-                    <input type="checkbox" name="option2" value="2" />
-                  </label>
-                </div>
-              </div>
-            </section>
+                  <div class="dropdown">
+                    <label>
+                      საჯარო
+                      <input type="checkbox" name="fund" value="1" />
+                    </label>
+                    <label>
+                      ილიას სახელმწიფო უნივ...
+                      <input type="checkbox" name="fund" value="2" />
+                    </label>
+                    <label>
+                      ხელნაწერები
+                      <input type="checkbox" name="fund" value="3" />
+                    </label>
+                    <label>
+                      მუზეუმი
+                      <input type="checkbox" name="fund" value="4" />
+                    </label>
+                    <label>
+                      სხვა
+                      <input type="checkbox" name="fund" value="5" />
+                    </label>
+                  </div>
+                </fieldset>
+              </section>
+            </form>
           </aside>
 
           <section class="books-section">
