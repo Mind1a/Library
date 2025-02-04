@@ -36,6 +36,11 @@ body {
     display: flex;
     flex-direction: row;
     gap: 70px;
+    justify-items: center;
+
+    @media (max-width: 1440px) {
+      gap: 131px;
+    }
 
     .filter-section {
       max-width: 402px;
@@ -43,6 +48,9 @@ body {
 
       @media (max-width: 1040px) {
         display: none;
+      }
+      @media (max-width: 1440px) {
+        width: 298px;
       }
 
       .buttons-section {
@@ -260,10 +268,11 @@ body {
               position: relative;
               border: 1px solid #3c3c4399;
               border-radius: 8px;
-              width: 170px;
+              max-width: 170px;
               height: 54px;
               padding: 17px 16px;
               cursor: pointer;
+              min-width: 102px;
 
               label {
                 display: flex;
@@ -331,6 +340,11 @@ body {
 
     @include responsive(l-tablet) {
       grid-template-columns: repeat(1, 1fr);
+    }
+
+    @media (max-width: 1440px) {
+      max-width: 835px;
+      column-gap: 27.5px;
     }
 
     //   @media (max-width: 1760px) {
