@@ -243,6 +243,11 @@ body {
     width: 91.67%;
   }
 }
+@media only screen and (max-width: 1440px) {
+  .container {
+    max-width: 1264px;
+  }
+}
 
 .main-content-wrapper {
   max-width: 1680px;
@@ -254,13 +259,18 @@ body {
     width: 91.67%;
   }
 }
+@media only screen and (max-width: 1440px) {
+  .main-content-wrapper {
+    max-width: 1264px;
+  }
+}
 .main-content-wrapper .filter-books-wrapper {
   display: flex;
   flex-direction: row;
   gap: 70px;
   justify-items: center;
 }
-@media (max-width: 1440px) {
+@media only screen and (max-width: 1440px) {
   .main-content-wrapper .filter-books-wrapper {
     gap: 131px;
   }
@@ -274,9 +284,9 @@ body {
     display: none;
   }
 }
-@media (max-width: 1440px) {
+@media only screen and (max-width: 1440px) {
   .main-content-wrapper .filter-books-wrapper .filter-section {
-    width: 298px;
+    max-width: 298px;
   }
 }
 .main-content-wrapper .filter-books-wrapper .filter-section .buttons-section {
@@ -537,7 +547,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media only screen and (max-width: 1335px) {
+@media (max-width: 1330px) {
   .main-content-wrapper .books-section {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -547,7 +557,7 @@ body {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-@media (max-width: 1440px) {
+@media only screen and (max-width: 1440px) {
   .main-content-wrapper .books-section {
     max-width: 835px;
     -moz-column-gap: 27.5px;
@@ -1300,6 +1310,11 @@ header .header_wrapper .burger_menu .line {
 }
 .about-main .main-content-wrapper {
   padding-top: 0;
+}
+@media only screen and (max-width: 1440px) {
+  .about-main .main-content-wrapper {
+    max-width: 1264px;
+  }
 }
 .about-main .landing-photo-wrapper::before {
   display: none;

@@ -25,6 +25,10 @@ $text-color: #333333;
 
   .main-content-wrapper {
     padding-top: 0;
+
+    @include responsive(pc) {
+      max-width: 1264px;
+    }
   }
 
   .landing-photo-wrapper::before {

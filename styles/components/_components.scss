@@ -20,6 +20,10 @@ body {
   @media (max-width: 1800px) {
     width: 91.67%;
   }
+
+  @include responsive(pc) {
+    max-width: 1264px;
+  }
 }
 
 .main-content-wrapper {
@@ -32,13 +36,17 @@ body {
     width: 91.67%;
   }
 
+  @include responsive(pc) {
+    max-width: 1264px;
+  }
+
   .filter-books-wrapper {
     display: flex;
     flex-direction: row;
     gap: 70px;
     justify-items: center;
 
-    @media (max-width: 1440px) {
+    @include responsive(pc) {
       gap: 131px;
     }
 
@@ -49,8 +57,9 @@ body {
       @media (max-width: 1040px) {
         display: none;
       }
-      @media (max-width: 1440px) {
-        width: 298px;
+
+      @include responsive(pc) {
+        max-width: 298px;
       }
 
       .buttons-section {
@@ -334,7 +343,7 @@ body {
       grid-template-columns: repeat(3, 1fr);
     }
 
-    @include responsive(pc) {
+    @media (max-width: 1330px) {
       grid-template-columns: repeat(2, 1fr);
     }
 
@@ -342,7 +351,7 @@ body {
       grid-template-columns: repeat(1, 1fr);
     }
 
-    @media (max-width: 1440px) {
+    @include responsive(pc) {
       max-width: 835px;
       column-gap: 27.5px;
     }
