@@ -20,6 +20,10 @@ body {
   @media (max-width: 1800px) {
     width: 91.67%;
   }
+
+  @include responsive(pc) {
+    max-width: 1264px;
+  }
 }
 
 .main-content-wrapper {
@@ -32,10 +36,19 @@ body {
     width: 91.67%;
   }
 
+  @include responsive(pc) {
+    max-width: 1264px;
+  }
+
   .filter-books-wrapper {
     display: flex;
     flex-direction: row;
     gap: 70px;
+    justify-items: center;
+
+    @include responsive(pc) {
+      gap: 131px;
+    }
 
     .filter-section {
       max-width: 402px;
@@ -43,6 +56,10 @@ body {
 
       @media (max-width: 1040px) {
         display: none;
+      }
+
+      @include responsive(pc) {
+        max-width: 298px;
       }
 
       .buttons-section {
@@ -260,10 +277,11 @@ body {
               position: relative;
               border: 1px solid #3c3c4399;
               border-radius: 8px;
-              width: 170px;
+              max-width: 170px;
               height: 54px;
               padding: 17px 16px;
               cursor: pointer;
+              min-width: 102px;
 
               label {
                 display: flex;
@@ -325,12 +343,17 @@ body {
       grid-template-columns: repeat(3, 1fr);
     }
 
-    @include responsive(pc) {
+    @media (max-width: 1330px) {
       grid-template-columns: repeat(2, 1fr);
     }
 
     @include responsive(l-tablet) {
       grid-template-columns: repeat(1, 1fr);
+    }
+
+    @include responsive(pc) {
+      max-width: 835px;
+      column-gap: 27.5px;
     }
 
     //   @media (max-width: 1760px) {
