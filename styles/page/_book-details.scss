@@ -28,6 +28,11 @@
     align-items: flex-start;
     gap: 72px;
 
+    @include responsive(pc) {
+      max-width: 1264px;
+      gap: 24px;
+    }
+
     .cover-wrapper {
       display: flex;
       flex-direction: column;
@@ -38,6 +43,10 @@
         height: 685px;
         margin-bottom: 16px;
         border-radius: 20px;
+
+        @include responsive(pc) {
+          margin-bottom: 27px;
+        }
       }
 
       a {
@@ -115,6 +124,12 @@
         flex-direction: row;
         align-items: center;
         gap: 46px;
+
+        @include responsive(pc) {
+          max-width: 545px;
+          justify-content: space-between;
+          // gap: 96px;
+        }
 
         button {
           background-color: transparent;
@@ -239,6 +254,10 @@
 
     .similar-books-container {
       max-width: 1680px;
+
+      @include responsive(pc) {
+        max-width: 1264px;
+      }
       &.main-content-wrapper {
         padding-top: 36px;
         padding-bottom: 43px;
