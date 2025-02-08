@@ -559,9 +559,8 @@ body {
 }
 @media only screen and (max-width: 1440px) {
   .main-content-wrapper .books-section {
-    max-width: 835px;
-    -moz-column-gap: 27.5px;
-         column-gap: 27.5px;
+    -moz-column-gap: 24px;
+         column-gap: 24px;
   }
 }
 .main-content-wrapper .books-section .card {
@@ -1020,6 +1019,12 @@ header .header_wrapper .burger_menu .line {
   align-items: flex-start;
   gap: 72px;
 }
+@media only screen and (max-width: 1440px) {
+  .book-main .book-container {
+    max-width: 1264px;
+    gap: 24px;
+  }
+}
 .book-main .book-container .cover-wrapper {
   display: flex;
   flex-direction: column;
@@ -1029,6 +1034,11 @@ header .header_wrapper .burger_menu .line {
   height: 685px;
   margin-bottom: 16px;
   border-radius: 20px;
+}
+@media only screen and (max-width: 1440px) {
+  .book-main .book-container .cover-wrapper img {
+    margin-bottom: 27px;
+  }
 }
 .book-main .book-container .cover-wrapper a {
   background-color: #0468dc;
@@ -1099,6 +1109,12 @@ header .header_wrapper .burger_menu .line {
   flex-direction: row;
   align-items: center;
   gap: 46px;
+}
+@media only screen and (max-width: 1440px) {
+  .book-main .book-container .info-wrapper .button-wrapper {
+    max-width: 545px;
+    justify-content: space-between;
+  }
 }
 .book-main .book-container .info-wrapper .button-wrapper button {
   background-color: transparent;
@@ -1265,6 +1281,11 @@ header .header_wrapper .burger_menu .line {
 }
 .book-main .similar-books .similar-books-container {
   max-width: 1680px;
+}
+@media only screen and (max-width: 1440px) {
+  .book-main .similar-books .similar-books-container {
+    max-width: 1264px;
+  }
 }
 .book-main .similar-books .similar-books-container.main-content-wrapper {
   padding-top: 36px;

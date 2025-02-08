@@ -352,8 +352,7 @@ body {
     }
 
     @include responsive(pc) {
-      max-width: 835px;
-      column-gap: 27.5px;
+      column-gap: 24px;
     }
 
     //   @media (max-width: 1760px) {
