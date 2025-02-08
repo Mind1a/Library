@@ -1378,9 +1378,9 @@ header .header_wrapper .burger_menu .line {
   margin-bottom: 74px;
 }
 .about-main .contacts-section > div {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 154px;
+  display: flex;
+  gap: 70px;
+  justify-content: space-between;
 }
 .about-main .contacts-section > div > div {
   display: flex;
@@ -1388,6 +1388,7 @@ header .header_wrapper .burger_menu .line {
   align-items: center;
   flex-direction: column;
   gap: 56px;
+  min-width: 415px;
 }
 .about-main .contacts-section > div > div > h2 {
   margin-bottom: 0;
@@ -1422,7 +1423,13 @@ header .header_wrapper .burger_menu .line {
   aspect-ratio: 1;
 }
 .about-main .contacts-section > div .iframe-div {
-  display: flex;
+  width: 100%;
+  max-width: 1111px;
+}
+@media only screen and (max-width: 1440px) {
+  .about-main .contacts-section > div .iframe-div {
+    max-width: 727px;
+  }
 }
 .about-main .contacts-section > div iframe {
   flex: 1;
