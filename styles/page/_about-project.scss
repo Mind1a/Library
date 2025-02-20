@@ -42,7 +42,7 @@ $text-color: #333333;
 
   h2 {
     margin-bottom: 16px;
-    @include text_font_style($header-blue, FiraGo700, 32px, bold);
+    @include text_font_style($header-background, FiraGo700, 32px, bold);
   }
 
   p,
@@ -127,7 +127,7 @@ $text-color: #333333;
         height: 288px;
 
         border-radius: 10px;
-        border: 2px solid #0468dc;
+        border: 2px solid $main-green-color;
       }
     }
   }
