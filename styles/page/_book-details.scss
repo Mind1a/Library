@@ -242,6 +242,8 @@
       .feature-section {
         ul {
           li {
+            display: flex;
+            justify-content: space-between;
             font-size: 14px;
             font-weight: 350;
             color: rgba(60, 60, 67, 0.6);
