@@ -1167,9 +1167,6 @@ header .header_wrapper .burger_menu .line {
   font-weight: normal;
   color: #000;
 }
-.book-main .book-container .info-wrapper .feature-section ul li:last-child {
-  border-bottom: 0;
-}
 .book-main .book-container .info-wrapper .searching-section {
   max-width: 1140px;
 }
