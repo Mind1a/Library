@@ -32,7 +32,7 @@ a#menu {
 }
 
 .flip-page-header {
-  background-color: #0077ff;
+  background-color: $main-green-color;
   color: white;
 
   .flip-page-header-container {
@@ -189,7 +189,7 @@ a#menu {
   }
 
   a {
-    color: #0468dc;
+    color: $main-green-color;
     font-size: 24px;
     font-family: Firago500;
     text-decoration: underline;

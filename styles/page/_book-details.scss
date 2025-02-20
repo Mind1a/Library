@@ -28,6 +28,11 @@
     align-items: flex-start;
     gap: 72px;
 
+    @include responsive(pc) {
+      max-width: 1264px;
+      gap: 24px;
+    }
+
     .cover-wrapper {
       display: flex;
       flex-direction: column;
@@ -38,10 +43,22 @@
         height: 685px;
         margin-bottom: 16px;
         border-radius: 20px;
+
+        @include responsive(pc) {
+          margin-bottom: 27px;
+        }
       }
 
       a {
-        @include Bookbutton(#0468dc, #ffffff, 16px, 12px, none, 24px, 350);
+        @include Bookbutton(
+          $main-green-color,
+          #ffffff,
+          16px,
+          12px,
+          none,
+          24px,
+          350
+        );
         font-family: $font-family;
         text-align: center;
 
@@ -49,7 +66,7 @@
         transition: all 0.2s;
 
         &:hover {
-          background-color: rgba(0, 119, 255, 1);
+          background-color: $header-background;
         }
       }
     }
@@ -116,6 +133,12 @@
         align-items: center;
         gap: 46px;
 
+        @include responsive(pc) {
+          max-width: 545px;
+          justify-content: space-between;
+          // gap: 96px;
+        }
+
         button {
           background-color: transparent;
           color: #333333;
@@ -126,8 +149,8 @@
           font-weight: 500;
 
           &.focused {
-            color: #0468dc;
-            border-bottom: #0468dc solid 3px;
+            color: $main-green-color;
+            border-bottom: $main-green-color solid 3px;
           }
         }
       }
@@ -219,6 +242,8 @@
       .feature-section {
         ul {
           li {
+            display: flex;
+            justify-content: space-between;
             font-size: 14px;
             font-weight: 350;
             color: rgba(60, 60, 67, 0.6);
@@ -239,6 +264,10 @@
 
     .similar-books-container {
       max-width: 1680px;
+
+      @include responsive(pc) {
+        max-width: 1264px;
+      }
       &.main-content-wrapper {
         padding-top: 36px;
         padding-bottom: 43px;

@@ -326,7 +326,7 @@ body {
 .main-content-wrapper .filter-books-wrapper .filter-section .buttons-section .blue-button {
   width: 100%;
   height: 61px;
-  background-color: #0468dc;
+  background-color: #95b48a;
   color: #ffffff;
   font-family: "FiraGo400";
   font-size: 1.5rem;
@@ -336,7 +336,7 @@ body {
 .main-content-wrapper .filter-books-wrapper .filter-section .buttons-section .dropdown-button {
   width: 100%;
   height: 59px;
-  border: 2px solid #0468dc;
+  border: 2px solid #95b48a;
   border-radius: 10px;
   background-color: #ffffff;
   display: flex;
@@ -346,13 +346,13 @@ body {
   transition: background-color 0.2s;
 }
 .main-content-wrapper .filter-books-wrapper .filter-section .buttons-section .dropdown-button .dropdown-text {
-  color: #0468dc;
+  color: #95b48a;
   font-size: 24px;
   font-family: FiraGo400;
   transition: color 0.2s;
 }
 .main-content-wrapper .filter-books-wrapper .filter-section .buttons-section .dropdown-button.active-btn {
-  background-color: #0468dc;
+  background-color: #95b48a;
 }
 .main-content-wrapper .filter-books-wrapper .filter-section .buttons-section .dropdown-button.active-btn .dropdown-text {
   color: #ffffff;
@@ -559,9 +559,8 @@ body {
 }
 @media only screen and (max-width: 1440px) {
   .main-content-wrapper .books-section {
-    max-width: 835px;
-    -moz-column-gap: 27.5px;
-         column-gap: 27.5px;
+    -moz-column-gap: 24px;
+         column-gap: 24px;
   }
 }
 .main-content-wrapper .books-section .card {
@@ -675,7 +674,7 @@ body {
   border-radius: 8px;
 }
 .pagination-container .pagination-wrapper p.active {
-  background-color: #0077ff;
+  background-color: #a6bd9e;
   color: white;
 }
 .pagination-container .pagination-wrapper img:last-child {
@@ -713,7 +712,7 @@ body {
 
 header {
   height: 96px;
-  background-color: #0077ff;
+  background-color: #a6bd9e;
 }
 @media (max-width: 1200px) {
   header {
@@ -829,7 +828,7 @@ header .header_wrapper .burger_menu .line {
 }
 
 .footer-main-info {
-  background-color: #0077ff;
+  background-color: #a6bd9e;
   color: white;
   font-size: 18px;
   font-weight: 700;
@@ -972,7 +971,7 @@ header .header_wrapper .burger_menu .line {
 }
 
 .footer-additional-info {
-  background-color: #0468dc;
+  background-color: #95b48a;
   color: white;
 }
 .footer-additional-info > aside p {
@@ -1020,6 +1019,12 @@ header .header_wrapper .burger_menu .line {
   align-items: flex-start;
   gap: 72px;
 }
+@media only screen and (max-width: 1440px) {
+  .book-main .book-container {
+    max-width: 1264px;
+    gap: 24px;
+  }
+}
 .book-main .book-container .cover-wrapper {
   display: flex;
   flex-direction: column;
@@ -1030,8 +1035,13 @@ header .header_wrapper .burger_menu .line {
   margin-bottom: 16px;
   border-radius: 20px;
 }
+@media only screen and (max-width: 1440px) {
+  .book-main .book-container .cover-wrapper img {
+    margin-bottom: 27px;
+  }
+}
 .book-main .book-container .cover-wrapper a {
-  background-color: #0468dc;
+  background-color: #95b48a;
   color: #ffffff;
   padding: 16px;
   border-radius: 12px;
@@ -1045,7 +1055,7 @@ header .header_wrapper .burger_menu .line {
   transition: all 0.2s;
 }
 .book-main .book-container .cover-wrapper a:hover {
-  background-color: rgb(0, 119, 255);
+  background-color: #a6bd9e;
 }
 .book-main .book-container .info-wrapper {
   display: flex;
@@ -1100,6 +1110,12 @@ header .header_wrapper .burger_menu .line {
   align-items: center;
   gap: 46px;
 }
+@media only screen and (max-width: 1440px) {
+  .book-main .book-container .info-wrapper .button-wrapper {
+    max-width: 545px;
+    justify-content: space-between;
+  }
+}
 .book-main .book-container .info-wrapper .button-wrapper button {
   background-color: transparent;
   color: #333333;
@@ -1110,8 +1126,8 @@ header .header_wrapper .burger_menu .line {
   font-weight: 500;
 }
 .book-main .book-container .info-wrapper .button-wrapper button.focused {
-  color: #0468dc;
-  border-bottom: #0468dc solid 3px;
+  color: #95b48a;
+  border-bottom: #95b48a solid 3px;
 }
 .book-main .book-container .info-wrapper .anotation-section {
   width: 100%;
@@ -1182,6 +1198,8 @@ header .header_wrapper .burger_menu .line {
   opacity: 0;
 }
 .book-main .book-container .info-wrapper .feature-section ul li {
+  display: flex;
+  justify-content: space-between;
   font-size: 14px;
   font-weight: 350;
   color: rgba(60, 60, 67, 0.6);
@@ -1266,6 +1284,11 @@ header .header_wrapper .burger_menu .line {
 .book-main .similar-books .similar-books-container {
   max-width: 1680px;
 }
+@media only screen and (max-width: 1440px) {
+  .book-main .similar-books .similar-books-container {
+    max-width: 1264px;
+  }
+}
 .book-main .similar-books .similar-books-container.main-content-wrapper {
   padding-top: 36px;
   padding-bottom: 43px;
@@ -1325,7 +1348,7 @@ header .header_wrapper .burger_menu .line {
 }
 .about-main h2 {
   margin-bottom: 16px;
-  color: #0468dc;
+  color: #a6bd9e;
   font-family: FiraGo700;
   font-size: 32px;
   font-weight: bold;
@@ -1357,9 +1380,9 @@ header .header_wrapper .burger_menu .line {
   margin-bottom: 74px;
 }
 .about-main .contacts-section > div {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 154px;
+  display: flex;
+  gap: 70px;
+  justify-content: space-between;
 }
 .about-main .contacts-section > div > div {
   display: flex;
@@ -1367,6 +1390,7 @@ header .header_wrapper .burger_menu .line {
   align-items: center;
   flex-direction: column;
   gap: 56px;
+  min-width: 415px;
 }
 .about-main .contacts-section > div > div > h2 {
   margin-bottom: 0;
@@ -1401,14 +1425,20 @@ header .header_wrapper .burger_menu .line {
   aspect-ratio: 1;
 }
 .about-main .contacts-section > div .iframe-div {
-  display: flex;
+  width: 100%;
+  max-width: 1111px;
+}
+@media only screen and (max-width: 1440px) {
+  .about-main .contacts-section > div .iframe-div {
+    max-width: 727px;
+  }
 }
 .about-main .contacts-section > div iframe {
   flex: 1;
   width: 100%;
   height: 288px;
   border-radius: 10px;
-  border: 2px solid #0468dc;
+  border: 2px solid #95b48a;
 }
 
 body {
@@ -1433,7 +1463,7 @@ body {
   font-size: 3rem;
 }
 .error-main-container .error-message p {
-  color: #0468dc;
+  color: #95b48a;
   font-family: FiraGo700;
   font-size: 1.5rem;
   text-decoration-line: underline;
@@ -1468,7 +1498,7 @@ a#menu:hover .svg-path {
 }
 
 .flip-page-header {
-  background-color: #0077ff;
+  background-color: #95b48a;
   color: white;
 }
 .flip-page-header .flip-page-header-container {
@@ -1613,7 +1643,7 @@ a#menu:hover .svg-path {
   animation: dots 1.5s steps(3, end) infinite;
 }
 #loader a {
-  color: #0468dc;
+  color: #95b48a;
   font-size: 24px;
   font-family: Firago500;
   text-decoration: underline;
