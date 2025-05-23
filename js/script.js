@@ -23,7 +23,7 @@ yearSelects.forEach((select) => {
 
   for (let year = start; isFrom ? year <= end : year >= end; year += step) {
     const option = document.createElement("option");
-    option.value = `${year}-01-01`;
+    option.value = `${year}`;
     option.textContent = year;
     select.appendChild(option);
   }
@@ -108,8 +108,8 @@ var formObject = {
   searchQuery: "",
   sortedBy: "",
   mediaType: [],
-  dateFrom: "",
-  dateTo: "",
+  yearFrom: "",
+  yearTo: "",
 
   genre: [],
   language: [],
@@ -119,7 +119,6 @@ var formObject = {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const data = new FormData(form);
-
   data.forEach((value, key) => {
     const arrayTypes = ["mediaType", "genre", "language", "fund"];
     if (arrayTypes.includes(key)) {
@@ -138,15 +137,12 @@ resetBtn.addEventListener("click", () => {
     searchQuery: "",
     sortedBy: "",
     mediaType: [],
-    dateFrom: "",
-    dateTo: "",
+    yearFrom: "",
+    yearTo: "",
 
     genre: [],
     language: [],
     fund: [],
   };
-
-  document.querySelectorAll(".date-text")[0].textContent = "-დან";
-  document.querySelectorAll(".date-text")[1].textContent = "-მდე";
   document.querySelector(".dropdown-text").textContent = "სორტირება";
 });
