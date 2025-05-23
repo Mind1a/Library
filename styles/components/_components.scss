@@ -271,17 +271,28 @@ body {
               rotate: 270deg;
             }
 
+            #year-from-select,
+            #year-to-select {
+              background-color: transparent;
+              border: none;
+              font-size: 16px;
+              font-family: FiraGo400;
+              color: #3c3c4399;
+
+              max-width: 170px;
+              height: 54px;
+              padding: 17px 16px;
+              min-width: 102px;
+              padding-left: 46px;
+            }
             .date-input-container {
               display: flex;
               align-items: center;
               position: relative;
               border: 1px solid #3c3c4399;
               border-radius: 8px;
-              max-width: 170px;
-              height: 54px;
-              padding: 17px 16px;
+
               cursor: pointer;
-              min-width: 102px;
 
               label {
                 display: flex;
@@ -292,6 +303,9 @@ body {
                 .calendar-icon {
                   margin-right: 10px;
                   rotate: 0deg;
+                  position: absolute;
+                  left: 16px;
+                  z-index: -1;
                 }
 
                 p {

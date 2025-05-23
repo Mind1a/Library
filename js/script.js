@@ -9,22 +9,44 @@
 //   });
 // });
 
-const dateContainer = document.querySelectorAll(".date-input-container");
+//----------------------------
+const yearSelects = [
+  document.getElementById("year-from-select"),
+  document.getElementById("year-to-select"),
+];
 
-dateContainer.forEach((container) => {
-  container.addEventListener("click", () => {
-    const dateInput = container.querySelector("#date-input");
+yearSelects.forEach((select) => {
+  const isFrom = select.name === "dateFrom";
+  const start = isFrom ? 1900 : new Date().getFullYear();
+  const end = isFrom ? new Date().getFullYear() : 1900;
+  const step = isFrom ? 1 : -1;
 
-    dateInput.showPicker();
-
-    const dateText = container.querySelector(".date-text");
-
-    dateInput.addEventListener("change", () => {
-      const date = dateInput.value;
-      dateText.textContent = date;
-    });
-  });
+  for (let year = start; isFrom ? year <= end : year >= end; year += step) {
+    const option = document.createElement("option");
+    option.value = `${year}-01-01`;
+    option.textContent = year;
+    select.appendChild(option);
+  }
 });
+
+//----------------------------
+
+// const dateContainer = document.querySelectorAll(".date-input-container");
+
+// dateContainer.forEach((container) => {
+//   container.addEventListener("click", () => {
+//     const dateInput = container.querySelector("#date-input");
+
+//     dateInput.showPicker();
+
+//     const dateText = container.querySelector(".date-text");
+
+//     dateInput.addEventListener("change", () => {
+//       const date = dateInput.value;
+//       dateText.textContent = date;
+//     });
+//   });
+// });
 
 //Hover on main page cards
 

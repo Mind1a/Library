@@ -486,17 +486,26 @@ body {
 .main-content-wrapper .filter-books-wrapper .media-type-section .dropdown-section-wrapper .publish-date .date-wrapper img {
   rotate: 270deg;
 }
+.main-content-wrapper .filter-books-wrapper .media-type-section .dropdown-section-wrapper .publish-date .date-wrapper #year-from-select,
+.main-content-wrapper .filter-books-wrapper .media-type-section .dropdown-section-wrapper .publish-date .date-wrapper #year-to-select {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  font-family: FiraGo400;
+  color: rgba(60, 60, 67, 0.6);
+  max-width: 170px;
+  height: 54px;
+  padding: 17px 16px;
+  min-width: 102px;
+  padding-left: 46px;
+}
 .main-content-wrapper .filter-books-wrapper .media-type-section .dropdown-section-wrapper .publish-date .date-wrapper .date-input-container {
   display: flex;
   align-items: center;
   position: relative;
   border: 1px solid rgba(60, 60, 67, 0.6);
   border-radius: 8px;
-  max-width: 170px;
-  height: 54px;
-  padding: 17px 16px;
   cursor: pointer;
-  min-width: 102px;
 }
 .main-content-wrapper .filter-books-wrapper .media-type-section .dropdown-section-wrapper .publish-date .date-wrapper .date-input-container label {
   display: flex;
@@ -507,6 +516,9 @@ body {
 .main-content-wrapper .filter-books-wrapper .media-type-section .dropdown-section-wrapper .publish-date .date-wrapper .date-input-container label .calendar-icon {
   margin-right: 10px;
   rotate: 0deg;
+  position: absolute;
+  left: 16px;
+  z-index: -1;
 }
 .main-content-wrapper .filter-books-wrapper .media-type-section .dropdown-section-wrapper .publish-date .date-wrapper .date-input-container label p {
   font-size: 16px;

@@ -158,14 +158,15 @@
                   <div class="publish-date">
                     <div class="date-wrapper">
                       <div class="date-input-container">
-                        <label for="date-from-input">
+                        <label for="year-from-select">
                           <img
                             src="./assets/calendar-icon.svg"
                             alt="calendar-icon"
                             class="calendar-icon"
                           />
-                          <p class="date-text">-დან</p>
-                          <input type="date" id="date-input" name="dateFrom" />
+                          <select id="year-from-select" name="dateFrom">
+                            <option value="">-დან</option>
+                          </select>
                         </label>
                       </div>
 
@@ -175,14 +176,15 @@
                       />
 
                       <div class="date-input-container">
-                        <label for="date-to-input" name="dateTo">
+                        <label for="year-to-select">
                           <img
                             src="./assets/calendar-icon.svg"
                             alt="calendar-icon"
                             class="calendar-icon"
                           />
-                          <p class="date-text">-მდე</p>
-                          <input name="dateTo" type="date" id="date-input" />
+                          <select id="year-to-select" name="dateTo">
+                            <option value="">-მდე</option>
+                          </select>
                         </label>
                       </div>
                     </div>
