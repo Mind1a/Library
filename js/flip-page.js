@@ -300,3 +300,25 @@ if (typeof pdfjsLib !== "undefined") {
 } else {
   console.error("PDF.js is not available");
 }
+
+// ------ zoom ----------
+const zoomInBTN = document.getElementById("zoom_in");
+const zoomOutBTN = document.getElementById("zoom_out");
+let zoomLevel = 1;
+
+function updateZoom() {
+  document.querySelector(".stf__block").style.transform = `scale(${zoomLevel})`;
+}
+
+zoomInBTN.addEventListener("click", () => {
+  if (zoomLevel >= 1.4) return;
+
+  zoomLevel += 0.1;
+  updateZoom();
+});
+zoomOutBTN.addEventListener("click", () => {
+  if (zoomLevel <= 0.7) return;
+
+  zoomLevel -= 0.1;
+  updateZoom();
+});

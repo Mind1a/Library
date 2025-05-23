@@ -1584,6 +1584,7 @@ a#menu:hover .svg-path {
 }
 
 #main-content {
+  overflow: scroll;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -1619,6 +1620,38 @@ a#menu:hover .svg-path {
   padding: 4px 8px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 6px;
+}
+#flip-pages .page .zoom-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+#flip-pages .page .zoom-container #zoom-icon-container {
+  position: relative;
+  display: flex;
+}
+#flip-pages .page .zoom-container #zoom-icon-container #zoom-icon {
+  height: 25px;
+  width: 24px;
+}
+#flip-pages .page .zoom-container #zoom-fragment {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 11px;
+  height: 11px;
+}
+#flip-pages .page .zoom-container button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+}
+#flip-pages .page .zoom-container button img {
+  width: 25px;
+  height: 25px;
 }
 
 #loader {

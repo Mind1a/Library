@@ -113,6 +113,7 @@ a#menu {
   overflow: hidden;
 }
 #main-content {
+  overflow: scroll;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -150,6 +151,41 @@ a#menu {
       padding: 4px 8px;
       border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 6px;
+    }
+
+    .zoom-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+
+      #zoom-icon-container {
+        position: relative;
+        display: flex;
+        #zoom-icon {
+          height: 25px;
+          width: 24px;
+        }
+      }
+      #zoom-fragment {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 11px;
+        height: 11px;
+      }
+
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        img {
+          width: 25px;
+          height: 25px;
+        }
+      }
     }
   }
 }
