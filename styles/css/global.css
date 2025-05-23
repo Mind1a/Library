@@ -347,7 +347,7 @@ body {
 }
 .main-content-wrapper .filter-books-wrapper .filter-section .buttons-section .dropdown-button .dropdown-text {
   color: #95b48a;
-  font-size: 24px;
+  font-size: 22px;
   font-family: FiraGo400;
   transition: color 0.2s;
 }
@@ -375,7 +375,7 @@ body {
   cursor: pointer;
 }
 .main-content-wrapper .filter-books-wrapper .filter-section .dropdown-options li:hover {
-  background-color: hsl(208, 86%, 92%);
+  background-color: #dcf0d4;
 }
 .main-content-wrapper .filter-books-wrapper .filter-section .dropdown-options.displayed {
   height: auto;
@@ -1559,7 +1559,7 @@ a#menu:hover .svg-path {
   border-bottom: none;
 }
 .flip-page-header .flip-page-header-container .menu-li:hover {
-  background-color: #d8ebfc;
+  background-color: #dcf0d4;
   color: #333333;
 }
 .flip-page-header .flip-page-header-container .menu-li.hover {
