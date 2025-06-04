@@ -9,28 +9,6 @@
 //   });
 // });
 
-//----------------------------
-const yearSelects = [
-  document.getElementById("year-from-select"),
-  document.getElementById("year-to-select"),
-];
-
-yearSelects.forEach((select) => {
-  const isFrom = select.name === "dateFrom";
-  const start = isFrom ? 1900 : new Date().getFullYear();
-  const end = isFrom ? new Date().getFullYear() : 1900;
-  const step = isFrom ? 1 : -1;
-
-  for (let year = start; isFrom ? year <= end : year >= end; year += step) {
-    const option = document.createElement("option");
-    option.value = `${year}`;
-    option.textContent = year;
-    select.appendChild(option);
-  }
-});
-
-//----------------------------
-
 // const dateContainer = document.querySelectorAll(".date-input-container");
 
 // dateContainer.forEach((container) => {
@@ -119,6 +97,7 @@ var formObject = {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const data = new FormData(form);
+  console.log(data);
   data.forEach((value, key) => {
     const arrayTypes = ["mediaType", "genre", "language", "fund"];
     if (arrayTypes.includes(key)) {

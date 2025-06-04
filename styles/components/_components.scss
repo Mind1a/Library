@@ -292,50 +292,29 @@ body {
               border: 1px solid #3c3c4399;
               border-radius: 8px;
 
-              cursor: pointer;
-
               label {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
+                gap: 10px;
                 justify-content: center;
+                cursor: pointer;
+                padding: 12px 17.25px;
+
+                .year-input {
+                  border: none;
+                  background-color: transparent;
+                  width: 100%;
+                }
 
                 .calendar-icon {
-                  margin-right: 10px;
                   rotate: 0deg;
-                  position: absolute;
-                  left: 16px;
-                  z-index: -1;
                 }
 
                 p {
                   font-size: 16px;
                   font-family: FiraGo400;
                   color: #3c3c4399;
-                }
-
-                input[type="date"] {
-                  position: absolute;
-                  border: none;
-                  outline: none;
-                  width: 100%;
-                  height: 100%;
-                  top: 0;
-                  left: 0;
-                  opacity: 0;
-                  z-index: 10;
-                  width: 10px;
-                  cursor: pointer;
-
-                  &::-webkit-inner-spin-button,
-                  &::-webkit-clear-button {
-                    display: none;
-                  }
-
-                  &::-webkit-calendar-picker-indicator {
-                    opacity: 0;
-                    cursor: pointer;
-                  }
                 }
               }
             }
